@@ -1,6 +1,0 @@
-C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
-C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L02\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
-C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L03\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
-C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L03\TP2\UI.Desktop\obj\Debug\UI.Desktop.csprojResolveAssemblyReference.cache
-C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L03\TP2\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
-C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L03\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
