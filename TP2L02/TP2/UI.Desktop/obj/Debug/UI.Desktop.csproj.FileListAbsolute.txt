@@ -1,0 +1,3 @@
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\Nueva carpeta\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L02\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config

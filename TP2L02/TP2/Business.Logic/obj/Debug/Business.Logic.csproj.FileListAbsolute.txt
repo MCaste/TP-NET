@@ -1,0 +1,5 @@
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L01\TP2\Business.Logic\obj\Debug\Business.Logic.pdb
