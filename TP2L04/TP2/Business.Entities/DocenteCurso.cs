@@ -9,14 +9,14 @@ namespace Business.Entities
     public class DocenteCurso : BusinessEntity
         {
         
-        //private _TiposCargos _Cargo;
+        private int _Cargo;
 
         private int _IDCurso;
         
         private int _IDDocente;
 
-        /*
-        public TiposCargos Cargo
+   
+        public int TiposCargo
             {
 
             get
@@ -28,7 +28,7 @@ namespace Business.Entities
                 _Cargo = value;
                 }
             }
-        */
+        
         public int IDCurso 
         {
 
@@ -54,9 +54,5 @@ namespace Business.Entities
                 _IDDocente = value;
                 }
             } 
-
-
-
-
         }
     }

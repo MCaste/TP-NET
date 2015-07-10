@@ -28,18 +28,12 @@ namespace UI.Desktop
             {
             UsuarioLogic UL = new UsuarioLogic();
 
-
             this.dgvUsuarios.DataSource = UL.GetAll();
-
-
- 
             }
 
         private void Usuarios_Load( object sender, EventArgs e )
             {
-            
             Listar();
-
             }
 
         private void btnActualizar_Click( object sender, EventArgs e )
@@ -48,10 +42,54 @@ namespace UI.Desktop
             }
 
         private void btnSalir_Click( object sender, EventArgs e )
-            {
-            this.Close();
+            {    
+            
+            DialogResult DR = (MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo));
+
+            if (DR == DialogResult.Yes) this.Close();        
+
             }
 
+        private void tsbNuevo_Click( object sender, EventArgs e )
+            {
+            UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
 
+            UD.ShowDialog();
+
+            this.Listar();
+            }
+
+        private void tsbEditar_Click( object sender, EventArgs e )
+            {
+
+            if ((this.dgvUsuarios.SelectedRows!=null)&&(this.dgvUsuarios.MultiSelect==false)&&this.dgvUsuarios.SelectionMode == DataGridViewSelectionMode.FullRowSelect)
+                { 
+            
+                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+
+                UsuarioDesktop UD = new UsuarioDesktop(ID,AplicationForm.ModoForm.Modificacion);
+
+                UsuarioLogic UL = new UsuarioLogic();
+
+                
+
+                }
+            }
+
+        private void tsbEliminar_Click( object sender, EventArgs e )
+            {
+            if ((this.dgvUsuarios.SelectedRows != null) && (this.dgvUsuarios.MultiSelect == false) && this.dgvUsuarios.SelectionMode == DataGridViewSelectionMode.FullRowSelect)
+                {
+
+                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+
+                UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
+
+                UsuarioLogic UL = new UsuarioLogic();
+
+                UL.Delete(ID);
+               
+                }
+            }
         }
     }

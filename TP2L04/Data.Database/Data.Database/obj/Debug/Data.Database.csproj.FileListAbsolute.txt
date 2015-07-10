@@ -6,3 +6,10 @@ C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TPL04\Data.Database\Dat
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TPL04\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TPL04\Data.Database\Data.Database\obj\Debug\Data.Database.dll
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TPL04\Data.Database\Data.Database\obj\Debug\Data.Database.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\bin\Debug\Data.Database.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\bin\Debug\Data.Database.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\bin\Debug\Business.Entities.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\obj\Debug\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\obj\Debug\Data.Database.dll
+C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\Data.Database\Data.Database\obj\Debug\Data.Database.pdb

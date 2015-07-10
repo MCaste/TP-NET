@@ -14,7 +14,7 @@ namespace Business.Logic
 
         UsuarioAdapter UA = new UsuarioAdapter();
 
-                private UsuarioAdapter _UsuarioData;
+        private UsuarioAdapter _UsuarioData;
 
         public UsuarioAdapter UsuarioData
                 {
@@ -22,7 +22,6 @@ namespace Business.Logic
                 get{
                     return _UsuarioData;
                     }
-                
                 }
                 
         public UsuarioLogic()
@@ -35,29 +34,25 @@ namespace Business.Logic
 
         public List<Usuario> GetAll()
         {
-
         return UA.GetAll();
         }
 
         public Business.Entities.Usuario GetOne(int ID) 
       
         {
-
             return UA.GetOne(ID);
         }
 
 
-        public void Delete( int ID )
+        public void Delete( int ID)
         {
         UA.Delete(ID); 
         }
 
 
-        public void Save( Usuario Usuario )
+        public void Save( Usuario Usuario)
         {
-
-        UA.Save(Usuario);
-            
+        UA.Save(Usuario);   
         }
 
         }

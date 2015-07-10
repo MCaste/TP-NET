@@ -87,6 +87,7 @@ namespace Data.Database
                     }
                 }
                 usuario.ID = NextID + 1;
+        
                 Usuarios.Add(usuario);
             }
             else if (usuario.State == BusinessEntity.States.Deleted)
@@ -100,9 +101,7 @@ namespace Data.Database
             usuario.State = BusinessEntity.States.Unmodified;
 
             }
-
-
             
-            }
+        }
     }
 
