@@ -11,48 +11,43 @@ namespace Business.Logic
     {
     public class UsuarioLogic : BusinessLogic 
         {
-
-        UsuarioAdapter UA = new UsuarioAdapter();
-
         private UsuarioAdapter _UsuarioData;
 
         public UsuarioAdapter UsuarioData
-                {
+            {
                 
-                get{
-                    return _UsuarioData;
-                    }
-                }
+             get{
+                 return _UsuarioData;
+                 }
+            }
                 
         public UsuarioLogic()
             {
-
             _UsuarioData = new UsuarioAdapter();
-
             }
 
 
         public List<Usuario> GetAll()
         {
-        return UA.GetAll();
+        return UsuarioData.GetAll();
         }
 
-        public Business.Entities.Usuario GetOne(int ID) 
+        public Usuario GetOne(int ID) 
       
         {
-            return UA.GetOne(ID);
+        return UsuarioData.GetOne(ID);
         }
 
 
         public void Delete( int ID)
         {
-        UA.Delete(ID); 
+        UsuarioData.Delete(ID); 
         }
 
 
         public void Save( Usuario Usuario)
         {
-        UA.Save(Usuario);   
+        UsuarioData.Save(Usuario);   
         }
 
         }

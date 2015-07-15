@@ -61,34 +61,28 @@ namespace UI.Desktop
 
         private void tsbEditar_Click( object sender, EventArgs e )
             {
+            if (this.dgvUsuarios.SelectedRows.Count != 0)
+                {
 
-            if ((this.dgvUsuarios.SelectedRows!=null)&&(this.dgvUsuarios.MultiSelect==false)&&this.dgvUsuarios.SelectionMode == DataGridViewSelectionMode.FullRowSelect)
-                { 
-            
-                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
 
-                UsuarioDesktop UD = new UsuarioDesktop(ID,AplicationForm.ModoForm.Modificacion);
+                UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
-                UsuarioLogic UL = new UsuarioLogic();
-
-                
-
+                UD.ShowDialog();
                 }
+  
             }
 
         private void tsbEliminar_Click( object sender, EventArgs e )
             {
-            if ((this.dgvUsuarios.SelectedRows != null) && (this.dgvUsuarios.MultiSelect == false) && this.dgvUsuarios.SelectionMode == DataGridViewSelectionMode.FullRowSelect)
+            if (this.dgvUsuarios.SelectedRows.Count != 0)
                 {
 
-                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
 
                 UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
 
-                UsuarioLogic UL = new UsuarioLogic();
-
-                UL.Delete(ID);
-               
+                UD.ShowDialog();
                 }
             }
         }

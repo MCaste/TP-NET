@@ -22,6 +22,7 @@ namespace UI.Desktop
 
         private Usuario _UsuarioActual;
 
+
         public Usuario UsuarioActual
         
             {
@@ -87,7 +88,7 @@ namespace UI.Desktop
         public override void MapearADatos()
             {
             
-            if (Modo == ModoForm.Alta)
+            if (Modo == AplicationForm.ModoForm.Alta)
                 {
                 
                 Usuario usu = new Usuario();
@@ -107,7 +108,7 @@ namespace UI.Desktop
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;                 
 
                 }
-            else if (Modo == ModoForm.Modificacion)
+            else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                 this.UsuarioActual.ID = Convert.ToInt32(this.txtID.Text);
                 
@@ -122,6 +123,8 @@ namespace UI.Desktop
                 this.UsuarioActual.Email = this.txtEmail.Text;
                 
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;  
+                
+                
                 }
             }
 
@@ -138,29 +141,28 @@ namespace UI.Desktop
 
         public override bool Validar()
             {
-            
-            if ((this.txtNombre.Text == null) || (this.txtNombre.Text == null) || (this.txtNombre.Text == null) || (this.txtNombre.Text == null) || (this.txtNombre.Text == null) || (this.txtNombre.Text == null))
+
+            if ((this.txtNombre.Text == null) || (this.txtApellido.Text == null) || (this.txtEmail.Text == null) || (this.txtUsuario.Text == null) || (this.txtClave.Text == null) || (this.txtConfirmarClave.Text == null))
                 {
-                Console.WriteLine("Todos los campos son obligatorios, por favor complete cada uno.\n");
+                Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return false;
                 }
-                
+
             if (this.txtClave.Text != this.txtConfirmarClave.Text)
                 {
-                Console.WriteLine("Las contraseñas no coinciden, por favor vuelva a ingresarla.\n");
+                Notificar("Error","Las contraseñas no coinciden, por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
                 return false;
                 }
             if ((this.txtClave.Text.Length) < 8)
                 {
-                Console.WriteLine("La contraseña debe tener una longitud minima de 8 caracteres.\n");
-
+                Notificar("Error", "La contraseña debe tener una longitud mìnima de 8 caracteres.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                
                 return false;
                 }
 
             return true;
-
 
             }
 
@@ -169,26 +171,22 @@ namespace UI.Desktop
         
          if (Validar() == true) GuardarCambios();
 
-         
-
-
          this.Close();
          
         }
 
         //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
         
-        public  new void Notificar( string titulo, string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )
+        public void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
             {
-            
-            
-            
+            MessageBox.Show(mensaje,titulo, botones, icono);
             }
 
-        public new void Notificar( string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )
+        public void Notificar( string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )
             {
-   
+            this.Notificar(this.Text, mensaje, botones, icono);
             }
+
 
         public UsuarioDesktop(ModoForm modo):this()
             {

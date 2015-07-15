@@ -41,17 +41,18 @@ namespace UI.Desktop
             {
             }
 
-        public virtual void GuardarCambios() { }
+        public virtual void GuardarCambios() 
+            {
+            }
 
-        public virtual bool Validar() 
+        public virtual bool Validar()
             {
             return false;
             }
 
         public void Notificar( string titulo, string mensaje, MessageBoxButtons botones, MessageBoxIcon icono ) 
             {
-            MessageBox.Show(mensaje, titulo, botones,icono);
-
+            MessageBox.Show(mensaje,titulo,botones,icono);
             }
 
         public void Notificar( string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )

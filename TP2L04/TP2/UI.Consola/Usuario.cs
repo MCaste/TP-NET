@@ -11,9 +11,9 @@ namespace UI.Consola
     public class Usuario
         {
 
-        Business.Logic.UsuarioLogic _UsuarioNegocio;
+        UsuarioLogic _UsuarioNegocio;
 
-        public Business.Logic.UsuarioLogic UsuarioNegocio
+        public UsuarioLogic UsuarioNegocio
         { 
             get{return _UsuarioNegocio;} 
         }
@@ -28,42 +28,65 @@ namespace UI.Consola
 
         public void Menu()
             {
-            Console.WriteLine("MENU:\n1)Listado General\n2)Consulta\n3)Agregar\n4)Modificar\n5)Eliminar\n6)Salir\n");
-
-            int opcion = int.Parse(Console.ReadLine());
-
-            do{
-                switch (opcion)
-                    {
-                    case 1:
-                            {
-                            ListadoGeneral();
-                            Console.WriteLine("Presione una tecla para continuar.\n");
-                            Console.ReadKey();
-                            }
-                        break;
-                    case 2: Consultar();
-                        break;
-                    case 3: {Agregar();
-                             Console.WriteLine("Presione una tecla para continuar.\n");
-                             Console.ReadKey();
-                             }    
-                        break;
-                    case 4: Modificar();
-                        break;
-                    case 5: Eliminar();
-                        break;
-                    case 6: Environment.Exit(0);
-                        break;
-                    default: Console.WriteLine("La opción ingresada es incorrecta, por favor ingresela nuevamente.\n");
-                            break;
-                    }
-
+             try
+                {
+                
                 Console.WriteLine("MENU:\n1)Listado General\n2)Consulta\n3)Agregar\n4)Modificar\n5)Eliminar\n6)Salir\n");
 
-                opcion = int.Parse(Console.ReadLine());
+                int opcion = int.Parse(Console.ReadLine());
 
-            }while ((opcion >=1)&&(opcion < 6));
+                do
+                    {
+                    switch (opcion)
+                        {
+                        case 1:
+                                {
+                                ListadoGeneral();
+                                Console.WriteLine("Presione una tecla para continuar.\n");
+                                Console.ReadKey();
+                                }
+                            break;
+                        case 2: Consultar();
+                            break;
+                        case 3:
+                                {
+                                Agregar();
+                                Console.WriteLine("Presione una tecla para continuar.\n");
+                                Console.ReadKey();
+                                }
+                            break;
+                        case 4: Modificar();
+                            break;
+                        case 5: Eliminar();
+                            break;
+                        case 6: Environment.Exit(0);
+                            break;
+                        default: Console.WriteLine("La opción ingresada es incorrecta, por favor ingresela nuevamente.\n");
+                            break;
+                        }
+
+                    Console.WriteLine("MENU:\n1)Listado General\n2)Consulta\n3)Agregar\n4)Modificar\n5)Eliminar\n6)Salir\n");
+
+                    opcion = int.Parse(Console.ReadLine());
+
+                    } while ((opcion >= 1) && (opcion < 6));
+                }
+            catch (FormatException)
+                {
+
+                Console.WriteLine();
+
+                Console.WriteLine("La opción ingresada es un número entero, por favor vuelva a ingresarla.\n");
+                }
+            finally 
+                {
+
+                Console.WriteLine();
+
+                 Menu();
+                
+                }
+
         }
 
         public void ListadoGeneral()
