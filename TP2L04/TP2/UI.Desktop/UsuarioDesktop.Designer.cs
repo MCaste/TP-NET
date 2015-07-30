@@ -101,6 +101,7 @@
             // 
             this.txtClave.Location = new System.Drawing.Point(77, 186);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(100, 20);
             this.txtClave.TabIndex = 6;
             // 
@@ -129,8 +130,9 @@
             // 
             // txtConfirmarClave
             // 
-            this.txtConfirmarClave.Location = new System.Drawing.Point(438, 178);
+            this.txtConfirmarClave.Location = new System.Drawing.Point(438, 185);
             this.txtConfirmarClave.Name = "txtConfirmarClave";
+            this.txtConfirmarClave.PasswordChar = '*';
             this.txtConfirmarClave.Size = new System.Drawing.Size(100, 20);
             this.txtConfirmarClave.TabIndex = 10;
             // 
@@ -180,6 +182,7 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -193,6 +196,7 @@
             // 
             // UsuarioDesktop
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 262);

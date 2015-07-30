@@ -29,12 +29,10 @@ namespace UI.Desktop
             get { return _UsuarioActual; }
 
             set { _UsuarioActual = value; }
-            
             }
 
         public override void MapearDeDatos()
             {
-
             this.txtID.Text = this.UsuarioActual.ID.ToString();
            
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
@@ -90,7 +88,6 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                
                 Usuario usu = new Usuario();
                  
                 UsuarioActual = usu;
@@ -106,7 +103,6 @@ namespace UI.Desktop
                 this.UsuarioActual.Email = this.txtEmail.Text;
                 
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;                 
-
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
@@ -123,8 +119,6 @@ namespace UI.Desktop
                 this.UsuarioActual.Email = this.txtEmail.Text;
                 
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;  
-                
-                
                 }
             }
 
@@ -142,47 +136,55 @@ namespace UI.Desktop
         public override bool Validar()
             {
 
-            if ((this.txtNombre.Text == null) || (this.txtApellido.Text == null) || (this.txtEmail.Text == null) || (this.txtUsuario.Text == null) || (this.txtClave.Text == null) || (this.txtConfirmarClave.Text == null))
-                {
-                Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            int ban1,ban2 ,ban3;
 
-                return false;
-                }
+            ban1 = ban2 = ban3=0;
+
+             if ((this.txtNombre.Text == null) || (this.txtApellido.Text == null) || (this.txtEmail.Text == null) || (this.txtUsuario.Text == null) || (this.txtClave.Text == null) || (this.txtConfirmarClave.Text == null))
+                    {
+                    ban1 = 1;
+
+                    Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
             if (this.txtClave.Text != this.txtConfirmarClave.Text)
-                {
-                Notificar("Error","Las contraseñas no coinciden, por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    {
+                    ban2 = 1;
 
-                return false;
-                }
-            if ((this.txtClave.Text.Length) < 8)
-                {
-                Notificar("Error", "La contraseña debe tener una longitud mìnima de 8 caracteres.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    Notificar("Error","Las contraseñas no coinciden, por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                   }
                 
-                return false;
-                }
 
-            return true;
+            if ((this.txtClave.Text.Length) < 8)
+                    {
+                    ban3 = 1;
 
+                    Notificar("Error", "La contraseña debe tener una longitud mìnima de 8 caracteres.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
+
+            if ((ban1 == 1) || (ban2 == 1) || (ban3 == 1)) return false;
+                
+            else return true;
             }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-        
-         if (Validar() == true) GuardarCambios();
+        private void btnAceptar_Click( object sender, EventArgs e )
+            {
+            if (Validar() == true)
+                {
+                GuardarCambios();
 
-         this.Close();
-         
-        }
+                this.Close();
+                }
+            }
 
         //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
         
-        public void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
+        public new  void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
             {
             MessageBox.Show(mensaje,titulo, botones, icono);
             }
 
-        public void Notificar( string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )
+        public new void Notificar( string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )
             {
             this.Notificar(this.Text, mensaje, botones, icono);
             }
@@ -195,7 +197,6 @@ namespace UI.Desktop
 
         public UsuarioDesktop(int ID, ModoForm modo):this()
             {
-
             this.Modo = modo;
 
             UsuarioLogic UL = new UsuarioLogic();
@@ -203,7 +204,6 @@ namespace UI.Desktop
             UsuarioActual = UL.GetOne(ID);
 
             MapearDeDatos();
-    
             }
 
         private void btnCancelar_Click( object sender, EventArgs e )

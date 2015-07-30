@@ -165,6 +165,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnActualizar.Enter += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -224,6 +225,7 @@
             // 
             // Usuarios
             // 
+            this.AcceptButton = this.btnActualizar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 352);
