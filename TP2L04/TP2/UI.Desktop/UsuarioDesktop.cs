@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business.Entities;
+using Business.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business.Entities;
-using Business.Logic;
+using System.Text.RegularExpressions;
+
 
 
 namespace UI.Desktop
@@ -133,17 +135,34 @@ namespace UI.Desktop
 
             }
 
-        public override bool Validar()
+      public static bool ValidarEmail(TextBox txtEmail)
+        {
+          string formato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+
+          string email = txtEmail.Text;
+
+          if (Regex.IsMatch(email, formato))
+              {
+              if (Regex.Replace(email, formato, String.Empty).Length == 0)
+                  {
+                  return true;
+                  }
+              else return false;
+              }
+          else return false;
+
+        }
+
+      public override bool Validar()
             {
 
-            int ban1,ban2 ,ban3;
+            int ban1,ban2 ,ban3, ban4;
 
-            ban1 = ban2 = ban3=0;
+            ban1 = ban2 = ban3 = ban4 = 0;
 
              if ((this.txtNombre.Text == null) || (this.txtApellido.Text == null) || (this.txtEmail.Text == null) || (this.txtUsuario.Text == null) || (this.txtClave.Text == null) || (this.txtConfirmarClave.Text == null))
                     {
                     ban1 = 1;
-
                     Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -159,10 +178,18 @@ namespace UI.Desktop
                     {
                     ban3 = 1;
 
-                    Notificar("Error", "La contraseña debe tener una longitud mìnima de 8 caracteres.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    Notificar("Error", "La contraseña debe tener una longitud mínima de 8 caracteres,por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
 
-            if ((ban1 == 1) || (ban2 == 1) || (ban3 == 1)) return false;
+            if (ValidarEmail(txtEmail)==false)
+              
+                {
+                ban4 = 1;
+
+                Notificar("Error","El email ingresado no se encuentra en el formato adecuado,por favor vuelva a ingresarlo nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+
+            if ((ban1 == 1) || (ban2 == 1) || (ban3 == 1) || (ban4==1)) return false;
                 
             else return true;
             }
