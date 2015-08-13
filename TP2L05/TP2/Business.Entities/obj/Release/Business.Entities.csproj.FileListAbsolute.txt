@@ -3,3 +3,8 @@ C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Ent
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
