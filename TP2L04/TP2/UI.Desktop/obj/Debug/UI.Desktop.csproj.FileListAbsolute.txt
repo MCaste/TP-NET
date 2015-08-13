@@ -35,3 +35,6 @@ C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\TP2\UI.Desktop\o
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
 C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L04\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb
