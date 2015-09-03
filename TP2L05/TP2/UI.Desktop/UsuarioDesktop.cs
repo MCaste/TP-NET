@@ -24,7 +24,7 @@ namespace UI.Desktop
 
         private Usuario _UsuarioActual;
 
-
+        //Propiedad
         public Usuario UsuarioActual
         
             {

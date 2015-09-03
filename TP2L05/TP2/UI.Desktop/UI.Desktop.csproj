@@ -50,6 +50,12 @@
     <Compile Include="AlumnoInscripciones.Designer.cs">
       <DependentUpon>AlumnoInscripciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlumnoInscripcionesDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnoInscripcionesDesktop.Designer.cs">
+      <DependentUpon>AlumnoInscripcionesDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="AplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AlumnoInscripciones.resx">
       <DependentUpon>AlumnoInscripciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnoInscripcionesDesktop.resx">
+      <DependentUpon>AlumnoInscripcionesDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
