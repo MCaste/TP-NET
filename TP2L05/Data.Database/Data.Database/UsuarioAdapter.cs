@@ -105,7 +105,7 @@ namespace Data.Database
 
                     //agrego el objeto con datos a la lista que devuelvo
                     
-                    Usuarios.Add(usr);
+                    usuarios.Add(usr);
                 }
 
                 //cerramos el datareader y la conexion a la BD
