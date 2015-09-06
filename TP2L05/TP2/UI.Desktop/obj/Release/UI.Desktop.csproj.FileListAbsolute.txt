@@ -34,3 +34,4 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desk
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\UI.Desktop.exe.config
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.exe
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.AlumnoInscripcionesDesktop.resources

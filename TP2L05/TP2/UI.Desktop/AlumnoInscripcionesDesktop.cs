@@ -36,13 +36,7 @@ namespace UI.Desktop
 
         public AlumnoInscripcionesDesktop(int ID, ModoForm modo):this()
             {
-            this.Modo = modo;
-
-            AlumnoInscripciones ai = new UsuarioLogic();
-
-            _AIActual = ai.GetOne(ID);
-
-            MapearDeDatos();
+            
             }
 
         private void btnCancelar_Click( object sender, EventArgs e )
