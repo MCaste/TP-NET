@@ -64,7 +64,7 @@ namespace Data.Database
 
         public List<Usuario> GetAll()
         {
-            //instancio obj Lista a retornar
+            //instanciamos el objeto lista a retornar
 
             List<Usuario> usuarios = new List<Usuario>();
 
@@ -140,7 +140,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdUsuarios = new SqlCommand("SELECT * from usuarios where id_usuario @id", sqlConn);
+                SqlCommand cmdUsuarios = new SqlCommand("SELECT * from usuarios where id_usuario=@id", sqlConn);
 
                 cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
 
@@ -202,7 +202,7 @@ namespace Data.Database
         }
 
 
-        public void Update(Usuario usuario)
+        protected void Update(Usuario usuario)
         {
             try
             {
@@ -237,7 +237,7 @@ namespace Data.Database
         }
 
 
-        public void Insert(Usuario usuario)
+        protected void Insert(Usuario usuario)
         {
             try
             {

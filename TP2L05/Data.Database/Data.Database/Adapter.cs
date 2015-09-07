@@ -9,18 +9,19 @@ namespace Data.Database
 {
     public class Adapter
     {
-        //private SqlConnection sqlConnection = new SqlConnection("ConnectionString;");
+        private SqlConnection sqlConnection = new SqlConnection("ConnectionString;");
 
+        //Clave por defecto a utilizar en la cadena de conexión
 
         const string consKeyDefaultCnnString = "ConnStringLocal";
 
+        private SqlConnection _sqlConn;
+
+        
         //Propiedad SQLConn
 
-        protected SqlConnection _sqlConn;
-
-        protected SqlConnection sqlConn
+        public SqlConnection sqlConn
         {
-
             get
             {
                 return _sqlConn;
@@ -31,7 +32,6 @@ namespace Data.Database
                 _sqlConn = value;
             }
         }
-
 
 
         protected void OpenConnection()
@@ -56,11 +56,5 @@ namespace Data.Database
         {
             throw new Exception("Metodo no implementado");
         }
-
-
-
-
-
-
     }
 }

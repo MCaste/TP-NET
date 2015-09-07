@@ -8,3 +8,8 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\bin\Release\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Release\Business.Entities.pdb

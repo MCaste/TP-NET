@@ -1,0 +1,224 @@
+﻿namespace UI.Desktop
+{
+    partial class ModuloDesktop
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuloDesktop));
+            this.tcModulos = new System.Windows.Forms.ToolStripContainer();
+            this.tsModulos = new System.Windows.Forms.ToolStrip();
+            this.tlModulos = new System.Windows.Forms.TableLayoutPanel();
+            this.dvgModulos = new System.Windows.Forms.DataGridView();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ejecuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tcModulos.ContentPanel.SuspendLayout();
+            this.tcModulos.TopToolStripPanel.SuspendLayout();
+            this.tcModulos.SuspendLayout();
+            this.tsModulos.SuspendLayout();
+            this.tlModulos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgModulos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tcModulos
+            // 
+            // 
+            // tcModulos.ContentPanel
+            // 
+            this.tcModulos.ContentPanel.Controls.Add(this.tlModulos);
+            this.tcModulos.ContentPanel.Size = new System.Drawing.Size(348, 233);
+            this.tcModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcModulos.Location = new System.Drawing.Point(0, 0);
+            this.tcModulos.Name = "tcModulos";
+            this.tcModulos.Size = new System.Drawing.Size(348, 258);
+            this.tcModulos.TabIndex = 0;
+            this.tcModulos.Text = "toolStripContainer1";
+            // 
+            // tcModulos.TopToolStripPanel
+            // 
+            this.tcModulos.TopToolStripPanel.Controls.Add(this.tsModulos);
+            // 
+            // tsModulos
+            // 
+            this.tsModulos.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.tsModulos.Location = new System.Drawing.Point(3, 0);
+            this.tsModulos.Name = "tsModulos";
+            this.tsModulos.Size = new System.Drawing.Size(81, 25);
+            this.tsModulos.TabIndex = 0;
+            // 
+            // tlModulos
+            // 
+            this.tlModulos.ColumnCount = 2;
+            this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlModulos.Controls.Add(this.dvgModulos, 0, 0);
+            this.tlModulos.Controls.Add(this.btnActualizar, 0, 1);
+            this.tlModulos.Controls.Add(this.btnSalir, 1, 1);
+            this.tlModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlModulos.Location = new System.Drawing.Point(0, 0);
+            this.tlModulos.Name = "tlModulos";
+            this.tlModulos.RowCount = 2;
+            this.tlModulos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlModulos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlModulos.Size = new System.Drawing.Size(348, 233);
+            this.tlModulos.TabIndex = 0;
+            // 
+            // dvgModulos
+            // 
+            this.dvgModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.descripcion,
+            this.ejecuta});
+            this.tlModulos.SetColumnSpan(this.dvgModulos, 2);
+            this.dvgModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgModulos.Location = new System.Drawing.Point(3, 3);
+            this.dvgModulos.MultiSelect = false;
+            this.dvgModulos.Name = "dvgModulos";
+            this.dvgModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgModulos.Size = new System.Drawing.Size(342, 198);
+            this.dvgModulos.TabIndex = 0;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Location = new System.Drawing.Point(189, 207);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(270, 207);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // tsbNuevo
+            // 
+            this.tsbNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
+            this.tsbNuevo.Text = "toolStripButton1";
+            this.tsbNuevo.ToolTipText = "Nuevo";
+            // 
+            // tsbEditar
+            // 
+            this.tsbEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEditar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEditar.Image")));
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(23, 22);
+            this.tsbEditar.Text = "toolStripButton1";
+            this.tsbEditar.ToolTipText = "Editar";
+            // 
+            // tsbEliminar
+            // 
+            this.tsbEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
+            this.tsbEliminar.Text = "toolStripButton1";
+            this.tsbEliminar.ToolTipText = "Eliminar";
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.Frozen = true;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.Frozen = true;
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // ejecuta
+            // 
+            this.ejecuta.DataPropertyName = "ejecuta";
+            this.ejecuta.Frozen = true;
+            this.ejecuta.HeaderText = "Ejecuta";
+            this.ejecuta.Name = "ejecuta";
+            this.ejecuta.ReadOnly = true;
+            // 
+            // ModuloDesktop
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(348, 258);
+            this.Controls.Add(this.tcModulos);
+            this.Name = "ModuloDesktop";
+            this.Text = "ModuloDesktop";
+            this.tcModulos.ContentPanel.ResumeLayout(false);
+            this.tcModulos.TopToolStripPanel.ResumeLayout(false);
+            this.tcModulos.TopToolStripPanel.PerformLayout();
+            this.tcModulos.ResumeLayout(false);
+            this.tcModulos.PerformLayout();
+            this.tsModulos.ResumeLayout(false);
+            this.tsModulos.PerformLayout();
+            this.tlModulos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgModulos)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ToolStripContainer tcModulos;
+        private System.Windows.Forms.TableLayoutPanel tlModulos;
+        private System.Windows.Forms.DataGridView dvgModulos;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolStrip tsModulos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ejecuta;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbEliminar;
+    }
+}

@@ -12,3 +12,6 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Re
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Release\Data.Database.pdb
