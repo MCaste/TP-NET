@@ -28,112 +28,194 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblEjecuta = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtEjecuta = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modulos));
+            this.tcModulos = new System.Windows.Forms.ToolStripContainer();
+            this.tlModulos = new System.Windows.Forms.TableLayoutPanel();
+            this.dvgModulos = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ejecuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.tsModulos = new System.Windows.Forms.ToolStrip();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tcModulos.ContentPanel.SuspendLayout();
+            this.tcModulos.TopToolStripPanel.SuspendLayout();
+            this.tcModulos.SuspendLayout();
+            this.tlModulos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgModulos)).BeginInit();
+            this.tsModulos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAceptar
+            // tcModulos
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(67, 195);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
+            // tcModulos.ContentPanel
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(179, 195);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.tcModulos.ContentPanel.Controls.Add(this.tlModulos);
+            this.tcModulos.ContentPanel.Size = new System.Drawing.Size(348, 233);
+            this.tcModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcModulos.Location = new System.Drawing.Point(0, 0);
+            this.tcModulos.Name = "tcModulos";
+            this.tcModulos.Size = new System.Drawing.Size(348, 258);
+            this.tcModulos.TabIndex = 0;
+            this.tcModulos.Text = "toolStripContainer1";
             // 
-            // lblID
+            // tcModulos.TopToolStripPanel
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(27, 43);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(18, 13);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "ID";
+            this.tcModulos.TopToolStripPanel.Controls.Add(this.tsModulos);
             // 
-            // lblDescripcion
+            // tlModulos
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(27, 92);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
-            this.lblDescripcion.TabIndex = 3;
-            this.lblDescripcion.Text = "Descripción";
+            this.tlModulos.ColumnCount = 2;
+            this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlModulos.Controls.Add(this.dvgModulos, 0, 0);
+            this.tlModulos.Controls.Add(this.btnActualizar, 0, 1);
+            this.tlModulos.Controls.Add(this.btnSalir, 1, 1);
+            this.tlModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlModulos.Location = new System.Drawing.Point(0, 0);
+            this.tlModulos.Name = "tlModulos";
+            this.tlModulos.RowCount = 2;
+            this.tlModulos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlModulos.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlModulos.Size = new System.Drawing.Size(348, 233);
+            this.tlModulos.TabIndex = 0;
             // 
-            // lblEjecuta
+            // dvgModulos
             // 
-            this.lblEjecuta.AutoSize = true;
-            this.lblEjecuta.Location = new System.Drawing.Point(27, 137);
-            this.lblEjecuta.Name = "lblEjecuta";
-            this.lblEjecuta.Size = new System.Drawing.Size(43, 13);
-            this.lblEjecuta.TabIndex = 4;
-            this.lblEjecuta.Text = "Ejecuta";
+            this.dvgModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.descripcion,
+            this.ejecuta});
+            this.tlModulos.SetColumnSpan(this.dvgModulos, 2);
+            this.dvgModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgModulos.Location = new System.Drawing.Point(3, 3);
+            this.dvgModulos.MultiSelect = false;
+            this.dvgModulos.Name = "dvgModulos";
+            this.dvgModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgModulos.Size = new System.Drawing.Size(342, 198);
+            this.dvgModulos.TabIndex = 0;
             // 
-            // txtID
+            // id
             // 
-            this.txtID.Location = new System.Drawing.Point(124, 43);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 5;
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
-            // txtDescripcion
+            // descripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(124, 92);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 6;
+            this.descripcion.DataPropertyName = "Descripcion";
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
             // 
-            // txtEjecuta
+            // ejecuta
             // 
-            this.txtEjecuta.Location = new System.Drawing.Point(124, 134);
-            this.txtEjecuta.Name = "txtEjecuta";
-            this.txtEjecuta.Size = new System.Drawing.Size(100, 20);
-            this.txtEjecuta.TabIndex = 7;
+            this.ejecuta.DataPropertyName = "Ejecuta";
+            this.ejecuta.HeaderText = "Ejecuta";
+            this.ejecuta.Name = "ejecuta";
+            this.ejecuta.ReadOnly = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.Location = new System.Drawing.Point(189, 207);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(270, 207);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // tsModulos
+            // 
+            this.tsModulos.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.tsModulos.Location = new System.Drawing.Point(3, 0);
+            this.tsModulos.Name = "tsModulos";
+            this.tsModulos.Size = new System.Drawing.Size(81, 25);
+            this.tsModulos.TabIndex = 0;
+            // 
+            // tsbNuevo
+            // 
+            this.tsbNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
+            this.tsbNuevo.Text = "toolStripButton1";
+            this.tsbNuevo.ToolTipText = "Nuevo";
+            // 
+            // tsbEditar
+            // 
+            this.tsbEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEditar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEditar.Image")));
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(23, 22);
+            this.tsbEditar.Text = "toolStripButton1";
+            this.tsbEditar.ToolTipText = "Editar";
+            // 
+            // tsbEliminar
+            // 
+            this.tsbEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
+            this.tsbEliminar.Text = "toolStripButton1";
+            this.tsbEliminar.ToolTipText = "Eliminar";
             // 
             // Modulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.txtEjecuta);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblEjecuta);
-            this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAceptar);
+            this.ClientSize = new System.Drawing.Size(348, 258);
+            this.Controls.Add(this.tcModulos);
             this.Name = "Modulos";
             this.Text = "Modulos";
+            this.tcModulos.ContentPanel.ResumeLayout(false);
+            this.tcModulos.TopToolStripPanel.ResumeLayout(false);
+            this.tcModulos.TopToolStripPanel.PerformLayout();
+            this.tcModulos.ResumeLayout(false);
+            this.tcModulos.PerformLayout();
+            this.tlModulos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgModulos)).EndInit();
+            this.tsModulos.ResumeLayout(false);
+            this.tsModulos.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Label lblEjecuta;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtEjecuta;
+        private System.Windows.Forms.ToolStripContainer tcModulos;
+        private System.Windows.Forms.TableLayoutPanel tlModulos;
+        private System.Windows.Forms.DataGridView dvgModulos;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolStrip tsModulos;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ejecuta;
     }
 }

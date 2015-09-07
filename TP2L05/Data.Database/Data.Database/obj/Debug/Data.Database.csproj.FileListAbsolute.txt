@@ -20,3 +20,6 @@ C:\Users\NET\TP-NET-master\TP2L05\Data.Database\Data.Database\bin\Debug\Business
 C:\Users\NET\TP-NET-master\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.dll
 C:\Users\NET\TP-NET-master\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.pdb
 C:\Users\NET\TP-NET-master\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.pdb

@@ -26,3 +26,6 @@ C:\Users\NET\TP-NET-master\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities
 C:\Users\NET\TP-NET-master\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
 C:\Users\NET\TP-NET-master\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.dll
 C:\Users\NET\TP-NET-master\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.pdb

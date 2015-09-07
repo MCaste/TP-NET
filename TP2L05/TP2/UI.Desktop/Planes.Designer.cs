@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Planes));
             this.tcPlanes = new System.Windows.Forms.ToolStripContainer();
-            this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.tlPlanes = new System.Windows.Forms.TableLayoutPanel();
             this.dvgPlanes = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
@@ -44,9 +44,9 @@
             this.tcPlanes.ContentPanel.SuspendLayout();
             this.tcPlanes.TopToolStripPanel.SuspendLayout();
             this.tcPlanes.SuspendLayout();
-            this.tsPlanes.SuspendLayout();
             this.tlPlanes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).BeginInit();
+            this.tsPlanes.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcPlanes
@@ -66,18 +66,6 @@
             // tcPlanes.TopToolStripPanel
             // 
             this.tcPlanes.TopToolStripPanel.Controls.Add(this.tsPlanes);
-            // 
-            // tsPlanes
-            // 
-            this.tsPlanes.Dock = System.Windows.Forms.DockStyle.None;
-            this.tsPlanes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbEditar,
-            this.tsbEliminar});
-            this.tsPlanes.Location = new System.Drawing.Point(3, 0);
-            this.tsPlanes.Name = "tsPlanes";
-            this.tsPlanes.Size = new System.Drawing.Size(81, 25);
-            this.tsPlanes.TabIndex = 0;
             // 
             // tlPlanes
             // 
@@ -131,6 +119,18 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // tsPlanes
+            // 
+            this.tsPlanes.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsPlanes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.tsPlanes.Location = new System.Drawing.Point(3, 0);
+            this.tsPlanes.Name = "tsPlanes";
+            this.tsPlanes.Size = new System.Drawing.Size(81, 25);
+            this.tsPlanes.TabIndex = 0;
+            // 
             // tsbNuevo
             // 
             this.tsbNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -163,21 +163,21 @@
             // 
             // id
             // 
-            this.id.DataPropertyName = "id";
+            this.id.DataPropertyName = "ID";
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
             // id_Especialidad
             // 
-            this.id_Especialidad.DataPropertyName = "id_especialidad";
+            this.id_Especialidad.DataPropertyName = "ID_Especialidad";
             this.id_Especialidad.HeaderText = "ID Especialidad";
             this.id_Especialidad.Name = "id_Especialidad";
             this.id_Especialidad.ReadOnly = true;
             // 
             // descripcion
             // 
-            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.DataPropertyName = "Descripcion";
             this.descripcion.HeaderText = "Descripción";
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
@@ -195,10 +195,10 @@
             this.tcPlanes.TopToolStripPanel.PerformLayout();
             this.tcPlanes.ResumeLayout(false);
             this.tcPlanes.PerformLayout();
-            this.tsPlanes.ResumeLayout(false);
-            this.tsPlanes.PerformLayout();
             this.tlPlanes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).EndInit();
+            this.tsPlanes.ResumeLayout(false);
+            this.tsPlanes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -208,14 +208,14 @@
         private System.Windows.Forms.ToolStripContainer tcPlanes;
         private System.Windows.Forms.TableLayoutPanel tlPlanes;
         private System.Windows.Forms.DataGridView dvgPlanes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_Especialidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsPlanes;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Especialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
     }
 }

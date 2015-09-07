@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace UI.Desktop
 {
-    public partial class ModuloDesktop :  AplicationForm
+    public partial class ModuloDesktop : AplicationForm
     {
         public ModuloDesktop()
         {
             InitializeComponent();
         }
-
-
     }
 }

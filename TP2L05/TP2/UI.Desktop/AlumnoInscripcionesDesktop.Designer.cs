@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblIDInscripcion = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.lblIDCurso = new System.Windows.Forms.Label();
             this.lblIDAlumno = new System.Windows.Forms.Label();
             this.lblCondicion = new System.Windows.Forms.Label();
-            this.txtIDInscripcion = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.lblNota = new System.Windows.Forms.Label();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
             this.txtIDAlumno = new System.Windows.Forms.TextBox();
@@ -42,14 +42,14 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblIDInscripcion
+            // lblID
             // 
-            this.lblIDInscripcion.AutoSize = true;
-            this.lblIDInscripcion.Location = new System.Drawing.Point(42, 48);
-            this.lblIDInscripcion.Name = "lblIDInscripcion";
-            this.lblIDInscripcion.Size = new System.Drawing.Size(72, 13);
-            this.lblIDInscripcion.TabIndex = 0;
-            this.lblIDInscripcion.Text = "ID Inscripcion";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(42, 48);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(21, 13);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID ";
             // 
             // lblIDCurso
             // 
@@ -78,13 +78,13 @@
             this.lblCondicion.TabIndex = 3;
             this.lblCondicion.Text = "Condición";
             // 
-            // txtIDInscripcion
+            // txtID
             // 
-            this.txtIDInscripcion.Location = new System.Drawing.Point(120, 41);
-            this.txtIDInscripcion.Name = "txtIDInscripcion";
-            this.txtIDInscripcion.ReadOnly = true;
-            this.txtIDInscripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtIDInscripcion.TabIndex = 4;
+            this.txtID.Location = new System.Drawing.Point(120, 41);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 4;
             // 
             // lblNota
             // 
@@ -153,11 +153,11 @@
             this.Controls.Add(this.txtIDAlumno);
             this.Controls.Add(this.txtIDCurso);
             this.Controls.Add(this.lblNota);
-            this.Controls.Add(this.txtIDInscripcion);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblCondicion);
             this.Controls.Add(this.lblIDAlumno);
             this.Controls.Add(this.lblIDCurso);
-            this.Controls.Add(this.lblIDInscripcion);
+            this.Controls.Add(this.lblID);
             this.Name = "AlumnoInscripcionesDesktop";
             this.Text = "AlumnoInscripcionesDesktop";
             this.ResumeLayout(false);
@@ -167,11 +167,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblIDInscripcion;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblIDCurso;
         private System.Windows.Forms.Label lblIDAlumno;
         private System.Windows.Forms.Label lblCondicion;
-        private System.Windows.Forms.TextBox txtIDInscripcion;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.TextBox txtIDCurso;
         private System.Windows.Forms.TextBox txtIDAlumno;

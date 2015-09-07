@@ -38,3 +38,6 @@ C:\Users\Public\Documents\Mailen\Facu\Electivas\Net\Labs\TP2L04\TP2\UI.Desktop\o
 C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L04\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
 C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.exe
 C:\Users\Mailen\Documents\GitHub\Repositorios\TP-NET\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L04\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L04\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb

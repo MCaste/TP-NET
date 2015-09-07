@@ -9,8 +9,6 @@ namespace Data.Database
 {
     public class Adapter
     {
-        private SqlConnection sqlConnection = new SqlConnection("ConnectionString;");
-
         //Clave por defecto a utilizar en la cadena de conexión
 
         const string consKeyDefaultCnnString = "ConnStringLocal";

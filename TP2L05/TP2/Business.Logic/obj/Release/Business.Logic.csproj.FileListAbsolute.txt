@@ -19,3 +19,9 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\obj\Release\Bus
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.dll
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj\Release\Business.Logic.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Release\Business.Logic.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Release\Business.Logic.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Release\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Release\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Release\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Release\Business.Entities.pdb

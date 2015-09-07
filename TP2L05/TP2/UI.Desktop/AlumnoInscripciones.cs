@@ -20,20 +20,15 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
-        public void Listar()
-        {
-            UsuarioLogic ul = new UsuarioLogic();
-            this.dgvAlumnoInscripciones.DataSource = ul.GetAll();
-        }
 
         private void AlumnoInscripciones_Load(object sender, EventArgs e)
         {
-            Listar();
+            //Listar();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Listar();
+            //Listar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlumnoInscripciones));
             this.tscAlumnosInscripciones = new System.Windows.Forms.ToolStripContainer();
-            this.tsAlumnosInscripciones = new System.Windows.Forms.ToolStrip();
             this.tlAlumnosInscripciones = new System.Windows.Forms.TableLayoutPanel();
             this.dgvAlumnoInscripciones = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.IDInscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.tsAlumnosInscripciones = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tscAlumnosInscripciones.ContentPanel.SuspendLayout();
             this.tscAlumnosInscripciones.TopToolStripPanel.SuspendLayout();
             this.tscAlumnosInscripciones.SuspendLayout();
-            this.tsAlumnosInscripciones.SuspendLayout();
             this.tlAlumnosInscripciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoInscripciones)).BeginInit();
+            this.tsAlumnosInscripciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // tscAlumnosInscripciones
@@ -68,18 +68,6 @@
             // tscAlumnosInscripciones.TopToolStripPanel
             // 
             this.tscAlumnosInscripciones.TopToolStripPanel.Controls.Add(this.tsAlumnosInscripciones);
-            // 
-            // tsAlumnosInscripciones
-            // 
-            this.tsAlumnosInscripciones.Dock = System.Windows.Forms.DockStyle.None;
-            this.tsAlumnosInscripciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbEditar,
-            this.tsbEliminar});
-            this.tsAlumnosInscripciones.Location = new System.Drawing.Point(3, 0);
-            this.tsAlumnosInscripciones.Name = "tsAlumnosInscripciones";
-            this.tsAlumnosInscripciones.Size = new System.Drawing.Size(81, 25);
-            this.tsAlumnosInscripciones.TabIndex = 0;
             // 
             // tlAlumnosInscripciones
             // 
@@ -102,18 +90,30 @@
             // 
             this.dgvAlumnoInscripciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlumnoInscripciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDInscripcion,
-            this.IDAlumno,
-            this.IDCurso,
+            this.id,
+            this.id_Alumno,
+            this.id_Curso,
             this.nota,
             this.condicion});
             this.tlAlumnosInscripciones.SetColumnSpan(this.dgvAlumnoInscripciones, 2);
             this.dgvAlumnoInscripciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAlumnoInscripciones.Location = new System.Drawing.Point(3, 3);
+            this.dgvAlumnoInscripciones.MultiSelect = false;
             this.dgvAlumnoInscripciones.Name = "dgvAlumnoInscripciones";
             this.dgvAlumnoInscripciones.ReadOnly = true;
+            this.dgvAlumnoInscripciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlumnoInscripciones.Size = new System.Drawing.Size(541, 350);
             this.dgvAlumnoInscripciones.TabIndex = 0;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(469, 359);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 2;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnActualizar
             // 
@@ -126,45 +126,17 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // btnSalir
+            // tsAlumnosInscripciones
             // 
-            this.btnSalir.Location = new System.Drawing.Point(469, 359);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // IDInscripcion
-            // 
-            this.IDInscripcion.HeaderText = "ID Inscripcion";
-            this.IDInscripcion.Name = "IDInscripcion";
-            this.IDInscripcion.ReadOnly = true;
-            // 
-            // IDAlumno
-            // 
-            this.IDAlumno.HeaderText = "ID Alumno";
-            this.IDAlumno.Name = "IDAlumno";
-            this.IDAlumno.ReadOnly = true;
-            // 
-            // IDCurso
-            // 
-            this.IDCurso.HeaderText = "ID Curso";
-            this.IDCurso.Name = "IDCurso";
-            this.IDCurso.ReadOnly = true;
-            // 
-            // nota
-            // 
-            this.nota.HeaderText = "Nota";
-            this.nota.Name = "nota";
-            this.nota.ReadOnly = true;
-            // 
-            // condicion
-            // 
-            this.condicion.HeaderText = "Condicion";
-            this.condicion.Name = "condicion";
-            this.condicion.ReadOnly = true;
+            this.tsAlumnosInscripciones.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsAlumnosInscripciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.tsAlumnosInscripciones.Location = new System.Drawing.Point(3, 0);
+            this.tsAlumnosInscripciones.Name = "tsAlumnosInscripciones";
+            this.tsAlumnosInscripciones.Size = new System.Drawing.Size(81, 25);
+            this.tsAlumnosInscripciones.TabIndex = 0;
             // 
             // tsbNuevo
             // 
@@ -195,6 +167,41 @@
             this.tsbEliminar.Text = "toolStripButton2";
             this.tsbEliminar.ToolTipText = "Eliminar";
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID ";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // id_Alumno
+            // 
+            this.id_Alumno.DataPropertyName = "ID_Alumno";
+            this.id_Alumno.HeaderText = "ID Alumno";
+            this.id_Alumno.Name = "id_Alumno";
+            this.id_Alumno.ReadOnly = true;
+            // 
+            // id_Curso
+            // 
+            this.id_Curso.DataPropertyName = "ID_Curso";
+            this.id_Curso.HeaderText = "ID Curso";
+            this.id_Curso.Name = "id_Curso";
+            this.id_Curso.ReadOnly = true;
+            // 
+            // nota
+            // 
+            this.nota.DataPropertyName = "Nota";
+            this.nota.HeaderText = "Nota";
+            this.nota.Name = "nota";
+            this.nota.ReadOnly = true;
+            // 
+            // condicion
+            // 
+            this.condicion.DataPropertyName = "Condicion";
+            this.condicion.HeaderText = "Condicion";
+            this.condicion.Name = "condicion";
+            this.condicion.ReadOnly = true;
+            // 
             // AlumnoInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,10 +216,10 @@
             this.tscAlumnosInscripciones.TopToolStripPanel.PerformLayout();
             this.tscAlumnosInscripciones.ResumeLayout(false);
             this.tscAlumnosInscripciones.PerformLayout();
-            this.tsAlumnosInscripciones.ResumeLayout(false);
-            this.tsAlumnosInscripciones.PerformLayout();
             this.tlAlumnosInscripciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnoInscripciones)).EndInit();
+            this.tsAlumnosInscripciones.ResumeLayout(false);
+            this.tsAlumnosInscripciones.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -225,13 +232,13 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ToolStrip tsAlumnosInscripciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDInscripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDAlumno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCurso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn condicion;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Alumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn condicion;
     }
 }
