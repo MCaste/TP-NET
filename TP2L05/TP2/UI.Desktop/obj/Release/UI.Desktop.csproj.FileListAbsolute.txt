@@ -58,3 +58,14 @@ C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Rel
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Curso.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Especialidades.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCurso.resources
