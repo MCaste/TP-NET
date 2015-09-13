@@ -16,7 +16,8 @@ namespace UI.Desktop
 {
     public partial class CursoDesktop : AplicationForm
     {
-         public CursoDesktop()
+        
+        public CursoDesktop()
             {
             InitializeComponent();
             }
@@ -34,11 +35,11 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
             {
-            this.txtIDCurso.Text = this.CursoActual. ID.ToString();           
-            this.txtIDComision.Text = this.CursoActual.Nombre;            
-            this.txtIDMateria.Text = this.CursoActual.Apellido;        
-            this.txtCupo.Text = this.CursoActual.Email;           
-            this.txtAnioCalendario.Text = this.CursoActual.Clave;
+            this.txtIDCurso.Text = this.CursoActual.ID.ToString();     
+            this.txtIDComision.Text = this.CursoActual.;           
+            this.txtCupo.Text = this.CursoActual.;            
+            this.txtIDMateria.Text = this.CursoActual.;           
+            this.txtAnioCalendario.Text = this.CursoActual.;
 
             switch (Modo)
                 {
@@ -81,11 +82,11 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                Curso cur = new Curso();
+                Curso usu = new Curso();
                  
                 CursoActual = cur;
                  
-                this.CursoActual.NombreUsuario = this.txtUsuario.Text;
+                this.CursoActual. NombreUsuario = this.txtUsuario.Text;
                 
                 this.CursoActual.Clave = this.txtClave.Text;
                 
@@ -99,7 +100,7 @@ namespace UI.Desktop
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
-                this.CursoActual.ID = Convert.ToInt32(this.txtID.Text);
+                this.CursoActual.IDCU ID = Convert.ToInt32(this.txtID.Text);
                 
                 this.CursoActual.NombreUsuario = this.txtUsuario.Text;
                 
@@ -120,7 +121,7 @@ namespace UI.Desktop
 
             MapearADatos();
 
-            UsuarioLogic UL = new UsuarioLogic();
+            CursoLogic CL = new CursoLogic();
 
             UL.Save(CursoActual);
 
@@ -230,6 +231,5 @@ namespace UI.Desktop
 
             if (DR == DialogResult.Yes) this.Close();      
             }
-        
     }
 }

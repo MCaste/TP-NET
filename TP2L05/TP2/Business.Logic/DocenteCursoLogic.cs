@@ -31,7 +31,7 @@ namespace Business.Logic
         return DocenteCursoData.GetAll();
         }
 
-        public Usuario GetOne(int ID) 
+        public DocenteCurso GetOne(int ID) 
       
         {
         return DocenteCursoData.GetOne(ID);

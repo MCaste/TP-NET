@@ -1,6 +1,6 @@
 ﻿namespace UI.Desktop
 {
-    partial class Planes
+    partial class Plan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Planes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Plan));
             this.tcPlanes = new System.Windows.Forms.ToolStripContainer();
             this.tlPlanes = new System.Windows.Forms.TableLayoutPanel();
-            this.dvgPlanes = new System.Windows.Forms.DataGridView();
+            this.dgvPlan = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcPlanes.ContentPanel.SuspendLayout();
             this.tcPlanes.TopToolStripPanel.SuspendLayout();
             this.tcPlanes.SuspendLayout();
             this.tlPlanes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlan)).BeginInit();
             this.tsPlanes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@
             this.tlPlanes.ColumnCount = 2;
             this.tlPlanes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlPlanes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlPlanes.Controls.Add(this.dvgPlanes, 0, 0);
+            this.tlPlanes.Controls.Add(this.dgvPlan, 0, 0);
             this.tlPlanes.Controls.Add(this.btnActualizar, 0, 1);
             this.tlPlanes.Controls.Add(this.btnSalir, 1, 1);
             this.tlPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,21 +84,42 @@
             this.tlPlanes.Size = new System.Drawing.Size(349, 231);
             this.tlPlanes.TabIndex = 0;
             // 
-            // dvgPlanes
+            // dgvPlan
             // 
-            this.dvgPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgPlanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.id_Especialidad,
             this.descripcion});
-            this.tlPlanes.SetColumnSpan(this.dvgPlanes, 2);
-            this.dvgPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgPlanes.Location = new System.Drawing.Point(3, 3);
-            this.dvgPlanes.MultiSelect = false;
-            this.dvgPlanes.Name = "dvgPlanes";
-            this.dvgPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgPlanes.Size = new System.Drawing.Size(343, 196);
-            this.dvgPlanes.TabIndex = 0;
+            this.tlPlanes.SetColumnSpan(this.dgvPlan, 2);
+            this.dgvPlan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPlan.Location = new System.Drawing.Point(3, 3);
+            this.dgvPlan.MultiSelect = false;
+            this.dgvPlan.Name = "dgvPlan";
+            this.dgvPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPlan.Size = new System.Drawing.Size(343, 196);
+            this.dgvPlan.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // id_Especialidad
+            // 
+            this.id_Especialidad.DataPropertyName = "ID_Especialidad";
+            this.id_Especialidad.HeaderText = "ID Especialidad";
+            this.id_Especialidad.Name = "id_Especialidad";
+            this.id_Especialidad.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "Descripcion";
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
             // 
             // btnActualizar
             // 
@@ -161,34 +182,13 @@
             this.tsbEliminar.Text = "toolStripButton2";
             this.tsbEliminar.ToolTipText = "Eliminar";
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "ID";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // id_Especialidad
-            // 
-            this.id_Especialidad.DataPropertyName = "ID_Especialidad";
-            this.id_Especialidad.HeaderText = "ID Especialidad";
-            this.id_Especialidad.Name = "id_Especialidad";
-            this.id_Especialidad.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.DataPropertyName = "Descripcion";
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // Planes
+            // Plan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 256);
             this.Controls.Add(this.tcPlanes);
-            this.Name = "Planes";
+            this.Name = "Plan";
             this.Text = "Planes";
             this.tcPlanes.ContentPanel.ResumeLayout(false);
             this.tcPlanes.TopToolStripPanel.ResumeLayout(false);
@@ -196,7 +196,7 @@
             this.tcPlanes.ResumeLayout(false);
             this.tcPlanes.PerformLayout();
             this.tlPlanes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPlanes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlan)).EndInit();
             this.tsPlanes.ResumeLayout(false);
             this.tsPlanes.PerformLayout();
             this.ResumeLayout(false);
@@ -207,7 +207,7 @@
 
         private System.Windows.Forms.ToolStripContainer tcPlanes;
         private System.Windows.Forms.TableLayoutPanel tlPlanes;
-        private System.Windows.Forms.DataGridView dvgPlanes;
+        private System.Windows.Forms.DataGridView dgvPlan;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsPlanes;

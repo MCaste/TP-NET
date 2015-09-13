@@ -23,10 +23,10 @@ namespace UI.Desktop
         {
             DocenteCursoLogic DCL = new DocenteCursoLogic();
 
-            this.dgvUsuarios.DataSource = UL.GetAll();
+            this.dgvDocenteCurso.DataSource = DCL.GetAll();
         }
 
-        private void Usuarios_Load(object sender, EventArgs e)
+        private void DocenteCurso_Load(object sender, EventArgs e)
         {
             Listar();
         }
@@ -47,37 +47,37 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
+            DocenteCursoDesktop DCD = new DocenteCursoDesktop(AplicationForm.ModoForm.Alta);
 
-            UD.ShowDialog();
+            DCD.ShowDialog();
 
             this.Listar();
         }
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            if (this.dgvUsuarios.SelectedRows.Count != 0)
+            if (this.dgvDocenteCurso.SelectedRows.Count != 0)
             {
 
-                int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
 
-                UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
+                DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
-                UD.ShowDialog();
+                DCD.ShowDialog();
             }
 
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (this.dgvUsuarios.SelectedRows.Count != 0)
+            if (this.dgvDocenteCurso.SelectedRows.Count != 0)
             {
 
-                int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
 
-                UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
+                DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Baja);
 
-                UD.ShowDialog();
+                DCD.ShowDialog();
             }
         }
 

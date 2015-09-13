@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtIDDictado = new System.Windows.Forms.TextBox();
+            this.txtIDDocente = new System.Windows.Forms.TextBox();
+            this.txtIDCurso = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblIDDictado = new System.Windows.Forms.Label();
             this.lblIDDocente = new System.Windows.Forms.Label();
             this.lblIDCurso = new System.Windows.Forms.Label();
@@ -40,33 +40,33 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtIDDictado
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtIDDictado.Location = new System.Drawing.Point(90, 6);
+            this.txtIDDictado.Name = "txtIDDictado";
+            this.txtIDDictado.Size = new System.Drawing.Size(172, 20);
+            this.txtIDDictado.TabIndex = 0;
             // 
-            // textBox2
+            // txtIDDocente
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtIDDocente.Location = new System.Drawing.Point(90, 32);
+            this.txtIDDocente.Name = "txtIDDocente";
+            this.txtIDDocente.Size = new System.Drawing.Size(172, 20);
+            this.txtIDDocente.TabIndex = 1;
             // 
-            // textBox3
+            // txtIDCurso
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(172, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtIDCurso.Location = new System.Drawing.Point(90, 58);
+            this.txtIDCurso.Name = "txtIDCurso";
+            this.txtIDCurso.Size = new System.Drawing.Size(172, 20);
+            this.txtIDCurso.TabIndex = 2;
             // 
-            // textBox4
+            // txtCargo
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtCargo.Location = new System.Drawing.Point(90, 84);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(172, 20);
+            this.txtCargo.TabIndex = 3;
             // 
             // lblIDDictado
             // 
@@ -89,7 +89,7 @@
             // lblIDCurso
             // 
             this.lblIDCurso.AutoSize = true;
-            this.lblIDCurso.Location = new System.Drawing.Point(8, 65);
+            this.lblIDCurso.Location = new System.Drawing.Point(8, 61);
             this.lblIDCurso.Name = "lblIDCurso";
             this.lblIDCurso.Size = new System.Drawing.Size(51, 13);
             this.lblIDCurso.TabIndex = 6;
@@ -98,7 +98,7 @@
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(8, 91);
+            this.lblCargo.Location = new System.Drawing.Point(8, 87);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(38, 13);
             this.lblCargo.TabIndex = 7;
@@ -133,10 +133,10 @@
             this.Controls.Add(this.lblIDCurso);
             this.Controls.Add(this.lblIDDocente);
             this.Controls.Add(this.lblIDDictado);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCargo);
+            this.Controls.Add(this.txtIDCurso);
+            this.Controls.Add(this.txtIDDocente);
+            this.Controls.Add(this.txtIDDictado);
             this.Name = "DocenteCursoDesktop";
             this.Text = "Docente - Curso";
             this.ResumeLayout(false);
@@ -146,10 +146,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtIDDictado;
+        private System.Windows.Forms.TextBox txtIDDocente;
+        private System.Windows.Forms.TextBox txtIDCurso;
+        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label lblIDDictado;
         private System.Windows.Forms.Label lblIDDocente;
         private System.Windows.Forms.Label lblIDCurso;
