@@ -116,11 +116,17 @@
     <Compile Include="Materia.Designer.cs">
       <DependentUpon>Materia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos.cs">
+    <Compile Include="MateriaDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos.Designer.cs">
-      <DependentUpon>Modulos.cs</DependentUpon>
+    <Compile Include="MateriaDesktop.Designer.cs">
+      <DependentUpon>MateriaDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo.Designer.cs">
+      <DependentUpon>Modulo.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloDesktop.cs">
       <SubType>Form</SubType>
@@ -128,17 +134,41 @@
     <Compile Include="ModuloDesktop.Designer.cs">
       <DependentUpon>ModuloDesktop.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuloUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloUsuario.Designer.cs">
+      <DependentUpon>ModuloUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloUsuarioDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloUsuarioDesktop.Designer.cs">
+      <DependentUpon>ModuloUsuarioDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonaDesktop.Designer.cs">
+      <DependentUpon>PersonaDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlanDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PlanDesktop.Designer.cs">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Planes.cs">
+    <Compile Include="Plan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Planes.Designer.cs">
-      <DependentUpon>Planes.cs</DependentUpon>
+    <Compile Include="Plan.Designer.cs">
+      <DependentUpon>Plan.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioDesktop.cs">
       <SubType>Form</SubType>
@@ -187,17 +217,32 @@
     <EmbeddedResource Include="Materia.resx">
       <DependentUpon>Materia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos.resx">
-      <DependentUpon>Modulos.cs</DependentUpon>
+    <EmbeddedResource Include="MateriaDesktop.resx">
+      <DependentUpon>MateriaDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo.resx">
+      <DependentUpon>Modulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloDesktop.resx">
       <DependentUpon>ModuloDesktop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloUsuario.resx">
+      <DependentUpon>ModuloUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloUsuarioDesktop.resx">
+      <DependentUpon>ModuloUsuarioDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonaDesktop.resx">
+      <DependentUpon>PersonaDesktop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PlanDesktop.resx">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Planes.resx">
-      <DependentUpon>Planes.cs</DependentUpon>
+    <EmbeddedResource Include="Plan.resx">
+      <DependentUpon>Plan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
