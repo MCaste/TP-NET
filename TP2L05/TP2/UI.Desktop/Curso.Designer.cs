@@ -32,10 +32,10 @@
             this.tcCurso = new System.Windows.Forms.ToolStripContainer();
             this.tlCurso = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCurso = new System.Windows.Forms.DataGridView();
-            this.idCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idComision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anioCalendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -57,11 +57,11 @@
             // tcCurso.ContentPanel
             // 
             this.tcCurso.ContentPanel.Controls.Add(this.tlCurso);
-            this.tcCurso.ContentPanel.Size = new System.Drawing.Size(616, 342);
+            this.tcCurso.ContentPanel.Size = new System.Drawing.Size(548, 342);
             this.tcCurso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcCurso.Location = new System.Drawing.Point(0, 0);
             this.tcCurso.Name = "tcCurso";
-            this.tcCurso.Size = new System.Drawing.Size(616, 367);
+            this.tcCurso.Size = new System.Drawing.Size(548, 367);
             this.tcCurso.TabIndex = 0;
             this.tcCurso.Text = "toolStripContainer1";
             // 
@@ -83,32 +83,32 @@
             this.tlCurso.RowCount = 2;
             this.tlCurso.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlCurso.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlCurso.Size = new System.Drawing.Size(616, 342);
+            this.tlCurso.Size = new System.Drawing.Size(548, 342);
             this.tlCurso.TabIndex = 0;
             // 
             // dgvCurso
             // 
             this.dgvCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCurso,
+            this.id,
             this.cupo,
-            this.idComision,
-            this.idMateria,
+            this.id_Comision,
+            this.id_Materia,
             this.anioCalendario});
             this.tlCurso.SetColumnSpan(this.dgvCurso, 2);
             this.dgvCurso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCurso.Location = new System.Drawing.Point(3, 3);
             this.dgvCurso.Name = "dgvCurso";
             this.dgvCurso.ReadOnly = true;
-            this.dgvCurso.Size = new System.Drawing.Size(610, 307);
+            this.dgvCurso.Size = new System.Drawing.Size(542, 307);
             this.dgvCurso.TabIndex = 0;
             // 
-            // idCurso
+            // id
             // 
-            this.idCurso.DataPropertyName = "ID Curso";
-            this.idCurso.HeaderText = "ID Curso";
-            this.idCurso.Name = "idCurso";
-            this.idCurso.ReadOnly = true;
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID Curso";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // cupo
             // 
@@ -117,30 +117,30 @@
             this.cupo.Name = "cupo";
             this.cupo.ReadOnly = true;
             // 
-            // idComision
+            // id_Comision
             // 
-            this.idComision.DataPropertyName = "ID Comision";
-            this.idComision.HeaderText = "ID Comision";
-            this.idComision.Name = "idComision";
-            this.idComision.ReadOnly = true;
+            this.id_Comision.DataPropertyName = "ID_Comision";
+            this.id_Comision.HeaderText = "ID Comision";
+            this.id_Comision.Name = "id_Comision";
+            this.id_Comision.ReadOnly = true;
             // 
-            // idMateria
+            // id_Materia
             // 
-            this.idMateria.DataPropertyName = "ID Materia";
-            this.idMateria.HeaderText = "ID Materia";
-            this.idMateria.Name = "idMateria";
-            this.idMateria.ReadOnly = true;
+            this.id_Materia.DataPropertyName = "ID_Materia";
+            this.id_Materia.HeaderText = "ID Materia";
+            this.id_Materia.Name = "id_Materia";
+            this.id_Materia.ReadOnly = true;
             // 
             // anioCalendario
             // 
-            this.anioCalendario.DataPropertyName = "Anio Calendario";
+            this.anioCalendario.DataPropertyName = "AnioCalendario";
             this.anioCalendario.HeaderText = "Año Calendario";
             this.anioCalendario.Name = "anioCalendario";
             this.anioCalendario.ReadOnly = true;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(538, 316);
+            this.btnSalir.Location = new System.Drawing.Point(470, 316);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -151,7 +151,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(457, 316);
+            this.btnActualizar.Location = new System.Drawing.Point(389, 316);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
@@ -179,6 +179,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -188,6 +189,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
             // 
@@ -197,12 +199,13 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 367);
+            this.ClientSize = new System.Drawing.Size(548, 367);
             this.Controls.Add(this.tcCurso);
             this.Name = "Curso";
             this.Text = "Curso";
@@ -231,10 +234,10 @@
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCurso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idComision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMateria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Comision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_Materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn anioCalendario;
     }
 }

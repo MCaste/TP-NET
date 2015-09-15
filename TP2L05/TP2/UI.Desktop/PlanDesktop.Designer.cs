@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtIDEspecialidad = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -38,26 +38,26 @@
             this.lblIDEspecialidad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtID.Location = new System.Drawing.Point(141, 51);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 0;
             // 
-            // textBox2
+            // txtIDEspecialidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtIDEspecialidad.Location = new System.Drawing.Point(141, 110);
+            this.txtIDEspecialidad.Name = "txtIDEspecialidad";
+            this.txtIDEspecialidad.Size = new System.Drawing.Size(100, 20);
+            this.txtIDEspecialidad.TabIndex = 1;
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 169);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtDescripcion.Location = new System.Drawing.Point(141, 169);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.TabIndex = 2;
             // 
             // lblID
             // 
@@ -85,6 +85,7 @@
             this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -94,6 +95,7 @@
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblIDEspecialidad
             // 
@@ -114,9 +116,9 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtIDEspecialidad);
+            this.Controls.Add(this.txtID);
             this.Name = "PlanDesktop";
             this.Text = "PlanDesktop";
             this.ResumeLayout(false);
@@ -126,9 +128,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtIDEspecialidad;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button btnAceptar;

@@ -11,7 +11,6 @@ using System.Text.RegularExpressions;
 using Business.Entities;
 using Business.Logic;
 
-
 namespace UI.Desktop
 {
     public partial class CursoDesktop : AplicationForm
@@ -22,10 +21,9 @@ namespace UI.Desktop
             InitializeComponent();
             }
 
-        private Curso _CursoActual;
+        private Business.Entities.Curso _CursoActual;
 
-        //Propiedad
-        public Curso CursoActual
+        public Business.Entities.Curso CursoActual
         
             {
             get { return _CursoActual; }
@@ -35,11 +33,11 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
             {
-            this.txtIDCurso.Text = this.CursoActual.ID.ToString();     
-            this.txtIDComision.Text = this.CursoActual.;           
-            this.txtCupo.Text = this.CursoActual.;            
-            this.txtIDMateria.Text = this.CursoActual.;           
-            this.txtAnioCalendario.Text = this.CursoActual.;
+            this.txtID.Text = this.CursoActual.ID.ToString();     
+            this.txtIDComision.Text = this.CursoActual.IDComision.ToString();           
+            this.txtCupo.Text = this.CursoActual.Cupo.ToString();    
+            this.txtIDMateria.Text = this.CursoActual.IDMateria.ToString();           
+            this.txtAnioCalendario.Text = this.CursoActual.AnioCalendario.ToString();
 
             switch (Modo)
                 {
@@ -82,37 +80,31 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                Curso usu = new Curso();
+                Business.Entities.Curso cur = new Business.Entities.Curso();
                  
                 CursoActual = cur;
                  
-                this.CursoActual. NombreUsuario = this.txtUsuario.Text;
-                
-                this.CursoActual.Clave = this.txtClave.Text;
-                
-                this.CursoActual.Nombre = this.txtNombre.Text;
-                
-                this.CursoActual.Apellido = this.txtApellido.Text;
-                
-                this.CursoActual.Email = this.txtEmail.Text;
-                
-                this.CursoActual.Habilitado = this.chkHabilitado.Checked;                 
+                this.CursoActual.Cupo = int.Parse(this.txtCupo.Text);
+              
+                this.CursoActual.AnioCalendario=int.Parse(txtAnioCalendario.Text);
+
+                this.CursoActual.IDComision=int.Parse(txtIDComision.Text);
+                      
+                this.CursoActual.IDMateria=int.Parse(txtIDMateria.Text);
+
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
-                this.CursoActual.IDCU ID = Convert.ToInt32(this.txtID.Text);
+                this.CursoActual.ID = Convert.ToInt32(this.txtID.Text);
+               
+                this.CursoActual.AnioCalendario=Convert.ToInt32(this.txtAnioCalendario);
                 
-                this.CursoActual.NombreUsuario = this.txtUsuario.Text;
+                this.CursoActual.Cupo=Convert.ToInt32(this.txtCupo);
+
+                this.CursoActual.IDComision=Convert.ToInt32(this.txtIDComision);
+
+                this.CursoActual.IDMateria=Convert.ToInt32(this.txtIDMateria);
                 
-                this.CursoActual.Clave = this.txtClave.Text;
-                
-                this.CursoActual.Nombre = this.txtNombre.Text;
-                
-                this.CursoActual.Apellido = this.txtApellido.Text;
-                
-                this.CursoActual.Email = this.txtEmail.Text;
-                
-                this.CursoActual.Habilitado = this.chkHabilitado.Checked;  
                 }
             }
 
@@ -123,80 +115,28 @@ namespace UI.Desktop
 
             CursoLogic CL = new CursoLogic();
 
-            UL.Save(CursoActual);
+            CL.Save(CursoActual);
 
             }
-
-      public static bool ValidarEmail(TextBox txtEmail)
-        {
-          string formato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-
-          string email = txtEmail.Text;
-
-          if (Regex.IsMatch(email, formato))
-              {
-              if (Regex.Replace(email, formato, String.Empty).Length == 0)
-                  {
-                  return true;
-                  }
-              else return false;
-              }
-          else return false;
-
-        }
 
       public override bool Validar()
             {
 
-            int ban1,ban2 ,ban3, ban4;
+            int ban1;
 
-            ban1 = ban2 = ban3 = ban4 = 0;
+            ban1 = 0;
 
-             if ((this.txtNombre.Text == null) || (this.txtApellido.Text == null) || (this.txtEmail.Text == null) || (this.txtUsuario.Text == null) || (this.txtClave.Text == null) || (this.txtConfirmarClave.Text == null))
+             if ((this.txtIDComision.Text == null) || (this.txtIDMateria.Text == null) || (this.txtCupo.Text == null) || (this.txtAnioCalendario.Text == null))
                     {
                     ban1 = 1;
+
                     Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-            if (this.txtClave.Text != this.txtConfirmarClave.Text)
-                    {
-                    ban2 = 1;
-
-                    Notificar("Error","Las contraseñas no coinciden, por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                   }
-                
-
-            if ((this.txtClave.Text.Length) < 8)
-                    {
-                    ban3 = 1;
-
-                    Notificar("Error", "La contraseña debe tener una longitud mínima de 8 caracteres,por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    }
-
-            if (ValidarEmail(txtEmail)==false)
-              
-                {
-                ban4 = 1;
-
-                Notificar("Error","El email ingresado no se encuentra en el formato adecuado,por favor vuelva a ingresarlo nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
-
-            if ((ban1 == 1) || (ban2 == 1) || (ban3 == 1) || (ban4==1)) return false;
+            if (ban1 == 1)  return false;
                 
             else return true;
             }
-
-        private void btnAceptar_Click( object sender, EventArgs e )
-            {
-            if (Validar() == true)
-                {
-                GuardarCambios();
-
-                this.Close();
-                }
-            }
-
-        //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
         
         public new  void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
             {
@@ -209,27 +149,37 @@ namespace UI.Desktop
             }
 
 
-        public UsuarioDesktop(ModoForm modo):this()
+        public CursoDesktop(ModoForm modo):this()
             {
             this.Modo = modo;   
             }
 
-        public UsuarioDesktop(int ID, ModoForm modo):this()
+        public CursoDesktop(int ID, ModoForm modo):this()
             {
             this.Modo = modo;
 
-            UsuarioLogic UL = new UsuarioLogic();
+            CursoLogic CL = new CursoLogic();
 
-            UsuarioActual = UL.GetOne(ID);
+            CursoActual = CL.GetOne(ID);
 
             MapearDeDatos();
             }
 
-        private void btnCancelar_Click( object sender, EventArgs e )
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (Validar() == true)
             {
-            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
+                GuardarCambios();
 
-            if (DR == DialogResult.Yes) this.Close();      
+                this.Close();
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
+
+            if (DR == DialogResult.Yes) this.Close(); 
+        }
     }
 }

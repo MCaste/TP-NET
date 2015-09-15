@@ -5,8 +5,6 @@ using Business.Entities;
 using System.Data;
 using System.Data.SqlClient;
 
-
-
 namespace Data.Database
 {
     public class CursoAdapter : Adapter
@@ -44,7 +42,7 @@ namespace Data.Database
 
                     //copio los datos de la fila al obj
 
-                    cur.Cupo = (int)drCursos["id_cupo"];
+                    cur.ID = (int)drCursos["id_curso"];
                     cur.Cupo = (int)drCursos["cupo"];
                     //cur.Descripcion = (string)drCursos["descripcion"];
                     cur.IDComision = (int)drCursos["id_comision"];

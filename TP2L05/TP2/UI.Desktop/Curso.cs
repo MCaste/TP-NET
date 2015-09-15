@@ -19,72 +19,68 @@ namespace UI.Desktop
             InitializeComponent();
             }
 
-        private void tlUsuarios_Paint( object sender, PaintEventArgs e )
-            {
-
-            }
-
         public void Listar()
             {
-                CursoLogic CL = new CursoLogic();
 
+            CursoLogic CL = new CursoLogic();
+            
             this.dgvCurso.DataSource = CL.GetAll();
             }
 
-        private void Curso_Load( object sender, EventArgs e )
-            {
-            Listar();
-            }
 
-        private void btnActualizar_Click( object sender, EventArgs e )
-            {
+        private void Curso_Load(object sender, EventArgs e)
+        {
             Listar();
-            }
+        }
 
-        private void btnSalir_Click( object sender, EventArgs e )
-            {    
-            
+      
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Listar();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
             DialogResult DR = (MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo));
 
             if (DR == DialogResult.Yes) this.Close();        
 
-            }
+        }
 
-        private void tsbNuevo_Click( object sender, EventArgs e )
-            {
-            UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            CursoDesktop CD = new CursoDesktop(AplicationForm.ModoForm.Alta);
 
-            UD.ShowDialog();
+            CD.ShowDialog();
 
             this.Listar();
-            }
+        }
 
-        private void tsbEditar_Click( object sender, EventArgs e )
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvCurso.SelectedRows.Count != 0)
             {
-                if (this.dgvCurso.SelectedRows.Count != 0)
-                {
 
-                    int ID = ((Curso)this.dgvCurso.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.Curso)this.dgvCurso.SelectedRows[0].DataBoundItem).ID;
 
-                    CursoDesktop UD = new CursoDesktop(ID, AplicationForm.ModoForm.Modificacion);
+                CursoDesktop UD = new CursoDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
                 UD.ShowDialog();
-                }
-  
             }
+        }
 
-        private void tsbEliminar_Click( object sender, EventArgs e )
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvCurso.SelectedRows.Count != 0)
             {
-                if (this.dgvCurso.SelectedRows.Count != 0)
-                {
 
-                    int ID = ((Curso)this.dgvCurso.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.Curso)this.dgvCurso.SelectedRows[0].DataBoundItem).ID;
 
-                CursoDesktop CD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
+                CursoDesktop CD = new CursoDesktop(ID, AplicationForm.ModoForm.Baja);
 
                 CD.ShowDialog();
-                }
             }
+        }
 
     }
 }

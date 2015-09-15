@@ -49,6 +49,6 @@ namespace Business.Logic
         DocenteCursoData.Save(DocenteCurso);   
         }
 
-        }
     }
 }
+

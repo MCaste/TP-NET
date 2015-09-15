@@ -55,9 +55,7 @@ C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Rel
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloDesktop.resources
-C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulos.resources
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PlanDesktop.resources
-C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ComisionDesktop.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Comisiones.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Curso.resources
@@ -69,3 +67,15 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desk
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Planes.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCurso.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Curso.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.CursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCurso.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.DocenteCursoDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Materia.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.MateriaDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Modulo.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuario.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Persona.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Plan.resources

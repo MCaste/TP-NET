@@ -49,8 +49,9 @@ namespace Business.Logic
         {
         _CursoData.Save(Curso);   
         }
-
-
-        }
+    
     }
+
 }
+
+

@@ -14,8 +14,6 @@ namespace Business.Entities
 
         private int _Cupo;
 
-       // private string _Descripcion;
-
         private int _IDComision;
 
         private int _IDMateria;
@@ -52,19 +50,6 @@ namespace Business.Entities
                 _Cupo = value;
                 }
             }
-
-        /*public string Descripcion
-            {
-
-            get
-                {
-                return _Descripcion;
-                }
-            set
-                {
-                _Descripcion = value;
-                }
-            }*/
 
         public int IDComision
             {

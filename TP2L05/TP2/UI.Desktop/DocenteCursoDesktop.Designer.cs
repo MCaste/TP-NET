@@ -31,11 +31,11 @@
             this.txtIDDictado = new System.Windows.Forms.TextBox();
             this.txtIDDocente = new System.Windows.Forms.TextBox();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtTiposCargo = new System.Windows.Forms.TextBox();
             this.lblIDDictado = new System.Windows.Forms.Label();
             this.lblIDDocente = new System.Windows.Forms.Label();
             this.lblIDCurso = new System.Windows.Forms.Label();
-            this.lblCargo = new System.Windows.Forms.Label();
+            this.lblTiposCargo = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -61,48 +61,48 @@
             this.txtIDCurso.Size = new System.Drawing.Size(172, 20);
             this.txtIDCurso.TabIndex = 2;
             // 
-            // txtCargo
+            // txtTiposCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(90, 84);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(172, 20);
-            this.txtCargo.TabIndex = 3;
+            this.txtTiposCargo.Location = new System.Drawing.Point(90, 84);
+            this.txtTiposCargo.Name = "txtTiposCargo";
+            this.txtTiposCargo.Size = new System.Drawing.Size(172, 20);
+            this.txtTiposCargo.TabIndex = 3;
             // 
             // lblIDDictado
             // 
             this.lblIDDictado.AutoSize = true;
             this.lblIDDictado.Location = new System.Drawing.Point(8, 9);
             this.lblIDDictado.Name = "lblIDDictado";
-            this.lblIDDictado.Size = new System.Drawing.Size(61, 13);
+            this.lblIDDictado.Size = new System.Drawing.Size(58, 13);
             this.lblIDDictado.TabIndex = 4;
-            this.lblIDDictado.Text = "ID Dictado:";
+            this.lblIDDictado.Text = "ID Dictado";
             // 
             // lblIDDocente
             // 
             this.lblIDDocente.AutoSize = true;
             this.lblIDDocente.Location = new System.Drawing.Point(8, 35);
             this.lblIDDocente.Name = "lblIDDocente";
-            this.lblIDDocente.Size = new System.Drawing.Size(65, 13);
+            this.lblIDDocente.Size = new System.Drawing.Size(62, 13);
             this.lblIDDocente.TabIndex = 5;
-            this.lblIDDocente.Text = "ID Docente:";
+            this.lblIDDocente.Text = "ID Docente";
             // 
             // lblIDCurso
             // 
             this.lblIDCurso.AutoSize = true;
             this.lblIDCurso.Location = new System.Drawing.Point(8, 61);
             this.lblIDCurso.Name = "lblIDCurso";
-            this.lblIDCurso.Size = new System.Drawing.Size(51, 13);
+            this.lblIDCurso.Size = new System.Drawing.Size(48, 13);
             this.lblIDCurso.TabIndex = 6;
-            this.lblIDCurso.Text = "ID Curso:";
+            this.lblIDCurso.Text = "ID Curso";
             // 
-            // lblCargo
+            // lblTiposCargo
             // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(8, 87);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(38, 13);
-            this.lblCargo.TabIndex = 7;
-            this.lblCargo.Text = "Cargo:";
+            this.lblTiposCargo.AutoSize = true;
+            this.lblTiposCargo.Location = new System.Drawing.Point(8, 87);
+            this.lblTiposCargo.Name = "lblTiposCargo";
+            this.lblTiposCargo.Size = new System.Drawing.Size(64, 13);
+            this.lblTiposCargo.TabIndex = 7;
+            this.lblTiposCargo.Text = "Tipos Cargo";
             // 
             // btnAceptar
             // 
@@ -112,6 +112,7 @@
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -121,6 +122,7 @@
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // DocenteCursoDesktop
             // 
@@ -129,11 +131,11 @@
             this.ClientSize = new System.Drawing.Size(296, 148);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.lblCargo);
+            this.Controls.Add(this.lblTiposCargo);
             this.Controls.Add(this.lblIDCurso);
             this.Controls.Add(this.lblIDDocente);
             this.Controls.Add(this.lblIDDictado);
-            this.Controls.Add(this.txtCargo);
+            this.Controls.Add(this.txtTiposCargo);
             this.Controls.Add(this.txtIDCurso);
             this.Controls.Add(this.txtIDDocente);
             this.Controls.Add(this.txtIDDictado);
@@ -149,11 +151,11 @@
         private System.Windows.Forms.TextBox txtIDDictado;
         private System.Windows.Forms.TextBox txtIDDocente;
         private System.Windows.Forms.TextBox txtIDCurso;
-        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtTiposCargo;
         private System.Windows.Forms.Label lblIDDictado;
         private System.Windows.Forms.Label lblIDDocente;
         private System.Windows.Forms.Label lblIDCurso;
-        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblTiposCargo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
 

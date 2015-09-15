@@ -16,11 +16,11 @@ namespace UI.Desktop
             {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Especialidades());
             Application.Run(new Usuarios());
+            //Application.Run(new Especialidades());
             Application.Run(new Curso());
-
-
+            Application.Run(new DocenteCurso());
+            Application.Run(new Plan());
             }
         }
     }

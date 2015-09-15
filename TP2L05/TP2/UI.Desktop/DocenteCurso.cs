@@ -38,11 +38,9 @@ namespace UI.Desktop
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
             DialogResult DR = (MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo));
 
             if (DR == DialogResult.Yes) this.Close();
-
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
@@ -59,7 +57,7 @@ namespace UI.Desktop
             if (this.dgvDocenteCurso.SelectedRows.Count != 0)
             {
 
-                int ID = ((DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
 
                 DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
@@ -73,17 +71,12 @@ namespace UI.Desktop
             if (this.dgvDocenteCurso.SelectedRows.Count != 0)
             {
 
-                int ID = ((DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
 
                 DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Baja);
 
                 DCD.ShowDialog();
             }
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
