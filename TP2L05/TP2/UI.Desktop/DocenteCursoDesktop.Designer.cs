@@ -31,11 +31,11 @@
             this.txtIDDictado = new System.Windows.Forms.TextBox();
             this.txtIDDocente = new System.Windows.Forms.TextBox();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
-            this.txtTiposCargo = new System.Windows.Forms.TextBox();
+            this.txtTipoCargo = new System.Windows.Forms.TextBox();
             this.lblIDDictado = new System.Windows.Forms.Label();
             this.lblIDDocente = new System.Windows.Forms.Label();
             this.lblIDCurso = new System.Windows.Forms.Label();
-            this.lblTiposCargo = new System.Windows.Forms.Label();
+            this.lblTipoCargo = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -61,12 +61,12 @@
             this.txtIDCurso.Size = new System.Drawing.Size(172, 20);
             this.txtIDCurso.TabIndex = 2;
             // 
-            // txtTiposCargo
+            // txtTipoCargo
             // 
-            this.txtTiposCargo.Location = new System.Drawing.Point(90, 84);
-            this.txtTiposCargo.Name = "txtTiposCargo";
-            this.txtTiposCargo.Size = new System.Drawing.Size(172, 20);
-            this.txtTiposCargo.TabIndex = 3;
+            this.txtTipoCargo.Location = new System.Drawing.Point(90, 84);
+            this.txtTipoCargo.Name = "txtTipoCargo";
+            this.txtTipoCargo.Size = new System.Drawing.Size(172, 20);
+            this.txtTipoCargo.TabIndex = 3;
             // 
             // lblIDDictado
             // 
@@ -95,14 +95,14 @@
             this.lblIDCurso.TabIndex = 6;
             this.lblIDCurso.Text = "ID Curso";
             // 
-            // lblTiposCargo
+            // lblTipoCargo
             // 
-            this.lblTiposCargo.AutoSize = true;
-            this.lblTiposCargo.Location = new System.Drawing.Point(8, 87);
-            this.lblTiposCargo.Name = "lblTiposCargo";
-            this.lblTiposCargo.Size = new System.Drawing.Size(64, 13);
-            this.lblTiposCargo.TabIndex = 7;
-            this.lblTiposCargo.Text = "Tipos Cargo";
+            this.lblTipoCargo.AutoSize = true;
+            this.lblTipoCargo.Location = new System.Drawing.Point(8, 87);
+            this.lblTipoCargo.Name = "lblTipoCargo";
+            this.lblTipoCargo.Size = new System.Drawing.Size(59, 13);
+            this.lblTipoCargo.TabIndex = 7;
+            this.lblTipoCargo.Text = "Tipo Cargo";
             // 
             // btnAceptar
             // 
@@ -131,11 +131,11 @@
             this.ClientSize = new System.Drawing.Size(296, 148);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.lblTiposCargo);
+            this.Controls.Add(this.lblTipoCargo);
             this.Controls.Add(this.lblIDCurso);
             this.Controls.Add(this.lblIDDocente);
             this.Controls.Add(this.lblIDDictado);
-            this.Controls.Add(this.txtTiposCargo);
+            this.Controls.Add(this.txtTipoCargo);
             this.Controls.Add(this.txtIDCurso);
             this.Controls.Add(this.txtIDDocente);
             this.Controls.Add(this.txtIDDictado);
@@ -151,11 +151,11 @@
         private System.Windows.Forms.TextBox txtIDDictado;
         private System.Windows.Forms.TextBox txtIDDocente;
         private System.Windows.Forms.TextBox txtIDCurso;
-        private System.Windows.Forms.TextBox txtTiposCargo;
+        private System.Windows.Forms.TextBox txtTipoCargo;
         private System.Windows.Forms.Label lblIDDictado;
         private System.Windows.Forms.Label lblIDDocente;
         private System.Windows.Forms.Label lblIDCurso;
-        private System.Windows.Forms.Label lblTiposCargo;
+        private System.Windows.Forms.Label lblTipoCargo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
 

@@ -11,78 +11,6 @@ namespace Data.Database
 {
     public class EspecialidadAdapter : Adapter
     {
-        #region DatosEnMemoria
-
-        private static List<Especialidad> _Especialidades;
-
-        private static List<Especialidad> Especialidades
-        {
-            get
-            {
-                if (_Especialidades == null)
-                {
-                    _Especialidades = new List<Especialidad>();
-
-                    Especialidad esp = new Especialidad();
-
-                    esp.ID = 1;
-
-                    esp.Descripcion = "ISI";
-
-                    esp.State = BusinessEntity.States.Unmodified;
-                    
-                    _Especialidades.Add(esp);
-
-
-                    esp = new Especialidad();
-
-                    esp.ID = 2;
-
-                    esp.Descripcion = "IM";
-
-                    esp.State = BusinessEntity.States.Unmodified;
-
-                    _Especialidades.Add(esp);
-
-
-                    esp = new Especialidad();
-
-                    esp.ID = 3;
-
-                    esp.Descripcion = "IQ";
-
-                    esp.State = BusinessEntity.States.Unmodified;
-
-                    _Especialidades.Add(esp);
-
-
-                    esp = new Especialidad();
-
-                    esp.ID = 4;
-
-                    esp.Descripcion = "IE";
-
-                    esp.State = BusinessEntity.States.Unmodified;
-
-                    _Especialidades.Add(esp);
-
-                    
-                    esp = new Especialidad();
-
-                    esp.ID = 5;
-
-                    esp.Descripcion = "IC";
-
-                    esp.State = BusinessEntity.States.Unmodified;
-
-                    _Especialidades.Add(esp);
-
-                }
-                return _Especialidades;
-            }
-        }
-        #endregion
-
         public List<Especialidad> GetAll()
         {
 
@@ -94,18 +22,24 @@ namespace Data.Database
 
                 SqlCommand cmdEspecialidades = new SqlCommand("select * from especialidades", sqlConn);
 
+
                 SqlDataReader drEspecialidades = cmdEspecialidades.ExecuteReader();
 
                 while (drEspecialidades.Read())
                 {
-                    Especialidad esp = new Especialidad();
 
-                    esp.ID = (int)drEspecialidades["id_especialidad"];
-                    esp.Descripcion = (string)drEspecialidades["descripcion"];
+                    Especialidad e = new Especialidad();
 
-                    especialidades.Add(esp);
+               
+                    e.ID = (int)drEspecialidades["id_especialidad"];
+                    e.Descripcion = (string)drEspecialidades["descripcion"];
+
+
+                    especialidades.Add(e);
                 }
+
                 drEspecialidades.Close();
+
             }
 
             catch (Exception Ex)
@@ -128,7 +62,7 @@ namespace Data.Database
         public Especialidad GetOne(int ID)
         {
 
-            Especialidad esp = new Especialidad();
+            Especialidad e = new Especialidad();
 
             try
             {
@@ -142,8 +76,8 @@ namespace Data.Database
 
                 if (drEspecialidades.Read())
                 {
-                    esp.ID = (int)drEspecialidades["id_especialidad"];
-                    esp.Descripcion = (string)drEspecialidades["descripcion"];
+                    e.ID = (int)drEspecialidades["id_especialidades"];
+                    e.Descripcion=(string)drEspecialidades["descripcion"];
                 }
 
                 drEspecialidades.Close();
@@ -161,7 +95,7 @@ namespace Data.Database
                 this.CloseConnection();
             }
 
-            return esp;
+            return e;
         }
 
 
@@ -180,7 +114,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar una especialidad", Ex);
+                Exception ExcepcionManejeada = new Exception("Error al eliminar la especialidad", Ex);
 
                 throw ExcepcionManejeada;
             }
@@ -198,17 +132,18 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE especialidades SET descripcion=@descripcion" +"WHERE id_especialidad=@id", sqlConn);
+                    "UPDATE especialidades SET id_especialidad=@id_especialidad, descripcion=@descripcion" +
+                    "WHERE id_especialidad=@id", sqlConn);
 
-                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = especialidad.ID;
-                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = especialidad.Descripcion;
+                cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = especialidad.ID;
+                cmdSave.Parameters.Add("@id_docente", SqlDbType.VarChar,50).Value = especialidad.Descripcion;
 
                 cmdSave.ExecuteNonQuery();
             }
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar la especialidad", Ex);
+                Exception ExcepcionManejeada = new Exception("Error al modificar especialidad", Ex);
 
                 throw ExcepcionManejeada;
             }
@@ -227,16 +162,17 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into especialidades (descripcion)" +"values (@descripcion)" +"select @@identity", sqlConn);
+                    "insert into especialidad (id_especialidad, descripcion)" +
+                    "values (@id_especialidad, @descripcion)" +
+                    "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = especialidad.Descripcion;
-                
+                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar,50).Value = especialidad.Descripcion;
                 especialidad.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear la especialidad", Ex);
+                Exception ExcepcionManejeada = new Exception("Error al crear especialidad", Ex);
 
                 throw ExcepcionManejeada;
             }
@@ -246,6 +182,7 @@ namespace Data.Database
                 this.CloseConnection();
             }
         }
+
 
         public void Save(Especialidad especialidad)
         {

@@ -46,7 +46,7 @@ namespace Data.Database
 
                     dc.IDCurso = (int)drDocenteCurso["id_curso"];
                     dc.IDDocente = (int)drDocenteCurso["id_docente"];
-                    dc.TiposCargo = (int)drDocenteCurso["cargo"];
+                    dc.TipoCargo = (int)drDocenteCurso["tipo_cargo"];
                     dc.ID = (int)drDocenteCurso["id_dictado"];
 
                     //agrego el objeto con datos a la lista que devuelvo
@@ -96,7 +96,7 @@ namespace Data.Database
                 {
                     dc.IDCurso = (int)drDocenteCurso["id_curso"];
                     dc.IDDocente = (int)drDocenteCurso["id_docente"];
-                    dc.TiposCargo = (int)drDocenteCurso["cargo"];
+                    dc.TipoCargo = (int)drDocenteCurso["cargo"];
                     dc.ID = (int)drDocenteCurso["id_dictado"];
                 }
 
@@ -152,14 +152,13 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE docentes_cursos SET id_dictado=@id_dictado, id_docente=@id_docente,"
-                    + "id_curso=@id_curso, cargo=@cargo" +
+                    "UPDATE docentes_cursos SET id_docente=@id_docente, id_curso=@id_curso, cargo=@cargo" +
                     "WHERE id_dictado=@id", sqlConn);
 
                 cmdSave.Parameters.Add("@id_dictado", SqlDbType.Int).Value = docenteCurso.ID;
                 cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
                 cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = docenteCurso.IDCurso;
-                cmdSave.Parameters.Add("@cargo", SqlDbType.VarChar, 50).Value = docenteCurso.TiposCargo;
+                cmdSave.Parameters.Add("@cargo", SqlDbType.VarChar, 50).Value = docenteCurso.TipoCargo;
                 cmdSave.ExecuteNonQuery();
             }
 
@@ -184,14 +183,13 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into docentes_cursos (id_dictado, id_docente, id_curso, cargo)" +
-                    "values (@id_dictado, @id_docente,@id_curso,@cargo)" +
+                    "insert into docentes_cursos (id_docente, id_curso, cargo)" +
+                    "values (@id_docente,@id_curso,@cargo)" +
                     "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@id_dictado", SqlDbType.VarChar, 50).Value = docenteCurso.ID;
-                cmdSave.Parameters.Add("@id_docente", SqlDbType.VarChar, 50).Value = docenteCurso.IDDocente;
-                cmdSave.Parameters.Add("@id_curso", SqlDbType.Bit).Value = docenteCurso.IDCurso;
-                cmdSave.Parameters.Add("@cargo", SqlDbType.VarChar, 50).Value = docenteCurso.TiposCargo;
+                cmdSave.Parameters.Add("@id_docente", SqlDbType.Int).Value = docenteCurso.IDDocente;
+                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = docenteCurso.IDCurso;
+                cmdSave.Parameters.Add("@cargo", SqlDbType.Int).Value = docenteCurso.TipoCargo;
                 docenteCurso.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
 

@@ -34,7 +34,7 @@ namespace UI.Desktop
             this.txtIDDictado.Text = this.DocenteCursoActual.ID.ToString();
             this.txtIDDocente.Text = this.DocenteCursoActual.IDDocente.ToString();
             this.txtIDCurso.Text = this.DocenteCursoActual.IDCurso.ToString();
-            this.txtTiposCargo.Text = this.DocenteCursoActual.TiposCargo.ToString();
+            this.txtTipoCargo.Text = this.DocenteCursoActual.TipoCargo.ToString();
 
             switch (Modo)
                 {
@@ -87,14 +87,13 @@ namespace UI.Desktop
 
                 this.DocenteCursoActual.IDDocente = Convert.ToInt32(this.txtIDDocente.Text);
                 this.DocenteCursoActual.IDCurso = Convert.ToInt32(this.txtIDCurso.Text);
-                this.DocenteCursoActual.TiposCargo = Convert.ToInt32(this.txtTiposCargo.Text);                
+                this.DocenteCursoActual.TipoCargo = Convert.ToInt32(this.txtTipoCargo.Text);                
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                     this.DocenteCursoActual.ID = Convert.ToInt32(this.txtIDDictado.Text);
-                    this.DocenteCursoActual.IDCurso = Convert.ToInt32(this.txtIDDocente.Text);
                     this.DocenteCursoActual.IDDocente = Convert.ToInt32(this.txtIDDocente.Text);
-                    this.DocenteCursoActual.TiposCargo = Convert.ToInt32(this.txtTiposCargo.Text); 
+                    this.DocenteCursoActual.TipoCargo = Convert.ToInt32(this.txtTipoCargo.Text); 
                 }
             }
 
@@ -115,7 +114,7 @@ namespace UI.Desktop
 
             ban1 =  0;
 
-             if ((this.txtIDDocente.Text == null) || (this.txtIDCurso.Text == null) || (this.txtTiposCargo.Text == null))                   {
+             if ((this.txtIDDocente.Text == null) || (this.txtIDCurso.Text == null) || (this.txtTipoCargo.Text == null))                   {
                     ban1 = 1;
 
                     Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);

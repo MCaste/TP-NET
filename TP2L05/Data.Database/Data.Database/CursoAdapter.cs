@@ -95,7 +95,7 @@ namespace Data.Database
 
                 if (drCursos.Read())
                 {
-                    cur.Cupo = (int)drCursos["id_cupo"];
+                    cur.Cupo = (int)drCursos["id_curso"];
                     cur.Cupo = (int)drCursos["cupo"];
                     //cur.Descripcion = (string)drCursos["descripcion"];
                     cur.IDComision = (int)drCursos["id_comision"];
@@ -159,7 +159,7 @@ namespace Data.Database
                     + "id_comision=@id_comision, anio_calendario=@anio_calendario, cupo=@cupo" +
                     "WHERE id_curso=@id_curso", sqlConn);
 
-                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = curso.IDCurso;
+                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = curso.ID;
                 cmdSave.Parameters.Add("@id_materia", SqlDbType.Int).Value = curso.IDMateria;
                 cmdSave.Parameters.Add("@id_comision", SqlDbType.Int).Value = curso.IDComision;
                 cmdSave.Parameters.Add("@anio_calendario", SqlDbType.Int).Value = curso.AnioCalendario;
@@ -192,7 +192,7 @@ namespace Data.Database
                     "values (@id_curso, @id_materia,@id_comision,@anio_calendario,@cupo)" +
                     "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = curso.IDCurso;
+                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = curso.ID;
                 cmdSave.Parameters.Add("@id_materia", SqlDbType.Int).Value = curso.IDMateria;
                 cmdSave.Parameters.Add("@id_comision", SqlDbType.Int).Value = curso.IDComision;
                 cmdSave.Parameters.Add("@anio_calendario", SqlDbType.Int).Value = curso.AnioCalendario;

@@ -9,9 +9,9 @@ namespace Business.Entities
     public class ModuloUsuario : BusinessEntity
         {
 
-        private int _IdUsuario;
+        private int _IDUsuario;
 
-        private int _IdModulo;
+        private int _IDModulo;
 
         private bool _PermiteAlta;
 
@@ -21,29 +21,29 @@ namespace Business.Entities
 
         private bool _PermiteConsulta;
 
-        public int IdUsuario
+        public int IDUsuario
             {
 
             get
                 {
-                return _IdUsuario;
+                return _IDUsuario;
                 }
             set
                 {
-                _IdUsuario = value;
+                _IDUsuario = value;
                 }
             }
 
-        public int IdModulo
+        public int IDModulo
             {
 
             get
                 {
-                return _IdModulo;
+                return _IDModulo;
                 }
             set
                 {
-                _IdModulo = value;
+                _IDModulo = value;
                 }
             }
 
@@ -98,10 +98,5 @@ namespace Business.Entities
                 _PermiteConsulta = value;
                 }
             }
-
-
-
-
-
         }
     }

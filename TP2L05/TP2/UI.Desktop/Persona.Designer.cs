@@ -38,7 +38,7 @@
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.IDPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,7 +97,7 @@
             this.dgvPersona.AllowUserToDeleteRows = false;
             this.dgvPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPersona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDPersona,
+            this.ID,
             this.apellido,
             this.nombre,
             this.direccion,
@@ -173,65 +173,65 @@
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "Eliminar";
             // 
-            // IDPersona
+            // ID
             // 
-            this.IDPersona.DataPropertyName = "IDPersona";
-            this.IDPersona.HeaderText = "ID Persona";
-            this.IDPersona.Name = "IDPersona";
-            this.IDPersona.ReadOnly = true;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID ";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // apellido
             // 
-            this.apellido.DataPropertyName = "apellido";
+            this.apellido.DataPropertyName = "Apellido";
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
             // 
             // nombre
             // 
-            this.nombre.DataPropertyName = "nombre";
+            this.nombre.DataPropertyName = "Nombre";
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             // 
             // direccion
             // 
-            this.direccion.DataPropertyName = "direccion";
+            this.direccion.DataPropertyName = "Direccion";
             this.direccion.HeaderText = "Dirección";
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
             // 
             // email
             // 
-            this.email.DataPropertyName = "email";
+            this.email.DataPropertyName = "Email";
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
             // telefono
             // 
-            this.telefono.DataPropertyName = "telefono";
+            this.telefono.DataPropertyName = "Telefono";
             this.telefono.HeaderText = "Telefono";
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
             // 
             // fechNac
             // 
-            this.fechNac.DataPropertyName = "fechaNacimiento";
+            this.fechNac.DataPropertyName = "FechaNacimiento";
             this.fechNac.HeaderText = "Fecha de nacimiento";
             this.fechNac.Name = "fechNac";
             this.fechNac.ReadOnly = true;
             // 
             // legajo
             // 
-            this.legajo.DataPropertyName = "legajo";
+            this.legajo.DataPropertyName = "Legajo";
             this.legajo.HeaderText = "Legajo";
             this.legajo.Name = "legajo";
             this.legajo.ReadOnly = true;
             // 
             // tipoPersona
             // 
-            this.tipoPersona.DataPropertyName = "tipoPersona";
+            this.tipoPersona.DataPropertyName = "TipoPersona";
             this.tipoPersona.HeaderText = "Tipo Persona";
             this.tipoPersona.Name = "tipoPersona";
             this.tipoPersona.ReadOnly = true;
@@ -269,7 +269,13 @@
         private System.Windows.Forms.ToolStripContainer tscPersona;
         private System.Windows.Forms.TableLayoutPanel tlPersona;
         private System.Windows.Forms.DataGridView dgvPersona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPersona;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolStrip tsPersona;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
@@ -279,11 +285,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPlan;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ToolStrip tsPersona;
-        private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tsbEditar;
-        private System.Windows.Forms.ToolStripButton tsbEliminar;
     }
 }

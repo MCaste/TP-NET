@@ -27,8 +27,9 @@ namespace UI.Desktop
         public void Listar()
             {
             UsuarioLogic UL = new UsuarioLogic();
-
-            this.dgvUsuarios.DataSource = UL.GetAll();
+            this.dgvUsuarios.AutoGenerateColumns = true;
+            List<Usuario> l = UL.GetAll();
+            this.dgvUsuarios.DataSource = l;
             }
 
         private void Usuarios_Load( object sender, EventArgs e )
@@ -85,5 +86,10 @@ namespace UI.Desktop
                 UD.ShowDialog();
                 }
             }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
         }
     }

@@ -32,17 +32,17 @@
             this.tcCurso = new System.Windows.Forms.ToolStripContainer();
             this.tlCurso = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCurso = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anioCalendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.tsCurso = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idComision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anioCalendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcCurso.ContentPanel.SuspendLayout();
             this.tcCurso.TopToolStripPanel.SuspendLayout();
             this.tcCurso.SuspendLayout();
@@ -92,8 +92,8 @@
             this.dgvCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.cupo,
-            this.id_Comision,
-            this.id_Materia,
+            this.idComision,
+            this.idMateria,
             this.anioCalendario});
             this.tlCurso.SetColumnSpan(this.dgvCurso, 2);
             this.dgvCurso.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -102,41 +102,6 @@
             this.dgvCurso.ReadOnly = true;
             this.dgvCurso.Size = new System.Drawing.Size(542, 307);
             this.dgvCurso.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "ID";
-            this.id.HeaderText = "ID Curso";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // cupo
-            // 
-            this.cupo.DataPropertyName = "Cupo";
-            this.cupo.HeaderText = "Cupo";
-            this.cupo.Name = "cupo";
-            this.cupo.ReadOnly = true;
-            // 
-            // id_Comision
-            // 
-            this.id_Comision.DataPropertyName = "ID_Comision";
-            this.id_Comision.HeaderText = "ID Comision";
-            this.id_Comision.Name = "id_Comision";
-            this.id_Comision.ReadOnly = true;
-            // 
-            // id_Materia
-            // 
-            this.id_Materia.DataPropertyName = "ID_Materia";
-            this.id_Materia.HeaderText = "ID Materia";
-            this.id_Materia.Name = "id_Materia";
-            this.id_Materia.ReadOnly = true;
-            // 
-            // anioCalendario
-            // 
-            this.anioCalendario.DataPropertyName = "AnioCalendario";
-            this.anioCalendario.HeaderText = "Año Calendario";
-            this.anioCalendario.Name = "anioCalendario";
-            this.anioCalendario.ReadOnly = true;
             // 
             // btnSalir
             // 
@@ -201,6 +166,41 @@
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // cupo
+            // 
+            this.cupo.DataPropertyName = "cupo";
+            this.cupo.HeaderText = "Cupo";
+            this.cupo.Name = "cupo";
+            this.cupo.ReadOnly = true;
+            // 
+            // idComision
+            // 
+            this.idComision.DataPropertyName = "IDComision";
+            this.idComision.HeaderText = "ID Comision";
+            this.idComision.Name = "idComision";
+            this.idComision.ReadOnly = true;
+            // 
+            // idMateria
+            // 
+            this.idMateria.DataPropertyName = "IDMateria";
+            this.idMateria.HeaderText = "ID Materia";
+            this.idMateria.Name = "idMateria";
+            this.idMateria.ReadOnly = true;
+            // 
+            // anioCalendario
+            // 
+            this.anioCalendario.DataPropertyName = "AnioCalendario";
+            this.anioCalendario.HeaderText = "Año Calendario";
+            this.anioCalendario.Name = "anioCalendario";
+            this.anioCalendario.ReadOnly = true;
+            // 
             // Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,8 +236,8 @@
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_Comision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_Materia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idComision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMateria;
         private System.Windows.Forms.DataGridViewTextBoxColumn anioCalendario;
     }
 }

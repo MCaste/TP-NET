@@ -32,11 +32,6 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tlMateria = new System.Windows.Forms.TableLayoutPanel();
             this.dgvMateria = new System.Windows.Forms.DataGridView();
-            this.IDMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hsSemanales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hsTotales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsMateria = new System.Windows.Forms.ToolStrip();
@@ -44,6 +39,11 @@
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.IDMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hsSemanales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hsTotales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -58,11 +58,11 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tlMateria);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(633, 391);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(550, 391);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(633, 416);
+            this.toolStripContainer1.Size = new System.Drawing.Size(550, 416);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -84,7 +84,7 @@
             this.tlMateria.RowCount = 2;
             this.tlMateria.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlMateria.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlMateria.Size = new System.Drawing.Size(633, 391);
+            this.tlMateria.Size = new System.Drawing.Size(550, 391);
             this.tlMateria.TabIndex = 0;
             // 
             // dgvMateria
@@ -94,57 +94,22 @@
             this.dgvMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMateria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDMateria,
-            this.descMateria,
+            this.IDPlan,
+            this.descripcion,
             this.hsSemanales,
-            this.hsTotales,
-            this.IDPlan});
+            this.hsTotales});
             this.tlMateria.SetColumnSpan(this.dgvMateria, 2);
             this.dgvMateria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMateria.Location = new System.Drawing.Point(3, 3);
             this.dgvMateria.Name = "dgvMateria";
             this.dgvMateria.ReadOnly = true;
-            this.dgvMateria.Size = new System.Drawing.Size(627, 356);
+            this.dgvMateria.Size = new System.Drawing.Size(544, 356);
             this.dgvMateria.TabIndex = 0;
-            // 
-            // IDMateria
-            // 
-            this.IDMateria.DataPropertyName = "IDMateria";
-            this.IDMateria.HeaderText = "ID Materia";
-            this.IDMateria.Name = "IDMateria";
-            this.IDMateria.ReadOnly = true;
-            // 
-            // descMateria
-            // 
-            this.descMateria.DataPropertyName = "descripcion";
-            this.descMateria.HeaderText = "Descripcion";
-            this.descMateria.Name = "descMateria";
-            this.descMateria.ReadOnly = true;
-            // 
-            // hsSemanales
-            // 
-            this.hsSemanales.DataPropertyName = "hs_semanales";
-            this.hsSemanales.HeaderText = "Horas Semanales";
-            this.hsSemanales.Name = "hsSemanales";
-            this.hsSemanales.ReadOnly = true;
-            // 
-            // hsTotales
-            // 
-            this.hsTotales.DataPropertyName = "hs_totales";
-            this.hsTotales.HeaderText = "Horas Totales";
-            this.hsTotales.Name = "hsTotales";
-            this.hsTotales.ReadOnly = true;
-            // 
-            // IDPlan
-            // 
-            this.IDPlan.DataPropertyName = "IDPlan";
-            this.IDPlan.HeaderText = "ID Plan";
-            this.IDPlan.Name = "IDPlan";
-            this.IDPlan.ReadOnly = true;
             // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(474, 365);
+            this.btnActualizar.Location = new System.Drawing.Point(391, 365);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
@@ -153,7 +118,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(555, 365);
+            this.btnSalir.Location = new System.Drawing.Point(472, 365);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -199,11 +164,46 @@
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "tsbEliminar";
             // 
+            // IDMateria
+            // 
+            this.IDMateria.DataPropertyName = "IDMateria";
+            this.IDMateria.HeaderText = "ID Materia";
+            this.IDMateria.Name = "IDMateria";
+            this.IDMateria.ReadOnly = true;
+            // 
+            // IDPlan
+            // 
+            this.IDPlan.DataPropertyName = "IDPlan";
+            this.IDPlan.HeaderText = "ID Plan";
+            this.IDPlan.Name = "IDPlan";
+            this.IDPlan.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // hsSemanales
+            // 
+            this.hsSemanales.DataPropertyName = "hsSemanales";
+            this.hsSemanales.HeaderText = "Horas Semanales";
+            this.hsSemanales.Name = "hsSemanales";
+            this.hsSemanales.ReadOnly = true;
+            // 
+            // hsTotales
+            // 
+            this.hsTotales.DataPropertyName = "hsTotales";
+            this.hsTotales.HeaderText = "Horas Totales";
+            this.hsTotales.Name = "hsTotales";
+            this.hsTotales.ReadOnly = true;
+            // 
             // Materia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 416);
+            this.ClientSize = new System.Drawing.Size(550, 416);
             this.Controls.Add(this.toolStripContainer1);
             this.Name = "Materia";
             this.Text = "Materia";
@@ -233,9 +233,9 @@
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDMateria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descMateria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPlan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn hsSemanales;
         private System.Windows.Forms.DataGridViewTextBoxColumn hsTotales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPlan;
     }
 }

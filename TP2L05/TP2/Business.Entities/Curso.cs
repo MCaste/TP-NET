@@ -8,8 +8,6 @@ namespace Business.Entities
     {
     public class Curso : BusinessEntity
         {
-        private int _IDCurso;
-
         private int _AnioCalendario;
 
         private int _Cupo;
@@ -17,16 +15,6 @@ namespace Business.Entities
         private int _IDComision;
 
         private int _IDMateria;
-
-        public int IDCurso
-        {
-            get {
-                return _IDCurso;
-                }
-            set{
-                _IDCurso = value;
-            }
-        }
         
         public int AnioCalendario
         {

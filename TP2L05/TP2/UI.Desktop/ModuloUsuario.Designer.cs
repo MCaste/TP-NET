@@ -38,7 +38,7 @@
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.IDModuloUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDModulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alta = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -94,7 +94,7 @@
             this.dgvModuloUsuario.AllowUserToDeleteRows = false;
             this.dgvModuloUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModuloUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDModuloUsuario,
+            this.ID,
             this.IDModulo,
             this.IDUsuario,
             this.alta,
@@ -167,27 +167,31 @@
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "Eliminar";
             // 
-            // IDModuloUsuario
+            // ID
             // 
-            this.IDModuloUsuario.HeaderText = "ID Modulo Usuario";
-            this.IDModuloUsuario.Name = "IDModuloUsuario";
-            this.IDModuloUsuario.ReadOnly = true;
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // IDModulo
             // 
+            this.IDModulo.DataPropertyName = "IDModulo";
             this.IDModulo.HeaderText = "ID Modulo";
             this.IDModulo.Name = "IDModulo";
             this.IDModulo.ReadOnly = true;
             // 
             // IDUsuario
             // 
+            this.IDUsuario.DataPropertyName = "IDUsuario";
             this.IDUsuario.HeaderText = "ID Usuario";
             this.IDUsuario.Name = "IDUsuario";
             this.IDUsuario.ReadOnly = true;
             // 
             // alta
             // 
-            this.alta.HeaderText = "Alta";
+            this.alta.DataPropertyName = "PermiteAlta";
+            this.alta.HeaderText = "Permite Alta";
             this.alta.Name = "alta";
             this.alta.ReadOnly = true;
             this.alta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -195,7 +199,8 @@
             // 
             // baja
             // 
-            this.baja.HeaderText = "Baja";
+            this.baja.DataPropertyName = "PermiteBaja";
+            this.baja.HeaderText = "Permite Baja";
             this.baja.Name = "baja";
             this.baja.ReadOnly = true;
             this.baja.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -203,7 +208,8 @@
             // 
             // modificacion
             // 
-            this.modificacion.HeaderText = "Modificacion";
+            this.modificacion.DataPropertyName = "PermiteModificacion";
+            this.modificacion.HeaderText = "Permite Modificacion";
             this.modificacion.Name = "modificacion";
             this.modificacion.ReadOnly = true;
             this.modificacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -211,7 +217,8 @@
             // 
             // consulta
             // 
-            this.consulta.HeaderText = "Consulta";
+            this.consulta.DataPropertyName = "PermiteConsulta";
+            this.consulta.HeaderText = "Permite Consulta";
             this.consulta.Name = "consulta";
             this.consulta.ReadOnly = true;
             this.consulta.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -245,16 +252,16 @@
         private System.Windows.Forms.DataGridView dgvModuloUsuario;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDModuloUsuario;
+        private System.Windows.Forms.ToolStrip tsModuloUsuario;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDModulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDUsuario;
         private System.Windows.Forms.DataGridViewComboBoxColumn alta;
         private System.Windows.Forms.DataGridViewComboBoxColumn baja;
         private System.Windows.Forms.DataGridViewComboBoxColumn modificacion;
         private System.Windows.Forms.DataGridViewComboBoxColumn consulta;
-        private System.Windows.Forms.ToolStrip tsModuloUsuario;
-        private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tsbEditar;
-        private System.Windows.Forms.ToolStripButton tsbEliminar;
     }
 }

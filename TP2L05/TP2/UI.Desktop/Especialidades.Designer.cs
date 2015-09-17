@@ -165,7 +165,7 @@
             // 
             // id
             // 
-            this.id.DataPropertyName = "Id";
+            this.id.DataPropertyName = "ID";
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
