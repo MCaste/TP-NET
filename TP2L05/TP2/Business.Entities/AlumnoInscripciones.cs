@@ -8,7 +8,7 @@ namespace Business.Entities
     {
     public class AlumnoInscripciones : BusinessEntity
         {
-
+       
         private string _Condicion;
 
         private int _IDAlumno;
@@ -16,6 +16,7 @@ namespace Business.Entities
         private int _IDCurso;
 
         private int _Nota;
+       
 
         public string Condicion
             {

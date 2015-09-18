@@ -14,11 +14,8 @@ namespace Business.Logic
         private UsuarioAdapter _UsuarioData;
 
         public UsuarioAdapter UsuarioData
-            {
-                
-             get{
-                 return _UsuarioData;
-                 }
+            {               
+             get{ return _UsuarioData; }
             }
                 
         public UsuarioLogic()
@@ -32,18 +29,15 @@ namespace Business.Logic
         return UsuarioData.GetAll();
         }
 
-        public Usuario GetOne(int ID) 
-      
+        public Usuario GetOne(int ID)    
         {
         return UsuarioData.GetOne(ID);
         }
-
 
         public void Delete( int ID)
         {
         UsuarioData.Delete(ID); 
         }
-
 
         public void Save( Usuario Usuario)
         {

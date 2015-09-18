@@ -103,8 +103,7 @@ namespace Data.Database
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
 
-                    //agrego el objeto con datos a la lista que devuelvo
-                    
+                    //agrego el objeto con datos a la lista que devuelvo                   
                     usuarios.Add(usr);
                 }
 
@@ -117,7 +116,6 @@ namespace Data.Database
             catch (Exception Ex)
             {
                 Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
-
                 throw ExcepcionManejada;
             }
 
@@ -125,9 +123,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-
             return usuarios;
-
         }
 
 
@@ -135,15 +131,11 @@ namespace Data.Database
         {
 
             Usuario usr = new Usuario();
-
             try
             {
                 this.OpenConnection();
-
                 SqlCommand cmdUsuarios = new SqlCommand("SELECT * from usuarios where id_usuario=@id", sqlConn);
-
                 cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
-
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
 
                 if (drUsuarios.Read())
@@ -163,7 +155,6 @@ namespace Data.Database
             catch (Exception Ex)
             {
                 Exception ExcepcionManejada = new Exception("Error al recuperar datos del usuario", Ex);
-
                 throw ExcepcionManejada;
             }
 
@@ -171,7 +162,6 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-
             return usr;
         }
 
@@ -191,8 +181,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al eliminar usuario", Ex);
-                
+                Exception ExcepcionManejeada = new Exception("Error al eliminar usuario", Ex);               
                 throw ExcepcionManejeada;
             }
             finally
@@ -225,8 +214,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al modificar usuario", Ex);
-                
+                Exception ExcepcionManejeada = new Exception("Error al modificar usuario", Ex);              
                 throw ExcepcionManejeada;
             }
 
@@ -259,8 +247,7 @@ namespace Data.Database
 
             catch (Exception Ex)
             {
-                Exception ExcepcionManejeada = new Exception("Error al crear usuario", Ex);
-                
+                Exception ExcepcionManejeada = new Exception("Error al crear usuario", Ex);              
                 throw ExcepcionManejeada;
             }
 
