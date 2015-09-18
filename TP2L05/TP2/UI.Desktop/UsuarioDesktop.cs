@@ -34,18 +34,12 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
             {
-            this.txtID.Text = this.UsuarioActual.ID.ToString();
-           
-            this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
-            
-            this.txtNombre.Text = this.UsuarioActual.Nombre;
-            
-            this.txtApellido.Text = this.UsuarioActual.Apellido;
-            
-            this.txtEmail.Text = this.UsuarioActual.Email;
-            
+            this.txtID.Text = this.UsuarioActual.ID.ToString();        
+            this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;           
+            this.txtNombre.Text = this.UsuarioActual.Nombre;           
+            this.txtApellido.Text = this.UsuarioActual.Apellido;      
+            this.txtEmail.Text = this.UsuarioActual.Email;            
             this.txtClave.Text = this.UsuarioActual.Clave;
-
             this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
 
             switch (Modo)
@@ -54,28 +48,24 @@ namespace UI.Desktop
                 case ModoForm.Alta:
                         {
                         this.btnAceptar.Text = "Guardar";
-
                         this.UsuarioActual.State = BusinessEntity.States.New;
                         }
                     break;
                 case ModoForm.Modificacion:
                         {
                         this.btnAceptar.Text = "Guardar";
-
                         this.UsuarioActual.State = BusinessEntity.States.Modified;                        
                         }
                     break;
                 case ModoForm.Baja:
                         {
                         this.btnAceptar.Text = "Eliminar";
-
                         this.UsuarioActual.State = BusinessEntity.States.Deleted;
                         } 
                     break;
                 case ModoForm.Consulta:
                         {
                         this.btnAceptar.Text = "Aceptar";
-
                         this.UsuarioActual.State = BusinessEntity.States.Unmodified;
                         }
                     break;
@@ -89,55 +79,38 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                Usuario usu = new Usuario();
-                 
+                Usuario usu = new Usuario();                
                 UsuarioActual = usu;
                  
-                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
-                
-                this.UsuarioActual.Clave = this.txtClave.Text;
-                
-                this.UsuarioActual.Nombre = this.txtNombre.Text;
-                
-                this.UsuarioActual.Apellido = this.txtApellido.Text;
-                
+                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;                
+                this.UsuarioActual.Clave = this.txtClave.Text;                
+                this.UsuarioActual.Nombre = this.txtNombre.Text;                
+                this.UsuarioActual.Apellido = this.txtApellido.Text;                
                 this.UsuarioActual.Email = this.txtEmail.Text;
-                
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;                 
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
-                this.UsuarioActual.ID = Convert.ToInt32(this.txtID.Text);
-                
+                this.UsuarioActual.ID = Convert.ToInt32(this.txtID.Text);            
                 this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
-                
-                this.UsuarioActual.Clave = this.txtClave.Text;
-                
-                this.UsuarioActual.Nombre = this.txtNombre.Text;
-                
-                this.UsuarioActual.Apellido = this.txtApellido.Text;
-                
-                this.UsuarioActual.Email = this.txtEmail.Text;
-                
+                this.UsuarioActual.Clave = this.txtClave.Text;                
+                this.UsuarioActual.Nombre = this.txtNombre.Text; 
+                this.UsuarioActual.Apellido = this.txtApellido.Text;                
+                this.UsuarioActual.Email = this.txtEmail.Text;                
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;  
                 }
             }
 
         public override void GuardarCambios() 
             {
-
             MapearADatos();
-
             UsuarioLogic UL = new UsuarioLogic();
-
             UL.Save(UsuarioActual);
-
             }
 
       public static bool ValidarEmail(TextBox txtEmail)
         {
           string formato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-
           string email = txtEmail.Text;
 
           if (Regex.IsMatch(email, formato))
@@ -215,7 +188,6 @@ namespace UI.Desktop
             this.Notificar(this.Text, mensaje, botones, icono);
             }
 
-
         public UsuarioDesktop(ModoForm modo):this()
             {
             this.Modo = modo;   
@@ -224,18 +196,14 @@ namespace UI.Desktop
         public UsuarioDesktop(int ID, ModoForm modo):this()
             {
             this.Modo = modo;
-
             UsuarioLogic UL = new UsuarioLogic();
-
             UsuarioActual = UL.GetOne(ID);
-
             MapearDeDatos();
             }
 
         private void btnCancelar_Click( object sender, EventArgs e )
             {
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
-
             if (DR == DialogResult.Yes) this.Close();      
             }
         }
