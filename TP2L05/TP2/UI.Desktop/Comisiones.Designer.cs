@@ -139,6 +139,7 @@
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -148,6 +149,7 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // tsComisiones
             // 
@@ -170,6 +172,7 @@
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
             this.tsbNuevo.Text = "toolStripButton1";
             this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -180,6 +183,7 @@
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "toolStripButton2";
             this.tsbEditar.ToolTipText = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
             // 
@@ -190,6 +194,7 @@
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "toolStripButton3";
             this.tsbEliminar.ToolTipText = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // Comisiones
             // 
@@ -199,6 +204,7 @@
             this.Controls.Add(this.tcComisiones);
             this.Name = "Comisiones";
             this.Text = "Comisiones";
+            this.Load += new System.EventHandler(this.Comisiones_Load);
             this.tcComisiones.ContentPanel.ResumeLayout(false);
             this.tcComisiones.TopToolStripPanel.ResumeLayout(false);
             this.tcComisiones.TopToolStripPanel.PerformLayout();

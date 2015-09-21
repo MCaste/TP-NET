@@ -45,7 +45,7 @@ namespace Data.Database
                     com.ID = (int)drComisiones["id_comision"];
                     com.Descripcion = (string)drComisiones["desc_comision"];
                     com.AnioEspecialidad = (int)drComisiones["anio_especialidad"];
-                    com.IDPlan = (int)drComisiones["habilitado"];
+                    com.IDPlan = (int)drComisiones["id_plan"];
                     //agrego el objeto con datos a la lista que devuelvo                   
                     comisiones.Add(com);
                 }
@@ -86,7 +86,7 @@ namespace Data.Database
                     com.ID = (int)drComisiones["id_comision"];
                     com.Descripcion = (string)drComisiones["desc_comision"];
                     com.AnioEspecialidad = (int)drComisiones["anio_especialidad"];
-                    com.IDPlan = (int)drComisiones["habilitado"];
+                    com.IDPlan = (int)drComisiones["id_plan"];
                 }
 
                 drComisiones.Close();

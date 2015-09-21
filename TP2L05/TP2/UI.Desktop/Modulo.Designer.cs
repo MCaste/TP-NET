@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modulo));
             this.tcModulos = new System.Windows.Forms.ToolStripContainer();
             this.tlModulos = new System.Windows.Forms.TableLayoutPanel();
-            this.dvgModulos = new System.Windows.Forms.DataGridView();
+            this.dgvModulos = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ejecuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +45,7 @@
             this.tcModulos.TopToolStripPanel.SuspendLayout();
             this.tcModulos.SuspendLayout();
             this.tlModulos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgModulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
             this.tsModulos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@
             this.tlModulos.ColumnCount = 2;
             this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlModulos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlModulos.Controls.Add(this.dvgModulos, 0, 0);
+            this.tlModulos.Controls.Add(this.dgvModulos, 0, 0);
             this.tlModulos.Controls.Add(this.btnActualizar, 0, 1);
             this.tlModulos.Controls.Add(this.btnSalir, 1, 1);
             this.tlModulos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,21 +84,21 @@
             this.tlModulos.Size = new System.Drawing.Size(348, 233);
             this.tlModulos.TabIndex = 0;
             // 
-            // dvgModulos
+            // dgvModulos
             // 
-            this.dvgModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descripcion,
             this.ejecuta});
-            this.tlModulos.SetColumnSpan(this.dvgModulos, 2);
-            this.dvgModulos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgModulos.Location = new System.Drawing.Point(3, 3);
-            this.dvgModulos.MultiSelect = false;
-            this.dvgModulos.Name = "dvgModulos";
-            this.dvgModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgModulos.Size = new System.Drawing.Size(342, 198);
-            this.dvgModulos.TabIndex = 0;
+            this.tlModulos.SetColumnSpan(this.dgvModulos, 2);
+            this.dgvModulos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvModulos.Location = new System.Drawing.Point(3, 3);
+            this.dgvModulos.MultiSelect = false;
+            this.dgvModulos.Name = "dgvModulos";
+            this.dgvModulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvModulos.Size = new System.Drawing.Size(342, 198);
+            this.dgvModulos.TabIndex = 0;
             // 
             // id
             // 
@@ -130,6 +130,7 @@
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -139,6 +140,7 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // tsModulos
             // 
@@ -161,6 +163,7 @@
             this.tsbNuevo.Size = new System.Drawing.Size(23, 22);
             this.tsbNuevo.Text = "toolStripButton1";
             this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -171,6 +174,7 @@
             this.tsbEditar.Size = new System.Drawing.Size(23, 22);
             this.tsbEditar.Text = "toolStripButton1";
             this.tsbEditar.ToolTipText = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
             // 
@@ -181,22 +185,24 @@
             this.tsbEliminar.Size = new System.Drawing.Size(23, 22);
             this.tsbEliminar.Text = "toolStripButton1";
             this.tsbEliminar.ToolTipText = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // Modulos
+            // Modulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 258);
             this.Controls.Add(this.tcModulos);
-            this.Name = "Modulos";
+            this.Name = "Modulo";
             this.Text = "Modulos";
+            this.Load += new System.EventHandler(this.Modulo_Load);
             this.tcModulos.ContentPanel.ResumeLayout(false);
             this.tcModulos.TopToolStripPanel.ResumeLayout(false);
             this.tcModulos.TopToolStripPanel.PerformLayout();
             this.tcModulos.ResumeLayout(false);
             this.tcModulos.PerformLayout();
             this.tlModulos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgModulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).EndInit();
             this.tsModulos.ResumeLayout(false);
             this.tsModulos.PerformLayout();
             this.ResumeLayout(false);
@@ -207,7 +213,7 @@
 
         private System.Windows.Forms.ToolStripContainer tcModulos;
         private System.Windows.Forms.TableLayoutPanel tlModulos;
-        private System.Windows.Forms.DataGridView dvgModulos;
+        private System.Windows.Forms.DataGridView dgvModulos;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsModulos;

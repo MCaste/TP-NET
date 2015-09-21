@@ -42,9 +42,6 @@ namespace Business.Logic
         {
         ComisionData.Save(comision);   
         }
-
-        }
-
-        }
     }
 }
+ 

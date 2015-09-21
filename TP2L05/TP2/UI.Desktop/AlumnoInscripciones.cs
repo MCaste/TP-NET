@@ -23,12 +23,11 @@ namespace UI.Desktop
         public void Listar()
             {
             AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
-            this.dgvAlumnoInscripciones.AutoGenerateColumns = true;
+
             List<Business.Entities.AlumnoInscripciones> l = AIL.GetAll();
-            this.dgvAlumnoInscripciones.DataSource = l;
             }
 
-        private void Usuarios_Load( object sender, EventArgs e )
+        private void AlumnoInscripciones_Load( object sender, EventArgs e )
             {
             Listar();
             }
@@ -47,40 +46,40 @@ namespace UI.Desktop
 
             }
 
-        private void tsbNuevo_Click( object sender, EventArgs e )
-            {
-            UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(AplicationForm.ModoForm.Alta);
 
-            UD.ShowDialog();
+            AID.ShowDialog();
 
             this.Listar();
-            }
+        }
 
-        private void tsbEditar_Click( object sender, EventArgs e )
+        private void tsbEditar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvAlumnoInscripciones.SelectedRows.Count != 0)
             {
+
+                int ID = ((Business.Entities.AlumnoInscripciones)this.dgvAlumnoInscripciones.SelectedRows[0].DataBoundItem).ID;
+
+                AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Modificacion);
+
+                AID.ShowDialog();
+            }
+        }
+
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
                 if (this.dgvAlumnoInscripciones.SelectedRows.Count != 0)
                 {
 
-                    int ID = ((Business.Entities.AlumnoInscripciones)this.dgvAlumnoInscripciones.SelectedRows[0].DataBoundItem).ID;
-
-                    AlumnoInscripcionesDesktop UD = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
-                UD.ShowDialog();
-                }
-  
-            }
-
-        private void tsbEliminar_Click( object sender, EventArgs e )
-            {
-                if (this.dgvAlumnoInscripciones.SelectedRows.Count != 0)
-                {
-
-                int ID = ((Usuario)this.dgvAlumnoInscripciones.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.AlumnoInscripciones)this.dgvAlumnoInscripciones.SelectedRows[0].DataBoundItem).ID;
 
                 AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Baja);
 
-                UD.ShowDialog();
+                AID.ShowDialog();
                 }
-            }
-    }
+        }
+    }    
 }
+

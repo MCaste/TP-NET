@@ -48,7 +48,5 @@ namespace Business.Logic
         {
         AIData.Save(alumnoInscripcion);   
         }
-
-        }
     }
 }

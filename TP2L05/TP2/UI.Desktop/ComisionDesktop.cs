@@ -22,7 +22,6 @@ namespace UI.Desktop
 
         private Comision _ComisionActual;
 
-        //Propiedad
         public Comision ComisionActual
         
             {
@@ -55,8 +54,8 @@ namespace UI.Desktop
                     break;
                 case ModoForm.Baja:
                         {
-                        this.btnAceptar.Text = "Eliminar";
-                        this.ComisionActual.State = BusinessEntity.States.Deleted;
+                            this.btnAceptar.Text = "Eliminar";
+                            this.ComisionActual.State = BusinessEntity.States.Deleted;
                         } 
                     break;
                 case ModoForm.Consulta:
@@ -75,8 +74,9 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                Comision com = new Comision();                
-                ComisionActual = com;
+                Comision C = new Comision();                
+                
+                ComisionActual = C;
                  
                 this.ComisionActual.Descripcion = this.txtDescripcion.Text;                
                 this.ComisionActual.AnioEspecialidad = Convert.ToInt32(this.txtAnioEspecialidad.Text);                
@@ -85,8 +85,8 @@ namespace UI.Desktop
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
                 this.ComisionActual.ID = Convert.ToInt32(this.txtID.Text);            
-                this.ComisionActual.Descripcion = this.txtDescripcion.Text;                
-                this.ComisionActual.AnioEspecialidad = Convert.ToInt32(this.txtAnioEspecialidad.Text);                
+                this.ComisionActual.Descripcion = this.txtDescripcion.Text;                              
+                this.ComisionActual.AnioEspecialidad = Convert.ToInt32(this.txtAnioEspecialidad.Text);                              
                 this.ComisionActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text);   
                 }
             }
@@ -94,8 +94,10 @@ namespace UI.Desktop
         public override void GuardarCambios() 
             {
             MapearADatos();
-            ComisionLogic cl = new ComisionLogic();
-            cl.Save(ComisionActual);
+
+            ComisionLogic CL = new ComisionLogic();
+
+            CL.Save(ComisionActual);
             }
 
       public override bool Validar()
@@ -108,18 +110,6 @@ namespace UI.Desktop
             else return true;
             }
 
-        private void btnAceptar_Click( object sender, EventArgs e )
-            {
-            if (Validar() == true)
-                {
-                GuardarCambios();
-
-                this.Close();
-                }
-            }
-
-        //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
-        
         public new  void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
             {
             MessageBox.Show(mensaje,titulo, botones, icono);
@@ -135,19 +125,32 @@ namespace UI.Desktop
             this.Modo = modo;   
             }
 
-        public ComisionDesktop(int ID, ModoForm modo)
-            : this()
+        public ComisionDesktop(int ID, ModoForm modo): this()
             {
             this.Modo = modo;
-            ComisionLogic cl = new ComisionLogic();
-            ComisionActual = cl.GetOne(ID);
+            
+            ComisionLogic CL = new ComisionLogic();
+
+            ComisionActual = CL.GetOne(ID);
+            
             MapearDeDatos();
             }
 
-        private void btnCancelar_Click( object sender, EventArgs e )
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (Validar() == true)
             {
-            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
-            if (DR == DialogResult.Yes) this.Close();      
+                GuardarCambios();
+
+                this.Close();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
+
+            if (DR == DialogResult.Yes) this.Close(); 
+        }
     }
 }
