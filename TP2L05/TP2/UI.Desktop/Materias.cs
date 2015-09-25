@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI.Desktop
 {
-    public partial class Persona : Form
+    public partial class Materias : AplicationForm
     {
-        public Persona()
+        public Materias()
         {
             InitializeComponent();
         }

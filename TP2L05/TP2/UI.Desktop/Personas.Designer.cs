@@ -1,6 +1,6 @@
 ﻿namespace UI.Desktop
 {
-    partial class Persona
+    partial class Personas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Persona));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personas));
             this.tscPersona = new System.Windows.Forms.ToolStripContainer();
             this.tlPersona = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPersona = new System.Windows.Forms.DataGridView();

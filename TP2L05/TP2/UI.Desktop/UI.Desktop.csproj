@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlumnoInscripciones.cs">
+    <Compile Include="AlumnosInscripciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlumnoInscripciones.Designer.cs">
-      <DependentUpon>AlumnoInscripciones.cs</DependentUpon>
+    <Compile Include="AlumnosInscripciones.Designer.cs">
+      <DependentUpon>AlumnosInscripciones.cs</DependentUpon>
     </Compile>
     <Compile Include="AlumnoInscripcionesDesktop.cs">
       <SubType>Form</SubType>
@@ -74,11 +74,11 @@
     <Compile Include="Comisiones.Designer.cs">
       <DependentUpon>Comisiones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Curso.cs">
+    <Compile Include="Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Curso.Designer.cs">
-      <DependentUpon>Curso.cs</DependentUpon>
+    <Compile Include="Cursos.Designer.cs">
+      <DependentUpon>Cursos.cs</DependentUpon>
     </Compile>
     <Compile Include="CursoDesktop.cs">
       <SubType>Form</SubType>
@@ -86,11 +86,11 @@
     <Compile Include="CursoDesktop.Designer.cs">
       <DependentUpon>CursoDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="DocenteCurso.cs">
+    <Compile Include="DocentesCursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DocenteCurso.Designer.cs">
-      <DependentUpon>DocenteCurso.cs</DependentUpon>
+    <Compile Include="DocentesCursos.Designer.cs">
+      <DependentUpon>DocentesCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="DocenteCursoDesktop.cs">
       <SubType>Form</SubType>
@@ -110,11 +110,11 @@
     <Compile Include="Especialidades.Designer.cs">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materia.cs">
+    <Compile Include="Materias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materia.Designer.cs">
-      <DependentUpon>Materia.cs</DependentUpon>
+    <Compile Include="Materias.Designer.cs">
+      <DependentUpon>Materias.cs</DependentUpon>
     </Compile>
     <Compile Include="MateriaDesktop.cs">
       <SubType>Form</SubType>
@@ -122,11 +122,11 @@
     <Compile Include="MateriaDesktop.Designer.cs">
       <DependentUpon>MateriaDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo.cs">
+    <Compile Include="Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo.Designer.cs">
-      <DependentUpon>Modulo.cs</DependentUpon>
+    <Compile Include="Modulos.Designer.cs">
+      <DependentUpon>Modulos.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloDesktop.cs">
       <SubType>Form</SubType>
@@ -134,11 +134,11 @@
     <Compile Include="ModuloDesktop.Designer.cs">
       <DependentUpon>ModuloDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloUsuario.cs">
+    <Compile Include="ModulosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuloUsuario.Designer.cs">
-      <DependentUpon>ModuloUsuario.cs</DependentUpon>
+    <Compile Include="ModulosUsuarios.Designer.cs">
+      <DependentUpon>ModulosUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloUsuarioDesktop.cs">
       <SubType>Form</SubType>
@@ -146,11 +146,11 @@
     <Compile Include="ModuloUsuarioDesktop.Designer.cs">
       <DependentUpon>ModuloUsuarioDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persona.cs">
+    <Compile Include="Personas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Persona.Designer.cs">
-      <DependentUpon>Persona.cs</DependentUpon>
+    <Compile Include="Personas.Designer.cs">
+      <DependentUpon>Personas.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonaDesktop.cs">
       <SubType>Form</SubType>
@@ -164,11 +164,11 @@
     <Compile Include="PlanDesktop.Designer.cs">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plan.cs">
+    <Compile Include="Planes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plan.Designer.cs">
-      <DependentUpon>Plan.cs</DependentUpon>
+    <Compile Include="Planes.Designer.cs">
+      <DependentUpon>Planes.cs</DependentUpon>
     </Compile>
     <Compile Include="tp2_netDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -189,8 +189,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AlumnoInscripciones.resx">
-      <DependentUpon>AlumnoInscripciones.cs</DependentUpon>
+    <EmbeddedResource Include="AlumnosInscripciones.resx">
+      <DependentUpon>AlumnosInscripciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlumnoInscripcionesDesktop.resx">
       <DependentUpon>AlumnoInscripcionesDesktop.cs</DependentUpon>
@@ -201,14 +201,14 @@
     <EmbeddedResource Include="Comisiones.resx">
       <DependentUpon>Comisiones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Curso.resx">
-      <DependentUpon>Curso.cs</DependentUpon>
+    <EmbeddedResource Include="Cursos.resx">
+      <DependentUpon>Cursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CursoDesktop.resx">
       <DependentUpon>CursoDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DocenteCurso.resx">
-      <DependentUpon>DocenteCurso.cs</DependentUpon>
+    <EmbeddedResource Include="DocentesCursos.resx">
+      <DependentUpon>DocentesCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DocenteCursoDesktop.resx">
       <DependentUpon>DocenteCursoDesktop.cs</DependentUpon>
@@ -219,26 +219,26 @@
     <EmbeddedResource Include="Especialidades.resx">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Materia.resx">
-      <DependentUpon>Materia.cs</DependentUpon>
+    <EmbeddedResource Include="Materias.resx">
+      <DependentUpon>Materias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MateriaDesktop.resx">
       <DependentUpon>MateriaDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo.resx">
-      <DependentUpon>Modulo.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos.resx">
+      <DependentUpon>Modulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloDesktop.resx">
       <DependentUpon>ModuloDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuloUsuario.resx">
-      <DependentUpon>ModuloUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="ModulosUsuarios.resx">
+      <DependentUpon>ModulosUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloUsuarioDesktop.resx">
       <DependentUpon>ModuloUsuarioDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persona.resx">
-      <DependentUpon>Persona.cs</DependentUpon>
+    <EmbeddedResource Include="Personas.resx">
+      <DependentUpon>Personas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonaDesktop.resx">
       <DependentUpon>PersonaDesktop.cs</DependentUpon>
@@ -246,8 +246,8 @@
     <EmbeddedResource Include="PlanDesktop.resx">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plan.resx">
-      <DependentUpon>Plan.cs</DependentUpon>
+    <EmbeddedResource Include="Planes.resx">
+      <DependentUpon>Planes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>

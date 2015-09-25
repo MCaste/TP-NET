@@ -1,6 +1,6 @@
 ﻿namespace UI.Desktop
 {
-    partial class AlumnoInscripciones
+    partial class AlumnosInscripciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlumnoInscripciones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlumnosInscripciones));
             this.tscAlumnosInscripciones = new System.Windows.Forms.ToolStripContainer();
             this.tlAlumnosInscripciones = new System.Windows.Forms.TableLayoutPanel();
             this.dgvAlumnoInscripciones = new System.Windows.Forms.DataGridView();

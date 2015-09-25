@@ -12,25 +12,25 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class DocenteCurso : AplicationForm
+    public partial class Planes : AplicationForm
     {
-        public DocenteCurso()
+        public Planes()
         {
             InitializeComponent();
         }
 
         public void Listar()
-        {
-            DocenteCursoLogic DCL = new DocenteCursoLogic();
+            {
+                PlanLogic PL = new PlanLogic();
 
-            this.dgvDocenteCurso.DataSource = DCL.GetAll();
-        }
+            this.dgvPlan.DataSource = PL.GetAll();
+            }
 
-        private void DocenteCurso_Load(object sender, EventArgs e)
+        private void Plan_Load(object sender, EventArgs e)
         {
             Listar();
         }
-
+        
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             Listar();
@@ -45,38 +45,36 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            DocenteCursoDesktop DCD = new DocenteCursoDesktop(AplicationForm.ModoForm.Alta);
+            PlanDesktop PD = new PlanDesktop(AplicationForm.ModoForm.Alta);
 
-            DCD.ShowDialog();
+            PD.ShowDialog();
 
             this.Listar();
         }
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            if (this.dgvDocenteCurso.SelectedRows.Count != 0)
+            if (this.dgvPlan.SelectedRows.Count != 0)
             {
+                int ID = ((Business.Entities.Plan)this.dgvPlan.SelectedRows[0].DataBoundItem).ID;
 
-                int ID = ((Business.Entities.DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
+                PlanDesktop UD = new PlanDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
-                DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
-                DCD.ShowDialog();
-            }
-
+                UD.ShowDialog();
+                }
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (this.dgvDocenteCurso.SelectedRows.Count != 0)
+            if (this.dgvPlan.SelectedRows.Count != 0)
             {
+                int ID = ((Business.Entities.Plan)this.dgvPlan.SelectedRows[0].DataBoundItem).ID;
 
-                int ID = ((Business.Entities.DocenteCurso)this.dgvDocenteCurso.SelectedRows[0].DataBoundItem).ID;
+                PlanDesktop UD = new PlanDesktop(ID, AplicationForm.ModoForm.Baja);
 
-                DocenteCursoDesktop DCD = new DocenteCursoDesktop(ID, AplicationForm.ModoForm.Baja);
-
-                DCD.ShowDialog();
+                UD.ShowDialog();
             }
-        }
-    }
+        }   
+    }    
 }
+

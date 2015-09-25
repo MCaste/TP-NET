@@ -12,57 +12,59 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class Modulo :  Form
+    public partial class ModulosUsuarios : Form
     {
-        public Modulo()
+        public ModulosUsuarios()
         {
             InitializeComponent();
         }
-
+         
         public void Listar()
         {
-            ModuloLogic ML = new ModuloLogic();
+            ModuloUsuarioLogic MUL = new ModuloUsuarioLogic();
 
-            List<Business.Entities.Modulo> l = ML.GetAll();
+            List<Business.Entities.ModuloUsuario> l = MUL.GetAll();
         }
 
-        private void Modulo_Load(object sender, EventArgs e)
+
+        private void ModuloUsuario_Load(object sender, EventArgs e)
         {
             Listar();
         }
 
+
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            ModuloDesktop MD = new ModuloDesktop(AplicationForm.ModoForm.Alta);
+            ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(AplicationForm.ModoForm.Alta);
 
-            MD.ShowDialog();
+            MUD.ShowDialog();
 
             this.Listar();
         }
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            if (this.dgvModulos.SelectedRows.Count != 0)
+            if (this.dgvModuloUsuario.SelectedRows.Count != 0)
             {
 
-                int ID = ((Business.Entities.Modulo)this.dgvModulos.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
 
-                ModuloDesktop UD = new ModuloDesktop(ID, AplicationForm.ModoForm.Modificacion);
+                ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
-                UD.ShowDialog();
+                MUD.ShowDialog();
             }
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (this.dgvModulos.SelectedRows.Count != 0)
+            if (this.dgvModuloUsuario.SelectedRows.Count != 0)
             {
 
-                int ID = ((Business.Entities.Modulo)this.dgvModulos.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
 
-                ModuloDesktop MD = new ModuloDesktop(ID, AplicationForm.ModoForm.Baja);
+                ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
 
-                MD.ShowDialog();
+                MUD.ShowDialog();
             }
         }
 
@@ -77,6 +79,7 @@ namespace UI.Desktop
 
             if (DR == DialogResult.Yes) this.Close();
         }
-
     }
 }
+
+    

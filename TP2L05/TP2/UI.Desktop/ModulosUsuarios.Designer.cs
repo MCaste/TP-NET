@@ -1,6 +1,6 @@
 ﻿namespace UI.Desktop
 {
-    partial class ModuloUsuario
+    partial class ModulosUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuloUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModulosUsuarios));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tlModuloUsuario = new System.Windows.Forms.TableLayoutPanel();
             this.dgvModuloUsuario = new System.Windows.Forms.DataGridView();

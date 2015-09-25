@@ -13,9 +13,9 @@ using Business.Logic;
 
 namespace UI.Desktop
 {
-    public partial class AlumnoInscripciones : Form
+    public partial class AlumnosInscripciones : Form
     {
-        public AlumnoInscripciones()
+        public AlumnosInscripciones()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace UI.Desktop
             {
             AlumnoInscripcionLogic AIL = new AlumnoInscripcionLogic();
 
-            List<Business.Entities.AlumnoInscripciones> l = AIL.GetAll();
+            List<AlumnoInscripciones> l = AIL.GetAll();
             }
 
         private void AlumnoInscripciones_Load( object sender, EventArgs e )
