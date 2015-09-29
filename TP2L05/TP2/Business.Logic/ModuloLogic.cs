@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.Entities;
 using Data.Database;
 
+
 namespace Business.Logic
 {
     public class ModuloLogic : BusinessLogic
