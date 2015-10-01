@@ -14,19 +14,19 @@ namespace Business.Entities
         
         private int _IDDocente;
 
-   
+
         public int TipoCargo
-            {
+        {
 
             get
-                {
+            {
                 return _TipoCargo;
-                }
-            set
-                {
-                _TipoCargo = value;
-                }
             }
+            set
+            {
+                _TipoCargo = value;
+            }
+        }
         
         public int IDCurso 
         {

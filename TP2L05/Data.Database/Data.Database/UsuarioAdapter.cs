@@ -32,7 +32,7 @@ namespace Data.Database
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
 
                 /*read() lee una fila de las devueltas por el comando sql, carga los datos
-                  en drUsurios para pdoer accederlos, devuelve erdadero meintras haya podido
+                  en drUsurios para pdoer accederlos, devuelve verdadero meintras haya podido
                   leer datos y avanza a la fila siguiente para el proximo read.*/
                 
                 while (drUsuarios.Read())

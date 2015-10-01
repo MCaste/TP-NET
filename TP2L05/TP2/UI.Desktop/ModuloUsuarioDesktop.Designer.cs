@@ -38,10 +38,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
             this.modulosusuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.modulos_usuariosTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.modulos_usuariosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modulosusuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,29 +112,19 @@
             // 
             this.cbEstado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.modulosusuariosBindingSource, "alta", true));
             this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "Alta",
+            "Baja",
+            "Modificacion",
+            "Consulta"});
             this.cbEstado.Location = new System.Drawing.Point(344, 58);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(147, 21);
             this.cbEstado.TabIndex = 9;
             // 
-            // tp2_netDataSet
-            // 
-            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
-            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // modulosusuariosBindingSource
-            // 
-            this.modulosusuariosBindingSource.DataMember = "modulos_usuarios";
-            this.modulosusuariosBindingSource.DataSource = this.tp2_netDataSet;
-            // 
-            // modulos_usuariosTableAdapter
-            // 
-            this.modulos_usuariosTableAdapter.ClearBeforeFill = true;
-            // 
             // ModuloUsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 151);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.btnCancelar);
@@ -150,7 +137,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "ModuloUsuarioDesktop";
             this.Text = "Modulo - Usuario";
-            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modulosusuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,8 +154,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cbEstado;
-        private tp2_netDataSet tp2_netDataSet;
         private System.Windows.Forms.BindingSource modulosusuariosBindingSource;
-        private tp2_netDataSetTableAdapters.modulos_usuariosTableAdapter modulos_usuariosTableAdapter;
     }
 }

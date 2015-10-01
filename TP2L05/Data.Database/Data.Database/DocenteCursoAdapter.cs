@@ -46,7 +46,7 @@ namespace Data.Database
 
                     dc.IDCurso = (int)drDocenteCurso["id_curso"];
                     dc.IDDocente = (int)drDocenteCurso["id_docente"];
-                    dc.TipoCargo = (int)drDocenteCurso["tipo_cargo"];
+                    dc.TipoCargo = (int)drDocenteCurso["cargo"];
                     dc.ID = (int)drDocenteCurso["id_dictado"];
 
                     //agrego el objeto con datos a la lista que devuelvo

@@ -115,3 +115,12 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Deskto
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.Usuarios.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Business.Logic.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Business.Logic.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb

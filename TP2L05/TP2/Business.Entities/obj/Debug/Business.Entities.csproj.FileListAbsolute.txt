@@ -17,3 +17,8 @@ C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Debug\Business.Entities.dll
 C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Entities\obj\Debug\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Debug\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\bin\Debug\Business.Entities.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Debug\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Entities\obj\Debug\Business.Entities.pdb

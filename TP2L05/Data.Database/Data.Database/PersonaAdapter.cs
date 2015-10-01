@@ -166,7 +166,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
                 cmdSave.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = persona.TiposPersona;
                 cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Email;
-                cmdSave.Parameters.Add("@id_plan", SqlDbType.VarChar, 50).Value = persona.Email;
+                cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = persona.IDPlan;
                 cmdSave.ExecuteNonQuery();
             }
 
@@ -194,15 +194,15 @@ namespace Data.Database
                     "values (@apellido, @nombre,@direccion,@telefono, @email, @fecha_nac, @tipo_persona, @legajo, @id_plan)" +
                     "select @@identity", sqlConn);
 
-                cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.NombreUsuario;
-                cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = persona.Clave;
-                cmdSave.Parameters.Add("@direccion", SqlDbType.Bit).Value = persona.Habilitado;
-                cmdSave.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = persona.Email;
-                cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Nombre;
-                cmdSave.Parameters.Add("@fecha_nac", SqlDbType.VarChar, 50).Value = persona.Apellido;
-                cmdSave.Parameters.Add("@tipo_persona", SqlDbType.VarChar, 50).Value = persona.Email;
-                cmdSave.Parameters.Add("@legajo", SqlDbType.VarChar, 50).Value = persona.Nombre;
-                cmdSave.Parameters.Add("@id_plan", SqlDbType.VarChar, 50).Value = persona.Apellido;
+                cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.Apellido;
+                cmdSave.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = persona.Nombre;
+                cmdSave.Parameters.Add("@direccion", SqlDbType.VarChar, 50).Value = persona.Direccion;
+                cmdSave.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = persona.Telefono;
+                cmdSave.Parameters.Add("@fecha_nac", SqlDbType.DateTime, 50).Value = persona.FechaNacimiento;
+                cmdSave.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
+                cmdSave.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = persona.TiposPersona;
+                cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Email;
+                cmdSave.Parameters.Add("@id_plan", SqlDbType.Int).Value = persona.IDPlan;
                 persona.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
             }
 

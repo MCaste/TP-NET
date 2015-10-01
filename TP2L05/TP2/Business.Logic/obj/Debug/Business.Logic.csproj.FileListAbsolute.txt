@@ -32,3 +32,9 @@ C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\obj
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.dll
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.pdb
