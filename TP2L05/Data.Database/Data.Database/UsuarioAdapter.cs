@@ -121,10 +121,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 
-                SqlCommand cmdDelete = new SqlCommand("delete usuarios where id_usuario=@id", sqlConn);
-                
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
-                
+                SqlCommand cmdDelete = new SqlCommand("delete usuarios where id_usuario=@id", sqlConn);               
+                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;               
                 cmdDelete.ExecuteNonQuery();
             }
 
