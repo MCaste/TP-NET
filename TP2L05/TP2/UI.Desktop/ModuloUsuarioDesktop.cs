@@ -144,7 +144,25 @@ namespace UI.Desktop
 
         private void cboxModuloUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            /*
+            switch (cboxModuloUsuario.SelectedIndex)
+            {
+                case 1:
+                    Modo = ModoForm.Alta;
+                    MapearADatos();
+                    break;
+                case 2:
+                    Modo = ModoForm.Baja;
+                    break;
+                case 3:
+                    Modo = ModoForm.Consulta;
+                    break;
+                case 4:
+                    Modo = ModoForm.Modificacion;
+                    break;
+                default:
+                    break;*/
+            }
         }
 
         private void ModuloUsuarioDesktop_Load(object sender, EventArgs e)
@@ -154,13 +172,7 @@ namespace UI.Desktop
 
         private void cboxModuloUsuario_SelectedValueChanged(object sender, EventArgs e)
         {
-            switch (cboxModuloUsuario.SelectedIndex)
-            {
-                case "Alta":
-
-                default:
-                    break;
-            }
+            
         }
         }
     }
