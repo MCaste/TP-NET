@@ -139,5 +139,28 @@ namespace UI.Desktop
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
             if (DR == DialogResult.Yes) this.Close();      
             }
+
+        
+
+        private void cboxModuloUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ModuloUsuarioDesktop_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxModuloUsuario_SelectedValueChanged(object sender, EventArgs e)
+        {
+            switch (cboxModuloUsuario.SelectedIndex)
+            {
+                case "Alta":
+
+                default:
+                    break;
+            }
+        }
         }
     }

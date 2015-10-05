@@ -37,8 +37,8 @@
             this.txtIDUsuario = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.modulosusuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cboxModuloUsuario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.modulosusuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,25 +108,27 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // cbEstado
+            // cboxModuloUsuario
             // 
-            this.cbEstado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.modulosusuariosBindingSource, "alta", true));
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Items.AddRange(new object[] {
+            this.cboxModuloUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxModuloUsuario.FormattingEnabled = true;
+            this.cboxModuloUsuario.Items.AddRange(new object[] {
             "Alta",
             "Baja",
-            "Modificacion",
-            "Consulta"});
-            this.cbEstado.Location = new System.Drawing.Point(344, 58);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(147, 21);
-            this.cbEstado.TabIndex = 9;
+            "Consulta",
+            "Modificación"});
+            this.cboxModuloUsuario.Location = new System.Drawing.Point(281, 58);
+            this.cboxModuloUsuario.Name = "cboxModuloUsuario";
+            this.cboxModuloUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cboxModuloUsuario.TabIndex = 9;
+            this.cboxModuloUsuario.SelectedIndexChanged += new System.EventHandler(this.cboxModuloUsuario_SelectedIndexChanged);
+            this.cboxModuloUsuario.SelectedValueChanged += new System.EventHandler(this.cboxModuloUsuario_SelectedValueChanged);
             // 
             // ModuloUsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(511, 151);
-            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.cboxModuloUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtIDUsuario);
@@ -137,6 +139,7 @@
             this.Controls.Add(this.lblID);
             this.Name = "ModuloUsuarioDesktop";
             this.Text = "Modulo - Usuario";
+            this.Load += new System.EventHandler(this.ModuloUsuarioDesktop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.modulosusuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,7 +156,7 @@
         private System.Windows.Forms.TextBox txtIDUsuario;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.BindingSource modulosusuariosBindingSource;
+        private System.Windows.Forms.ComboBox cboxModuloUsuario;
     }
 }
