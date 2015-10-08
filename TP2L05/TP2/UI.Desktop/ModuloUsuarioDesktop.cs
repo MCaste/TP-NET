@@ -163,16 +163,14 @@ namespace UI.Desktop
                 default:
                     break;*/
             }
-        }
-
-        private void ModuloUsuarioDesktop_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void cboxModuloUsuario_SelectedValueChanged(object sender, EventArgs e)
         {
-            
+
         }
         }
+
+
+       
+        
     }

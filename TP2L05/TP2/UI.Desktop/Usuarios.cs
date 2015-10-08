@@ -54,7 +54,7 @@ namespace UI.Desktop
         private void tsbNuevo_Click( object sender, EventArgs e )
             {
             UsuarioDesktop UD = new UsuarioDesktop(AplicationForm.ModoForm.Alta);
-
+            UD.Text = "Alta usuario";
             UD.ShowDialog();
 
             this.Listar();
@@ -68,7 +68,7 @@ namespace UI.Desktop
                 int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
 
                 UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
+                UD.Text = "Editar usuario";
                 UD.ShowDialog();
                 }
   
@@ -82,7 +82,7 @@ namespace UI.Desktop
                 int ID = ((Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
 
                 UsuarioDesktop UD = new UsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
-
+                UD.Text = "Eliminar usuario";
                 UD.ShowDialog();
                 }
             }

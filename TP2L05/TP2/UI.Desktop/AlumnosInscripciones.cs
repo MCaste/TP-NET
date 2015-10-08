@@ -49,9 +49,8 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(AplicationForm.ModoForm.Alta);
-
+            AID.Text = "Alta";
             AID.ShowDialog();
-
             this.Listar();
         }
 
@@ -59,11 +58,9 @@ namespace UI.Desktop
         {
             if (this.dgvAlumnoInscripciones.SelectedRows.Count != 0)
             {
-
                 int ID = ((Business.Entities.AlumnoInscripciones)this.dgvAlumnoInscripciones.SelectedRows[0].DataBoundItem).ID;
-
                 AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
+                AID.Text = "Eliminar";
                 AID.ShowDialog();
             }
         }
@@ -72,11 +69,9 @@ namespace UI.Desktop
         {
                 if (this.dgvAlumnoInscripciones.SelectedRows.Count != 0)
                 {
-
                 int ID = ((Business.Entities.AlumnoInscripciones)this.dgvAlumnoInscripciones.SelectedRows[0].DataBoundItem).ID;
-
                 AlumnoInscripcionesDesktop AID = new AlumnoInscripcionesDesktop(ID, AplicationForm.ModoForm.Baja);
-
+                AID.Text = "Eliminar";
                 AID.ShowDialog();
                 }
         }

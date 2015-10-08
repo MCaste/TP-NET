@@ -86,3 +86,6 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desk
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.ModuloUsuarioDesktop.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Personas.resources
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.PersonaDesktop.resources
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Release\Util.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Release\UI.Desktop.Login.resources

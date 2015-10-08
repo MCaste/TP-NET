@@ -46,7 +46,7 @@ namespace UI.Desktop
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             PlanDesktop PD = new PlanDesktop(AplicationForm.ModoForm.Alta);
-
+            PD.Text = "Alta plan";
             PD.ShowDialog();
 
             this.Listar();
@@ -58,9 +58,9 @@ namespace UI.Desktop
             {
                 int ID = ((Business.Entities.Plan)this.dgvPlan.SelectedRows[0].DataBoundItem).ID;
 
-                PlanDesktop UD = new PlanDesktop(ID, AplicationForm.ModoForm.Modificacion);
-
-                UD.ShowDialog();
+                PlanDesktop PD = new PlanDesktop(ID, AplicationForm.ModoForm.Modificacion);
+                PD.Text = "Editar plan";
+                PD.ShowDialog();
                 }
         }
 
@@ -70,9 +70,9 @@ namespace UI.Desktop
             {
                 int ID = ((Business.Entities.Plan)this.dgvPlan.SelectedRows[0].DataBoundItem).ID;
 
-                PlanDesktop UD = new PlanDesktop(ID, AplicationForm.ModoForm.Baja);
-
-                UD.ShowDialog();
+                PlanDesktop PD = new PlanDesktop(ID, AplicationForm.ModoForm.Baja);
+                PD.Text = "Eliminar plan";
+                PD.ShowDialog();
             }
         }   
     }    

@@ -10,15 +10,10 @@ namespace Business.Entities
         {
 
         private int _IDUsuario;
-
         private int _IDModulo;
-
         private bool _PermiteAlta;
-
         private bool _PermiteBaja;
-
         private bool _PermiteModificacion;
-
         private bool _PermiteConsulta;
 
         public int IDUsuario

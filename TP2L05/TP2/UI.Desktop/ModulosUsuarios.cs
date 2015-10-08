@@ -23,7 +23,7 @@ namespace UI.Desktop
         {
             ModuloUsuarioLogic MUL = new ModuloUsuarioLogic();
 
-            List<Business.Entities.ModuloUsuario> l = MUL.GetAll();
+            List<ModuloUsuario> l = MUL.GetAll();
         }
 
 
@@ -47,7 +47,7 @@ namespace UI.Desktop
             if (this.dgvModuloUsuario.SelectedRows.Count != 0)
             {
 
-                int ID = ((Business.Entities.ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
 
                 ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(ID, AplicationForm.ModoForm.Modificacion);
 
@@ -60,7 +60,7 @@ namespace UI.Desktop
             if (this.dgvModuloUsuario.SelectedRows.Count != 0)
             {
 
-                int ID = ((Business.Entities.ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((ModuloUsuario)this.dgvModuloUsuario.SelectedRows[0].DataBoundItem).ID;
 
                 ModuloUsuarioDesktop MUD = new ModuloUsuarioDesktop(ID, AplicationForm.ModoForm.Baja);
 

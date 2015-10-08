@@ -124,3 +124,5 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Business.
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Business.Logic.pdb
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Data.Database.pdb
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Util.dll
+C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Desktop\bin\Debug\Util.pdb

@@ -68,7 +68,7 @@ namespace Data.Database
                 {
                     m.ID = (int)drModulos["id_modulo"];
                     m.Descripcion = (String)drModulos["desc_modulo"];
-                    m.Ejecuta = (String)drModulos["Ejecuta"];
+                    m.Ejecuta = (String)drModulos["ejecuta"];
                 }
 
                 drModulos.Close();

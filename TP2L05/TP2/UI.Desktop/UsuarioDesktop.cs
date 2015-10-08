@@ -12,6 +12,7 @@ using Business.Entities;
 using Business.Logic;
 
 
+
 namespace UI.Desktop
     {
     public partial class UsuarioDesktop : AplicationForm
@@ -49,6 +50,7 @@ namespace UI.Desktop
                         {
                         this.btnAceptar.Text = "Guardar";
                         this.UsuarioActual.State = BusinessEntity.States.New;
+                        
                         }
                     break;
                 case ModoForm.Modificacion:
@@ -108,63 +110,38 @@ namespace UI.Desktop
             UL.Save(UsuarioActual);
             }
 
-      public static bool ValidarEmail(TextBox txtEmail)
-        {
-          string formato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-          string email = txtEmail.Text;
-
-          if (Regex.IsMatch(email, formato))
-              {
-              if (Regex.Replace(email, formato, String.Empty).Length == 0)
-                  {
-                  return true;
-                  }
-              else return false;
-              }
-          else return false;
-
-        }
 
       public override bool Validar()
-            {
+      {
+          string mensaje = "";
+          bool ok = true;
 
-            int ban1,ban2 ,ban3, ban4;
+          foreach(Control c in this.Controls)
+          {
+              if ((c is TextBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+          }
 
-            ban1 = ban2 = ban3 = ban4 = 0;
+          if (!string.IsNullOrEmpty(mensaje))
+          {
+              mensaje = "Por favor complete los siguientes campos:\n" + mensaje;
+              ok = false;
+          }
 
-             if ((this.txtNombre.Text == null) || (this.txtApellido.Text == null) || (this.txtEmail.Text == null) || (this.txtUsuario.Text == null) || (this.txtClave.Text == null) || (this.txtConfirmarClave.Text == null))
-                    {
-                    ban1 = 1;
-                    Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+          if ((!string.IsNullOrWhiteSpace(txtEmail.Text)) && (!Util.Util.IsValidEMail(this.txtEmail.Text)))
+          {
+              mensaje += "El email ingresado no es válido.\n";
+              ok = false;
+          }
 
-            if (this.txtClave.Text != this.txtConfirmarClave.Text)
-                    {
-                    ban2 = 1;
+          if (!(this.txtClave.Text.Equals(this.txtConfirmarClave.Text)) || (this.txtClave.Text.Length < 8))
+          {
+              mensaje += "La contraseña ingresada no coincide o posee menos de 8 caracteres.\n";
+              ok = false;
+          }
 
-                    Notificar("Error","Las contraseñas no coinciden, por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                   }
-                
-
-            if ((this.txtClave.Text.Length) < 8)
-                    {
-                    ban3 = 1;
-
-                    Notificar("Error", "La contraseña debe tener una longitud mínima de 8 caracteres,por favor vuelva a ingresarla nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    }
-
-            if (ValidarEmail(txtEmail)==false)
-              
-                {
-                ban4 = 1;
-
-                Notificar("Error","El email ingresado no se encuentra en el formato adecuado,por favor vuelva a ingresarlo nuevamente.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                }
-
-            if ((ban1 == 1) || (ban2 == 1) || (ban3 == 1) || (ban4==1)) return false;
-                
-            else return true;
-            }
+          if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          return ok;
+      }
 
         private void btnAceptar_Click( object sender, EventArgs e )
             {
@@ -206,5 +183,7 @@ namespace UI.Desktop
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
             if (DR == DialogResult.Yes) this.Close();      
             }
+
+        
         }
     }
