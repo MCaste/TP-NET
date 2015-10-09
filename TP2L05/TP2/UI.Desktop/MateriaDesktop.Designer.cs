@@ -31,13 +31,13 @@
             this.lblIDMateria = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblIDPlan = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIDMateria = new System.Windows.Forms.TextBox();
             this.lblHorasSemanales = new System.Windows.Forms.Label();
             this.lblHorasTotales = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtIDPlan = new System.Windows.Forms.TextBox();
+            this.txtHorasTotales = new System.Windows.Forms.TextBox();
+            this.txtHorasSemanales = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,12 +69,12 @@
             this.lblIDPlan.TabIndex = 2;
             this.lblIDPlan.Text = "ID Plan:";
             // 
-            // textBox1
+            // txtIDMateria
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtIDMateria.Location = new System.Drawing.Point(86, 10);
+            this.txtIDMateria.Name = "txtIDMateria";
+            this.txtIDMateria.Size = new System.Drawing.Size(189, 20);
+            this.txtIDMateria.TabIndex = 3;
             // 
             // lblHorasSemanales
             // 
@@ -94,33 +94,33 @@
             this.lblHorasTotales.TabIndex = 5;
             this.lblHorasTotales.Text = "Horas Totales:";
             // 
-            // textBox2
+            // txtDescripcion
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtDescripcion.Location = new System.Drawing.Point(85, 38);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(189, 20);
+            this.txtDescripcion.TabIndex = 6;
             // 
-            // textBox3
+            // txtIDPlan
             // 
-            this.textBox3.Location = new System.Drawing.Point(86, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtIDPlan.Location = new System.Drawing.Point(86, 67);
+            this.txtIDPlan.Name = "txtIDPlan";
+            this.txtIDPlan.Size = new System.Drawing.Size(189, 20);
+            this.txtIDPlan.TabIndex = 7;
             // 
-            // textBox4
+            // txtHorasTotales
             // 
-            this.textBox4.Location = new System.Drawing.Point(380, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtHorasTotales.Location = new System.Drawing.Point(380, 36);
+            this.txtHorasTotales.Name = "txtHorasTotales";
+            this.txtHorasTotales.Size = new System.Drawing.Size(189, 20);
+            this.txtHorasTotales.TabIndex = 8;
             // 
-            // textBox5
+            // txtHorasSemanales
             // 
-            this.textBox5.Location = new System.Drawing.Point(380, 10);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(189, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtHorasSemanales.Location = new System.Drawing.Point(380, 10);
+            this.txtHorasSemanales.Name = "txtHorasSemanales";
+            this.txtHorasSemanales.Size = new System.Drawing.Size(189, 20);
+            this.txtHorasSemanales.TabIndex = 9;
             // 
             // btnAceptar
             // 
@@ -147,13 +147,13 @@
             this.ClientSize = new System.Drawing.Size(580, 111);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtHorasSemanales);
+            this.Controls.Add(this.txtHorasTotales);
+            this.Controls.Add(this.txtIDPlan);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblHorasTotales);
             this.Controls.Add(this.lblHorasSemanales);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIDMateria);
             this.Controls.Add(this.lblIDPlan);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblIDMateria);
@@ -169,13 +169,13 @@
         private System.Windows.Forms.Label lblIDMateria;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblIDPlan;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIDMateria;
         private System.Windows.Forms.Label lblHorasSemanales;
         private System.Windows.Forms.Label lblHorasTotales;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtIDPlan;
+        private System.Windows.Forms.TextBox txtHorasTotales;
+        private System.Windows.Forms.TextBox txtHorasSemanales;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
 

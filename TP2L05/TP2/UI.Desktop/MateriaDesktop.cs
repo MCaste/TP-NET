@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using Business.Entities;
+using Business.Logic;
 
 namespace UI.Desktop
 {
@@ -16,5 +19,147 @@ namespace UI.Desktop
         {
             InitializeComponent();
         }
+
+        private Materia _MateriaActual;
+
+        //Propiedad
+        public Materia MateriaActual    
+            {
+            get { return _MateriaActual; }
+            set { _MateriaActual = value; }
+            }
+
+        public override void MapearDeDatos()
+            {
+            this.txtIDMateria.Text = this.MateriaActual.ID.ToString();        
+            this.txtIDPlan.Text = this.MateriaActual.IDPlan.ToString();           
+            this.txtDescripcion.Text = this.MateriaActual.Descripcion;           
+            this.txtHorasSemanales.Text = this.MateriaActual.HsSemanales.ToString();      
+            this.txtHorasTotales.Text = this.MateriaActual.HsTotales.ToString();       
+
+            switch (Modo)
+                {
+                case ModoForm.Alta:
+                        {
+                        this.btnAceptar.Text = "Guardar";
+                        this.MateriaActual.State = BusinessEntity.States.New;
+                        
+                        }
+                    break;
+                case ModoForm.Modificacion:
+                        {
+                        this.btnAceptar.Text = "Guardar";
+                        this.MateriaActual.State = BusinessEntity.States.Modified;                        
+                        }
+                    break;
+                case ModoForm.Baja:
+                        {
+                        this.btnAceptar.Text = "Eliminar";
+                        this.MateriaActual.State = BusinessEntity.States.Deleted;
+                        } 
+                    break;
+                case ModoForm.Consulta:
+                        {
+                        this.btnAceptar.Text = "Aceptar";
+                        this.MateriaActual.State = BusinessEntity.States.Unmodified;
+                        }
+                    break;
+                default:
+                    break;
+                }
+            }
+
+        public override void MapearADatos()
+            {
+            
+            if (Modo == AplicationForm.ModoForm.Alta)
+                {
+                Materia mat = new Materia();                
+                MateriaActual = mat;
+                 
+                this.MateriaActual.ID = Convert.ToInt32(this.txtIDMateria.Text);                
+                this.MateriaActual.Descripcion = this.txtDescripcion.Text;                
+                this.MateriaActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text);                
+                this.MateriaActual.HsSemanales = Convert.ToInt32(this.txtHorasSemanales.Text);                
+                this.MateriaActual.HsTotales = Convert.ToInt32(this.txtHorasTotales.Text);           
+                }
+            else if (Modo == AplicationForm.ModoForm.Modificacion)
+                {
+                this.MateriaActual.ID = Convert.ToInt32(this.txtIDMateria.Text);                
+                this.MateriaActual.Descripcion = this.txtDescripcion.Text;                
+                this.MateriaActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text);                
+                this.MateriaActual.HsSemanales = Convert.ToInt32(this.txtHorasSemanales.Text);                
+                this.MateriaActual.HsTotales = Convert.ToInt32(this.txtHorasTotales.Text);  
+                }
+            }
+
+        public override void GuardarCambios() 
+            {
+            MapearADatos();
+            MateriaLogic ml = new MateriaLogic();
+            ml.Save(MateriaActual);
+            }
+
+      public override bool Validar()
+      {
+          string mensaje = "";
+          bool ok = true;
+
+          foreach(Control c in this.Controls)
+          {
+              if ((c is TextBox) && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+          }
+
+          if (!string.IsNullOrEmpty(mensaje))
+          {
+              mensaje = "Por favor complete los siguientes campos:\n" + mensaje;
+              ok = false;
+          }
+
+          if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          return ok;
+      }
+
+        private void btnAceptar_Click( object sender, EventArgs e )
+            {
+            if (Validar() == true)
+                {
+                GuardarCambios();
+
+                this.Close();
+                }
+            }
+
+        //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
+        
+        public new  void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
+            {
+            MessageBox.Show(mensaje,titulo, botones, icono);
+            }
+
+        public new void Notificar( string mensaje, MessageBoxButtons botones, MessageBoxIcon icono )
+            {
+            this.Notificar(this.Text, mensaje, botones, icono);
+            }
+
+        public MateriaDesktop(ModoForm modo):this()
+            {
+            this.Modo = modo;   
+            }
+
+        public MateriaDesktop(int ID, ModoForm modo)
+            : this()
+            {
+            this.Modo = modo;
+            MateriaLogic ml = new MateriaLogic();
+            MateriaActual = ml.GetOne(ID);
+            MapearDeDatos();
+            }
+
+        private void btnCancelar_Click( object sender, EventArgs e )
+            {
+            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
+            if (DR == DialogResult.Yes) this.Close();      
+            }
     }
 }
