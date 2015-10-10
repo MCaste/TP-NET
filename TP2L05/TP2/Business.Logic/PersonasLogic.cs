@@ -8,7 +8,7 @@ using Data.Database;
 
 namespace Business.Logic
 {
-    class PersonasLogic : BusinessLogic
+    public class PersonasLogic : BusinessLogic
     {
         private PersonaAdapter _PersonaData;
 
@@ -23,12 +23,12 @@ namespace Business.Logic
             }
 
 
-        public List<Personas> GetAll()
+        public List<Persona> GetAll()
         {
             return PersonaData.GetAll();
         }
 
-        public Personas GetOne(int ID)    
+        public Persona GetOne(int ID)    
         {
             return PersonaData.GetOne(ID);
         }
@@ -38,7 +38,7 @@ namespace Business.Logic
             PersonaData.Delete(ID); 
         }
 
-        public void Save(Personas persona)
+        public void Save(Persona persona)
         {
             PersonaData.Save(persona);   
         }

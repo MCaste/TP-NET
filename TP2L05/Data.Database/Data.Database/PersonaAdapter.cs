@@ -10,11 +10,11 @@ namespace Data.Database
 {
     public class PersonaAdapter : Adapter
     {
-        public List<Personas> GetAll()
+        public List<Persona> GetAll()
         {
             //instanciamos el objeto lista a retornar
 
-            List<Personas> personas = new List<Personas>();
+            List<Persona> personas = new List<Persona>();
 
             try
             {
@@ -39,7 +39,7 @@ namespace Data.Database
                     /*creo un obj usuario de la capa de entidades para copiar los datos 
                       de la fila del datareader al objeto de entidades.*/
 
-                    Personas per = new Personas();
+                    Persona per = new Persona();
 
                     //copio los datos de la fila al obj
 
@@ -78,10 +78,10 @@ namespace Data.Database
         }
 
 
-        public Personas GetOne(int ID)
+        public Persona GetOne(int ID)
         {
 
-            Personas per = new Personas();
+            Persona per = new Persona();
             try
             {
                 this.OpenConnection();
@@ -146,7 +146,7 @@ namespace Data.Database
         }
 
 
-        protected void Update(Personas persona)
+        protected void Update(Persona persona)
         {
             try
             {
@@ -183,7 +183,7 @@ namespace Data.Database
         }
 
 
-        protected void Insert(Personas persona)
+        protected void Insert(Persona persona)
         {
             try
             {
@@ -219,7 +219,7 @@ namespace Data.Database
         }
 
 
-        public void Save(Personas persona)
+        public void Save(Persona persona)
         {
             if (persona.State == BusinessEntity.States.Deleted)
             {

@@ -48,6 +48,8 @@
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.txtFechaNac = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblIDPersona
@@ -154,7 +156,7 @@
             // 
             // txtTIpoPersona
             // 
-            this.txtTIpoPersona.Location = new System.Drawing.Point(333, 84);
+            this.txtTIpoPersona.Location = new System.Drawing.Point(373, 84);
             this.txtTIpoPersona.Name = "txtTIpoPersona";
             this.txtTIpoPersona.Size = new System.Drawing.Size(163, 20);
             this.txtTIpoPersona.TabIndex = 12;
@@ -168,21 +170,21 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(333, 6);
+            this.txtEmail.Location = new System.Drawing.Point(373, 6);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(163, 20);
             this.txtEmail.TabIndex = 14;
             // 
             // txtIDPlan
             // 
-            this.txtIDPlan.Location = new System.Drawing.Point(333, 58);
+            this.txtIDPlan.Location = new System.Drawing.Point(373, 58);
             this.txtIDPlan.Name = "txtIDPlan";
             this.txtIDPlan.Size = new System.Drawing.Size(163, 20);
             this.txtIDPlan.TabIndex = 15;
             // 
             // txtLegajo
             // 
-            this.txtLegajo.Location = new System.Drawing.Point(333, 32);
+            this.txtLegajo.Location = new System.Drawing.Point(373, 32);
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(163, 20);
             this.txtLegajo.TabIndex = 16;
@@ -196,7 +198,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(333, 114);
+            this.btnAceptar.Location = new System.Drawing.Point(307, 150);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 18;
@@ -205,18 +207,36 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(421, 114);
+            this.btnSalir.Location = new System.Drawing.Point(421, 150);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 19;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // txtFechaNac
+            // 
+            this.txtFechaNac.AutoSize = true;
+            this.txtFechaNac.Location = new System.Drawing.Point(257, 114);
+            this.txtFechaNac.Name = "txtFechaNac";
+            this.txtFechaNac.Size = new System.Drawing.Size(111, 13);
+            this.txtFechaNac.TabIndex = 20;
+            this.txtFechaNac.Text = "Fecha de Nacimiento:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(375, 114);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(161, 20);
+            this.textBox1.TabIndex = 21;
+            // 
             // PersonaDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 144);
+            this.ClientSize = new System.Drawing.Size(607, 221);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFechaNac);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtTelefono);
@@ -266,5 +286,7 @@
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label txtFechaNac;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
