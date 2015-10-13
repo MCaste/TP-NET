@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtIDDictado = new System.Windows.Forms.TextBox();
-            this.txtIDDocente = new System.Windows.Forms.TextBox();
-            this.txtIDCurso = new System.Windows.Forms.TextBox();
             this.txtTipoCargo = new System.Windows.Forms.TextBox();
             this.lblIDDictado = new System.Windows.Forms.Label();
             this.lblIDDocente = new System.Windows.Forms.Label();
@@ -38,6 +37,18 @@
             this.lblTipoCargo = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cbIdCurso = new System.Windows.Forms.ComboBox();
+            this.tp2_netDataSet = new UI.Desktop.tp2_netDataSet();
+            this.tp2netDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursosTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.cursosTableAdapter();
+            this.cbIdDocente = new System.Windows.Forms.ComboBox();
+            this.personasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personasTableAdapter = new UI.Desktop.tp2_netDataSetTableAdapters.personasTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tp2netDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtIDDictado
@@ -47,20 +58,6 @@
             this.txtIDDictado.ReadOnly = true;
             this.txtIDDictado.Size = new System.Drawing.Size(172, 20);
             this.txtIDDictado.TabIndex = 1;
-            // 
-            // txtIDDocente
-            // 
-            this.txtIDDocente.Location = new System.Drawing.Point(90, 32);
-            this.txtIDDocente.Name = "txtIDDocente";
-            this.txtIDDocente.Size = new System.Drawing.Size(172, 20);
-            this.txtIDDocente.TabIndex = 2;
-            // 
-            // txtIDCurso
-            // 
-            this.txtIDCurso.Location = new System.Drawing.Point(90, 58);
-            this.txtIDCurso.Name = "txtIDCurso";
-            this.txtIDCurso.Size = new System.Drawing.Size(172, 20);
-            this.txtIDCurso.TabIndex = 3;
             // 
             // txtTipoCargo
             // 
@@ -107,7 +104,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(90, 128);
+            this.btnAceptar.Location = new System.Drawing.Point(106, 128);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 5;
@@ -126,11 +123,63 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // cbIdCurso
+            // 
+            this.cbIdCurso.DataSource = this.cursosBindingSource;
+            this.cbIdCurso.DisplayMember = "id_curso";
+            this.cbIdCurso.FormattingEnabled = true;
+            this.cbIdCurso.Location = new System.Drawing.Point(90, 58);
+            this.cbIdCurso.Name = "cbIdCurso";
+            this.cbIdCurso.Size = new System.Drawing.Size(172, 21);
+            this.cbIdCurso.TabIndex = 8;
+            this.cbIdCurso.ValueMember = "id_curso";
+            // 
+            // tp2_netDataSet
+            // 
+            this.tp2_netDataSet.DataSetName = "tp2_netDataSet";
+            this.tp2_netDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tp2netDataSetBindingSource
+            // 
+            this.tp2netDataSetBindingSource.DataSource = this.tp2_netDataSet;
+            this.tp2netDataSetBindingSource.Position = 0;
+            // 
+            // cursosBindingSource
+            // 
+            this.cursosBindingSource.DataMember = "cursos";
+            this.cursosBindingSource.DataSource = this.tp2netDataSetBindingSource;
+            // 
+            // cursosTableAdapter
+            // 
+            this.cursosTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbIdDocente
+            // 
+            this.cbIdDocente.DataSource = this.personasBindingSource;
+            this.cbIdDocente.DisplayMember = "id_persona";
+            this.cbIdDocente.FormattingEnabled = true;
+            this.cbIdDocente.Location = new System.Drawing.Point(90, 32);
+            this.cbIdDocente.Name = "cbIdDocente";
+            this.cbIdDocente.Size = new System.Drawing.Size(172, 21);
+            this.cbIdDocente.TabIndex = 9;
+            this.cbIdDocente.ValueMember = "id_persona";
+            // 
+            // personasBindingSource
+            // 
+            this.personasBindingSource.DataMember = "personas";
+            this.personasBindingSource.DataSource = this.tp2netDataSetBindingSource;
+            // 
+            // personasTableAdapter
+            // 
+            this.personasTableAdapter.ClearBeforeFill = true;
+            // 
             // DocenteCursoDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(276, 163);
+            this.Controls.Add(this.cbIdDocente);
+            this.Controls.Add(this.cbIdCurso);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblTipoCargo);
@@ -138,11 +187,14 @@
             this.Controls.Add(this.lblIDDocente);
             this.Controls.Add(this.lblIDDictado);
             this.Controls.Add(this.txtTipoCargo);
-            this.Controls.Add(this.txtIDCurso);
-            this.Controls.Add(this.txtIDDocente);
             this.Controls.Add(this.txtIDDictado);
             this.Name = "DocenteCursoDesktop";
             this.Text = "Docente - Curso";
+            this.Load += new System.EventHandler(this.DocenteCursoDesktop_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tp2_netDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tp2netDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,8 +203,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtIDDictado;
-        private System.Windows.Forms.TextBox txtIDDocente;
-        private System.Windows.Forms.TextBox txtIDCurso;
         private System.Windows.Forms.TextBox txtTipoCargo;
         private System.Windows.Forms.Label lblIDDictado;
         private System.Windows.Forms.Label lblIDDocente;
@@ -160,6 +210,14 @@
         private System.Windows.Forms.Label lblTipoCargo;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ComboBox cbIdCurso;
+        private System.Windows.Forms.BindingSource tp2netDataSetBindingSource;
+        private tp2_netDataSet tp2_netDataSet;
+        private System.Windows.Forms.BindingSource cursosBindingSource;
+        private tp2_netDataSetTableAdapters.cursosTableAdapter cursosTableAdapter;
+        private System.Windows.Forms.ComboBox cbIdDocente;
+        private System.Windows.Forms.BindingSource personasBindingSource;
+        private tp2_netDataSetTableAdapters.personasTableAdapter personasTableAdapter;
 
     }
 }

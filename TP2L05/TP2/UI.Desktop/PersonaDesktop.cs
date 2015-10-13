@@ -131,8 +131,7 @@ namespace UI.Desktop
           if (!Util.Util.IsDate (this.txtFechaNac.Text)) 
           {
             mensaje += "La fecha de nacimiento ingresada no es valida.\n";
-
-              ok = false;
+            ok = false;
           }
 
           if (!string.IsNullOrEmpty(mensaje))

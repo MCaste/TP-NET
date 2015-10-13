@@ -54,6 +54,7 @@
             // 
             // txtFechaNacimiento
             // 
+            this.txtFechaNacimiento.AccessibleDescription = "";
             this.txtFechaNacimiento.Location = new System.Drawing.Point(131, 95);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
             this.txtFechaNacimiento.Size = new System.Drawing.Size(161, 20);
