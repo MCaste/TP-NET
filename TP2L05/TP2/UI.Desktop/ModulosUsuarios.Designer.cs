@@ -176,6 +176,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnActualizar.Enter += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnSalir
             // 
@@ -229,13 +230,13 @@
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // ModuloUsuario
+            // ModulosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 346);
             this.Controls.Add(this.toolStripContainer1);
-            this.Name = "ModuloUsuario";
+            this.Name = "ModulosUsuarios";
             this.Text = "ModuloUsuario";
             this.Load += new System.EventHandler(this.ModuloUsuario_Load);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);

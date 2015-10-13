@@ -59,7 +59,7 @@ namespace UI.Desktop
             if (this.dgvEspecialidades.SelectedRows.Count != 0)
             {
 
-                int ID = ((Usuario)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
 
                 EspecialidadDesktop ED = new EspecialidadDesktop(AplicationForm.ModoForm.Modificacion);
 
@@ -73,7 +73,7 @@ namespace UI.Desktop
             if (this.dgvEspecialidades.SelectedRows.Count != 0)
             {
 
-                int ID = ((Usuario)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
 
                 EspecialidadDesktop ED = new EspecialidadDesktop(AplicationForm.ModoForm.Baja);
 

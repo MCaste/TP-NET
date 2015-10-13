@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblIDCurso = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.lblCupo = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtCupo = new System.Windows.Forms.TextBox();
@@ -39,17 +39,17 @@
             this.lblAnioCalendario = new System.Windows.Forms.Label();
             this.txtAnioCalendario = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblIDCurso
+            // lblID
             // 
-            this.lblIDCurso.AutoSize = true;
-            this.lblIDCurso.Location = new System.Drawing.Point(12, 32);
-            this.lblIDCurso.Name = "lblIDCurso";
-            this.lblIDCurso.Size = new System.Drawing.Size(18, 13);
-            this.lblIDCurso.TabIndex = 0;
-            this.lblIDCurso.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(12, 32);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
             // 
             // lblCupo
             // 
@@ -66,14 +66,14 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(150, 20);
-            this.txtID.TabIndex = 2;
+            this.txtID.TabIndex = 1;
             // 
             // txtCupo
             // 
             this.txtCupo.Location = new System.Drawing.Point(100, 55);
             this.txtCupo.Name = "txtCupo";
             this.txtCupo.Size = new System.Drawing.Size(150, 20);
-            this.txtCupo.TabIndex = 3;
+            this.txtCupo.TabIndex = 2;
             // 
             // txtIDComision
             // 
@@ -121,34 +121,35 @@
             this.txtAnioCalendario.Location = new System.Drawing.Point(100, 85);
             this.txtAnioCalendario.Name = "txtAnioCalendario";
             this.txtAnioCalendario.Size = new System.Drawing.Size(150, 20);
-            this.txtAnioCalendario.TabIndex = 9;
+            this.txtAnioCalendario.TabIndex = 3;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(270, 88);
+            this.btnAceptar.Location = new System.Drawing.Point(175, 132);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // btnSalir
+            // btnCancelar
             // 
-            this.btnSalir.Location = new System.Drawing.Point(351, 88);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(270, 132);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // CursoDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 128);
-            this.Controls.Add(this.btnSalir);
+            this.ClientSize = new System.Drawing.Size(532, 162);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtAnioCalendario);
             this.Controls.Add(this.lblAnioCalendario);
@@ -159,9 +160,9 @@
             this.Controls.Add(this.txtCupo);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblCupo);
-            this.Controls.Add(this.lblIDCurso);
+            this.Controls.Add(this.lblID);
             this.Name = "CursoDesktop";
-            this.Text = "Curso";
+            this.Text = "CursoDesktop";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +170,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblIDCurso;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblCupo;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtCupo;
@@ -180,7 +181,7 @@
         private System.Windows.Forms.Label lblAnioCalendario;
         private System.Windows.Forms.TextBox txtAnioCalendario;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCancelar;
 
 
     }

@@ -21,9 +21,9 @@ namespace UI.Desktop
 
         public void Listar()
         {
-            MateriaLogic ml = new MateriaLogic();
+            MateriaLogic ML = new MateriaLogic();
             this.dgvMateria.AutoGenerateColumns = true;
-            List<Materia> l = ml.GetAll();
+            List<Materia> l = ML.GetAll();
             this.dgvMateria.DataSource = l;
         }
 
@@ -39,10 +39,8 @@ namespace UI.Desktop
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-
             DialogResult DR = (MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo));
             if (DR == DialogResult.Yes) this.Close();
-
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
@@ -58,11 +56,10 @@ namespace UI.Desktop
             if (this.dgvMateria.SelectedRows.Count != 0)
             {
                 int ID = ((Materia)this.dgvMateria.SelectedRows[0].DataBoundItem).ID;
-                MateriaDesktop UD = new MateriaDesktop(ID, AplicationForm.ModoForm.Modificacion);
-                UD.Text = "Editar materia";
-                UD.ShowDialog();
+                MateriaDesktop MD = new MateriaDesktop(ID, AplicationForm.ModoForm.Modificacion);
+                MD.Text = "Editar materia";
+                MD.ShowDialog();
             }
-
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
@@ -70,11 +67,11 @@ namespace UI.Desktop
             if (this.dgvMateria.SelectedRows.Count != 0)
             {
                 int ID = ((Materia)this.dgvMateria.SelectedRows[0].DataBoundItem).ID;
-                MateriaDesktop md = new MateriaDesktop(ID, AplicationForm.ModoForm.Baja);
-                md.Text = "Eliminar materia";
-                md.ShowDialog();
+                MateriaDesktop MD = new MateriaDesktop(ID, AplicationForm.ModoForm.Baja);
+                MD.Text = "Eliminar materia";
+                MD.ShowDialog();
             }
         }
-
+        
     }
 }

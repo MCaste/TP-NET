@@ -57,11 +57,11 @@
             // tscAlumnosInscripciones.ContentPanel
             // 
             this.tscAlumnosInscripciones.ContentPanel.Controls.Add(this.tlAlumnosInscripciones);
-            this.tscAlumnosInscripciones.ContentPanel.Size = new System.Drawing.Size(547, 385);
+            this.tscAlumnosInscripciones.ContentPanel.Size = new System.Drawing.Size(545, 385);
             this.tscAlumnosInscripciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tscAlumnosInscripciones.Location = new System.Drawing.Point(0, 0);
             this.tscAlumnosInscripciones.Name = "tscAlumnosInscripciones";
-            this.tscAlumnosInscripciones.Size = new System.Drawing.Size(547, 410);
+            this.tscAlumnosInscripciones.Size = new System.Drawing.Size(545, 410);
             this.tscAlumnosInscripciones.TabIndex = 0;
             this.tscAlumnosInscripciones.Text = "toolStripContainer1";
             // 
@@ -83,7 +83,7 @@
             this.tlAlumnosInscripciones.RowCount = 2;
             this.tlAlumnosInscripciones.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlAlumnosInscripciones.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlAlumnosInscripciones.Size = new System.Drawing.Size(547, 385);
+            this.tlAlumnosInscripciones.Size = new System.Drawing.Size(545, 385);
             this.tlAlumnosInscripciones.TabIndex = 0;
             // 
             // dgvAlumnoInscripciones
@@ -102,7 +102,7 @@
             this.dgvAlumnoInscripciones.Name = "dgvAlumnoInscripciones";
             this.dgvAlumnoInscripciones.ReadOnly = true;
             this.dgvAlumnoInscripciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAlumnoInscripciones.Size = new System.Drawing.Size(541, 350);
+            this.dgvAlumnoInscripciones.Size = new System.Drawing.Size(539, 350);
             this.dgvAlumnoInscripciones.TabIndex = 0;
             // 
             // id
@@ -142,7 +142,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(469, 359);
+            this.btnSalir.Location = new System.Drawing.Point(467, 359);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -153,13 +153,14 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(388, 359);
+            this.btnActualizar.Location = new System.Drawing.Point(386, 359);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnActualizar.Enter += new System.EventHandler(this.btnActualizar_Click);
             // 
             // tsAlumnosInscripciones
             // 
@@ -170,7 +171,7 @@
             this.tsbEliminar});
             this.tsAlumnosInscripciones.Location = new System.Drawing.Point(3, 0);
             this.tsAlumnosInscripciones.Name = "tsAlumnosInscripciones";
-            this.tsAlumnosInscripciones.Size = new System.Drawing.Size(112, 25);
+            this.tsAlumnosInscripciones.Size = new System.Drawing.Size(81, 25);
             this.tsAlumnosInscripciones.TabIndex = 0;
             // 
             // tsbNuevo
@@ -205,13 +206,13 @@
             this.tsbEliminar.ToolTipText = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
-            // AlumnoInscripciones
+            // AlumnosInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 410);
+            this.ClientSize = new System.Drawing.Size(545, 410);
             this.Controls.Add(this.tscAlumnosInscripciones);
-            this.Name = "AlumnoInscripciones";
+            this.Name = "AlumnosInscripciones";
             this.Text = "Alumnos e Inscripciones";
             this.Load += new System.EventHandler(this.AlumnoInscripciones_Load);
             this.tscAlumnosInscripciones.ContentPanel.ResumeLayout(false);

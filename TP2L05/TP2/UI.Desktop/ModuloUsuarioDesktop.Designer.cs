@@ -53,7 +53,7 @@
             // lblIDModulo
             // 
             this.lblIDModulo.AutoSize = true;
-            this.lblIDModulo.Location = new System.Drawing.Point(12, 58);
+            this.lblIDModulo.Location = new System.Drawing.Point(13, 46);
             this.lblIDModulo.Name = "lblIDModulo";
             this.lblIDModulo.Size = new System.Drawing.Size(56, 13);
             this.lblIDModulo.TabIndex = 1;
@@ -62,7 +62,7 @@
             // lblIDUsuario
             // 
             this.lblIDUsuario.AutoSize = true;
-            this.lblIDUsuario.Location = new System.Drawing.Point(278, 21);
+            this.lblIDUsuario.Location = new System.Drawing.Point(12, 72);
             this.lblIDUsuario.Name = "lblIDUsuario";
             this.lblIDUsuario.Size = new System.Drawing.Size(57, 13);
             this.lblIDUsuario.TabIndex = 2;
@@ -70,48 +70,51 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(116, 21);
+            this.txtID.Location = new System.Drawing.Point(84, 18);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(147, 20);
-            this.txtID.TabIndex = 4;
+            this.txtID.TabIndex = 1;
             // 
             // txtIDModulo
             // 
-            this.txtIDModulo.Location = new System.Drawing.Point(116, 55);
+            this.txtIDModulo.Location = new System.Drawing.Point(84, 43);
             this.txtIDModulo.Name = "txtIDModulo";
             this.txtIDModulo.Size = new System.Drawing.Size(147, 20);
-            this.txtIDModulo.TabIndex = 5;
+            this.txtIDModulo.TabIndex = 2;
             // 
             // txtIDUsuario
             // 
-            this.txtIDUsuario.Location = new System.Drawing.Point(344, 18);
+            this.txtIDUsuario.Location = new System.Drawing.Point(84, 69);
             this.txtIDUsuario.Name = "txtIDUsuario";
             this.txtIDUsuario.Size = new System.Drawing.Size(147, 20);
-            this.txtIDUsuario.TabIndex = 6;
+            this.txtIDUsuario.TabIndex = 3;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(188, 116);
+            this.btnAceptar.Location = new System.Drawing.Point(66, 105);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 7;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(281, 116);
+            this.btnCancelar.Location = new System.Drawing.Point(169, 105);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ModuloUsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(511, 151);
+            this.ClientSize = new System.Drawing.Size(261, 151);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtIDUsuario);

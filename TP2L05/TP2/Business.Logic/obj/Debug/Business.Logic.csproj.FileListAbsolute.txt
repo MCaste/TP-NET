@@ -38,3 +38,9 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Busin
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.dll
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.pdb
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\Business.Logic\bin\Debug\Business.Entities.pdb

@@ -38,20 +38,21 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(72, 177);
+            this.btnAceptar.Location = new System.Drawing.Point(81, 120);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(175, 177);
+            this.btnCancelar.Location = new System.Drawing.Point(162, 120);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -59,7 +60,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(22, 47);
+            this.lblID.Location = new System.Drawing.Point(44, 47);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 13);
             this.lblID.TabIndex = 2;
@@ -68,7 +69,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(22, 114);
+            this.lblDescripcion.Location = new System.Drawing.Point(44, 75);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 3;
@@ -76,24 +77,24 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(113, 47);
+            this.txtID.Location = new System.Drawing.Point(113, 40);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 4;
+            this.txtID.TabIndex = 1;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(113, 111);
+            this.txtDescripcion.Location = new System.Drawing.Point(113, 72);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // EspecialidadDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 225);
+            this.ClientSize = new System.Drawing.Size(251, 161);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblDescripcion);

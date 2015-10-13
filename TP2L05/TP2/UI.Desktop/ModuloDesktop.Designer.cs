@@ -40,20 +40,21 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(67, 195);
+            this.btnAceptar.Location = new System.Drawing.Point(88, 105);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(179, 195);
+            this.btnCancelar.Location = new System.Drawing.Point(179, 105);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -61,7 +62,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(27, 43);
+            this.lblID.Location = new System.Drawing.Point(27, 20);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 2;
@@ -70,7 +71,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(27, 92);
+            this.lblDescripcion.Location = new System.Drawing.Point(27, 46);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 3;
@@ -79,7 +80,7 @@
             // lblEjecuta
             // 
             this.lblEjecuta.AutoSize = true;
-            this.lblEjecuta.Location = new System.Drawing.Point(27, 137);
+            this.lblEjecuta.Location = new System.Drawing.Point(27, 71);
             this.lblEjecuta.Name = "lblEjecuta";
             this.lblEjecuta.Size = new System.Drawing.Size(43, 13);
             this.lblEjecuta.TabIndex = 4;
@@ -87,31 +88,31 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(124, 43);
+            this.txtID.Location = new System.Drawing.Point(124, 13);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 5;
+            this.txtID.TabIndex = 1;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(124, 92);
+            this.txtDescripcion.Location = new System.Drawing.Point(124, 39);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 6;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtEjecuta
             // 
-            this.txtEjecuta.Location = new System.Drawing.Point(124, 134);
+            this.txtEjecuta.Location = new System.Drawing.Point(124, 68);
             this.txtEjecuta.Name = "txtEjecuta";
             this.txtEjecuta.Size = new System.Drawing.Size(100, 20);
-            this.txtEjecuta.TabIndex = 7;
+            this.txtEjecuta.TabIndex = 3;
             // 
             // ModuloDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(277, 135);
             this.Controls.Add(this.txtEjecuta);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtID);
