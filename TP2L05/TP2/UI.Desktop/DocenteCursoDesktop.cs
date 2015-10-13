@@ -168,5 +168,14 @@ namespace UI.Desktop
 
             if (DR == DialogResult.Yes) this.Close();    
         }
+
+        private void DocenteCursoDesktop_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.personas' Puede moverla o quitarla según sea necesario.
+            this.personasTableAdapter.Fill(this.tp2_netDataSet.personas);
+            // TODO: esta línea de código carga datos en la tabla 'tp2_netDataSet.cursos' Puede moverla o quitarla según sea necesario.
+            this.cursosTableAdapter.Fill(this.tp2_netDataSet.cursos);
+
+        }
     }
 }
