@@ -4,3 +4,9 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Web\bin\UI.Web.pdb
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Web\obj\Debug\UI.Web.csprojResolveAssemblyReference.cache
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Web\obj\Debug\UI.Web.dll
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\TP2\UI.Web\obj\Debug\UI.Web.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Web\bin\UI.Web.dll.config
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Web\bin\UI.Web.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Web\bin\UI.Web.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Web\obj\Debug\UI.Web.csprojResolveAssemblyReference.cache
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Web\obj\Debug\UI.Web.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\TP2\UI.Web\obj\Debug\UI.Web.pdb

@@ -54,6 +54,7 @@
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(155, 20);
             this.txtID.TabIndex = 0;
+            this.txtID.Tag = "1";
             // 
             // lblID
             // 
@@ -96,6 +97,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(155, 20);
             this.txtEmail.TabIndex = 4;
+            this.txtEmail.Tag = "";
             // 
             // txtClave
             // 
@@ -157,7 +159,7 @@
             // lblConfirmarClave
             // 
             this.lblConfirmarClave.AutoSize = true;
-            this.lblConfirmarClave.Location = new System.Drawing.Point(245, 116);
+            this.lblConfirmarClave.Location = new System.Drawing.Point(247, 116);
             this.lblConfirmarClave.Name = "lblConfirmarClave";
             this.lblConfirmarClave.Size = new System.Drawing.Size(78, 13);
             this.lblConfirmarClave.TabIndex = 13;

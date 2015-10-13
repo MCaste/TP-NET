@@ -14,13 +14,13 @@ namespace Data.Database
     {
         public List<ModuloUsuario> GetAll()
         {
-            List<ModuloUsuario> moduloUsuarios = new List<ModuloUsuario>();
+            List<ModuloUsuario> modulosUsuarios = new List<ModuloUsuario>();
 
             try
             {
                 this.OpenConnection();
 
-                SqlCommand cmdModuloUsuarios = new SqlCommand("select * from moduloUsuarios", sqlConn);
+                SqlCommand cmdModuloUsuarios = new SqlCommand("select * from modulos_usuarios", sqlConn);
 
                 SqlDataReader drModuloUsuarios = cmdModuloUsuarios.ExecuteReader();
 
@@ -36,7 +36,7 @@ namespace Data.Database
                     mu.PermiteConsulta = (bool)drModuloUsuarios["consulta"];
                     mu.PermiteModificacion = (bool)drModuloUsuarios["modificacion"];
 
-                    moduloUsuarios.Add(mu);
+                    modulosUsuarios.Add(mu);
                 }
                 drModuloUsuarios.Close();
 
@@ -53,7 +53,7 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-            return moduloUsuarios;
+            return modulosUsuarios;
         }
 
         public ModuloUsuario GetOne(int ID)
@@ -64,7 +64,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdModuloUsuarios = new SqlCommand("SELECT * from moduloUsuarios where id_modulo_usuario=@id", sqlConn);
+                SqlCommand cmdModuloUsuarios = new SqlCommand("SELECT * from modulos_usuarios where id_modulo_usuario=@id", sqlConn);
 
                 cmdModuloUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
 
@@ -104,7 +104,7 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdDelete = new SqlCommand("delete modulo usuarios where id_modulo_usuario=@id", sqlConn);
+                SqlCommand cmdDelete = new SqlCommand("delete modulos_usuarios where id_modulo_usuario=@id", sqlConn);
 
                 cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = ID;
 
@@ -131,7 +131,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "UPDATE moduloUsuarios SET id_modulo=@id_modulo, id_usuario=@id_usuario, alta=@alta, baja=@baja" +
+                    "UPDATE modulos_usuarios SET id_modulo=@id_modulo, id_usuario=@id_usuario, alta=@alta, baja=@baja" +
                     "consulta=@consulta, modificacion=@modificacion " +
                     "WHERE id_modulo_usuario=@id", sqlConn);
 
@@ -167,7 +167,7 @@ namespace Data.Database
                 this.OpenConnection();
 
                 SqlCommand cmdSave = new SqlCommand(
-                    "insert into moduloUsuarios(id_modulo,id_usuario,alta,baja,consulta,modificacion)" +
+                    "insert into modulos_usuarios(id_modulo,id_usuario,alta,baja,consulta,modificacion)" +
                     "values (@id_modulo, @id_usuario,@alta,@baja,@consulta,@modificacion)" +
                     "select @@identity", sqlConn);
 

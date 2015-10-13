@@ -44,29 +44,30 @@
             // 
             this.txtIDDictado.Location = new System.Drawing.Point(90, 6);
             this.txtIDDictado.Name = "txtIDDictado";
+            this.txtIDDictado.ReadOnly = true;
             this.txtIDDictado.Size = new System.Drawing.Size(172, 20);
-            this.txtIDDictado.TabIndex = 0;
+            this.txtIDDictado.TabIndex = 1;
             // 
             // txtIDDocente
             // 
             this.txtIDDocente.Location = new System.Drawing.Point(90, 32);
             this.txtIDDocente.Name = "txtIDDocente";
             this.txtIDDocente.Size = new System.Drawing.Size(172, 20);
-            this.txtIDDocente.TabIndex = 1;
+            this.txtIDDocente.TabIndex = 2;
             // 
             // txtIDCurso
             // 
             this.txtIDCurso.Location = new System.Drawing.Point(90, 58);
             this.txtIDCurso.Name = "txtIDCurso";
             this.txtIDCurso.Size = new System.Drawing.Size(172, 20);
-            this.txtIDCurso.TabIndex = 2;
+            this.txtIDCurso.TabIndex = 3;
             // 
             // txtTipoCargo
             // 
             this.txtTipoCargo.Location = new System.Drawing.Point(90, 84);
             this.txtTipoCargo.Name = "txtTipoCargo";
             this.txtTipoCargo.Size = new System.Drawing.Size(172, 20);
-            this.txtTipoCargo.TabIndex = 3;
+            this.txtTipoCargo.TabIndex = 4;
             // 
             // lblIDDictado
             // 
@@ -106,20 +107,21 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(129, 110);
+            this.btnAceptar.Location = new System.Drawing.Point(90, 128);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(210, 110);
+            this.btnCancelar.Location = new System.Drawing.Point(187, 128);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -128,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 148);
+            this.ClientSize = new System.Drawing.Size(276, 163);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblTipoCargo);
