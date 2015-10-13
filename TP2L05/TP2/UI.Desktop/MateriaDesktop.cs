@@ -31,7 +31,7 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
             {
-            this.txtIDMateria.Text = this.MateriaActual.ID.ToString();        
+            this.txtID.Text = this.MateriaActual.ID.ToString();        
             this.txtIDPlan.Text = this.MateriaActual.IDPlan.ToString();           
             this.txtDescripcion.Text = this.MateriaActual.Descripcion;           
             this.txtHorasSemanales.Text = this.MateriaActual.HsSemanales.ToString();      
@@ -77,7 +77,7 @@ namespace UI.Desktop
                 Materia mat = new Materia();                
                 MateriaActual = mat;
                  
-                this.MateriaActual.ID = Convert.ToInt32(this.txtIDMateria.Text);                
+                this.MateriaActual.ID = Convert.ToInt32(this.txtID.Text);                
                 this.MateriaActual.Descripcion = this.txtDescripcion.Text;                
                 this.MateriaActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text);                
                 this.MateriaActual.HsSemanales = Convert.ToInt32(this.txtHorasSemanales.Text);                
@@ -85,7 +85,7 @@ namespace UI.Desktop
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
-                this.MateriaActual.ID = Convert.ToInt32(this.txtIDMateria.Text);                
+                this.MateriaActual.ID = Convert.ToInt32(this.txtID.Text);                
                 this.MateriaActual.Descripcion = this.txtDescripcion.Text;                
                 this.MateriaActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text);                
                 this.MateriaActual.HsSemanales = Convert.ToInt32(this.txtHorasSemanales.Text);                
@@ -96,8 +96,8 @@ namespace UI.Desktop
         public override void GuardarCambios() 
             {
             MapearADatos();
-            MateriaLogic ml = new MateriaLogic();
-            ml.Save(MateriaActual);
+            MateriaLogic ML = new MateriaLogic();
+            ML.Save(MateriaActual);
             }
 
       public override bool Validar()
@@ -119,17 +119,6 @@ namespace UI.Desktop
           if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
           return ok;
       }
-
-        private void btnAceptar_Click( object sender, EventArgs e )
-            {
-            if (Validar() == true)
-                {
-                GuardarCambios();
-
-                this.Close();
-                }
-            }
-
         //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
         
         public new  void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
@@ -147,19 +136,28 @@ namespace UI.Desktop
             this.Modo = modo;   
             }
 
-        public MateriaDesktop(int ID, ModoForm modo)
-            : this()
+        public MateriaDesktop(int ID, ModoForm modo): this()
             {
             this.Modo = modo;
-            MateriaLogic ml = new MateriaLogic();
-            MateriaActual = ml.GetOne(ID);
+            MateriaLogic ML = new MateriaLogic();
+            MateriaActual = ML.GetOne(ID);
             MapearDeDatos();
             }
 
-        private void btnCancelar_Click( object sender, EventArgs e )
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (Validar() == true)
             {
-            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
-            if (DR == DialogResult.Yes) this.Close();      
+                GuardarCambios();
+
+                this.Close();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
+            if (DR == DialogResult.Yes) this.Close();
+        }
     }
 }

@@ -19,9 +19,9 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
-        private Business.Entities.Plan _PlanActual;
+        private Plan _PlanActual;
 
-        public Business.Entities.Plan PlanActual
+        public Plan PlanActual
         {
             get { return _PlanActual; }
 
@@ -80,8 +80,8 @@ namespace UI.Desktop
         {
 
             if (Modo == AplicationForm.ModoForm.Alta)
-            {
-                Business.Entities.Plan p = new Business.Entities.Plan();
+            {   
+                Plan p = new Plan();
 
                 PlanActual = p;
 
@@ -101,29 +101,25 @@ namespace UI.Desktop
 
         public override void GuardarCambios()
         {
-
             MapearADatos();
 
-            PlanLogic UL = new PlanLogic();
-
-            UL.Save(PlanActual);
-
+            PlanLogic PL = new PlanLogic();
+            
+            PL.Save(PlanActual);
         }
 
         public override bool Validar()
         {
-
-            int ban1;
-
-            ban1 = 0;
+            int ban = 0;
 
             if ((this.txtIDEspecialidad.Text == null) || (this.txtDescripcion.Text == null))
             {
-                ban1 = 1;
+                ban = 1;
+
                 Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (ban1 == 1) return false;
+            if (ban == 1) return false;
 
             else return true;
         }
@@ -139,14 +135,12 @@ namespace UI.Desktop
         }
 
 
-        public PlanDesktop(ModoForm modo)
-            : this()
+        public PlanDesktop(ModoForm modo): this()
         {
             this.Modo = modo;
         }
 
-        public PlanDesktop(int ID, ModoForm modo)
-            : this()
+        public PlanDesktop(int ID, ModoForm modo): this()
         {
             this.Modo = modo;
 
@@ -173,6 +167,5 @@ namespace UI.Desktop
 
             if (DR == DialogResult.Yes) this.Close();
         }
-
     }
 }

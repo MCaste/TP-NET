@@ -24,7 +24,6 @@ namespace UI.Desktop
 
         private Usuario _UsuarioActual;
 
-        //Propiedad
         public Usuario UsuarioActual
         
             {
@@ -118,7 +117,7 @@ namespace UI.Desktop
 
           foreach(Control c in this.Controls)
           {
-              if ((c is TextBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+              if ((c is TextBox) && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
           }
 
           if (!string.IsNullOrEmpty(mensaje))
@@ -139,7 +138,7 @@ namespace UI.Desktop
               ok = false;
           }
 
-          if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          if (!string.IsNullOrEmpty(mensaje)) Notificar("Error",mensaje, MessageBoxButtons.OK, MessageBoxIcon.Error);
           return ok;
       }
 

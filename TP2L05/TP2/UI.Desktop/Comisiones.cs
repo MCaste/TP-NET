@@ -21,9 +21,9 @@ namespace UI.Desktop
 
         public void Listar()
         {
-            ComisionLogic cl = new ComisionLogic();
+            ComisionLogic CL = new ComisionLogic();
 
-            List<Comision> l = cl.GetAll();
+            List<Comision> l = CL.GetAll();
         }
 
         private void Comisiones_Load(object sender, EventArgs e)

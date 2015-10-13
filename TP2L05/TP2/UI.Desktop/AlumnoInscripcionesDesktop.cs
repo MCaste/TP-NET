@@ -19,9 +19,9 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
-        private Business.Entities.AlumnoInscripciones _AluInscActual;
+        private AlumnoInscripciones _AluInscActual;
 
-        public Business.Entities.AlumnoInscripciones AluInscActual
+        public AlumnoInscripciones AluInscActual
         
             {
             get { return _AluInscActual; }
@@ -78,15 +78,14 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                Business.Entities.AlumnoInscripciones aluInsc = new Business.Entities.AlumnoInscripciones();
+                AlumnoInscripciones aluInsc = new AlumnoInscripciones();
+                
                 AluInscActual = aluInsc;
-                 
-                //this.AluInscActual.ID = this.txtID.Text; -->Es autoincremental?               
+                                
                 this.AluInscActual.IDAlumno = Convert.ToInt32(this.txtIDAlumno.Text);                
                 this.AluInscActual.IDCurso = Convert.ToInt32(this.txtIDCurso.Text);                
                 this.AluInscActual.Condicion = this.txtCondicion.Text;                
-                this.AluInscActual.Nota = Convert.ToInt32(this.txtNota.Text);
-              
+                this.AluInscActual.Nota = Convert.ToInt32(this.txtNota.Text);     
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
@@ -95,7 +94,6 @@ namespace UI.Desktop
                 this.AluInscActual.IDCurso = Convert.ToInt32(this.txtIDCurso.Text);                
                 this.AluInscActual.Condicion = this.txtCondicion.Text;                
                 this.AluInscActual.Nota = Convert.ToInt32(this.txtNota.Text);
- 
                 }
             }
 
@@ -110,17 +108,21 @@ namespace UI.Desktop
 
             }
 
-
       public override bool Validar()
             {
+                int band1, band2;
+            
+                band1 = band2 = 0;
 
-             if ((this.txtIDAlumno.Text == null) || (this.txtIDCurso.Text == null) || (this.txtCondicion.Text == null) || (this.txtNota.Text == null))
-                    
-                    
-             { Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               return false;}
+                if ((this.txtIDAlumno.Text == null) || (this.txtIDCurso.Text == null) || (this.txtCondicion.Text == null) || (this.txtNota.Text == null))
+                {
+                    Notificar("Error", "Todos los campos son obligatorios, por favor completelos a todos.", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-             else return true;
+                    band2 = 1;
+                }
+                 
+                if (band2 == 1) return false;
+                else return true;
             }              
 
         public new void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
@@ -164,7 +166,7 @@ namespace UI.Desktop
         {
             DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
 
-            if (DR == DialogResult.Yes) this.Close(); 
+            if (DR == DialogResult.Yes) this.Close();
         }
     }
 }

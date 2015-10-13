@@ -84,7 +84,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 4;
+            this.txtID.TabIndex = 1;
             // 
             // lblNota
             // 
@@ -100,45 +100,46 @@
             this.txtIDCurso.Location = new System.Drawing.Point(120, 67);
             this.txtIDCurso.Name = "txtIDCurso";
             this.txtIDCurso.Size = new System.Drawing.Size(100, 20);
-            this.txtIDCurso.TabIndex = 6;
+            this.txtIDCurso.TabIndex = 2;
             // 
             // txtIDAlumno
             // 
             this.txtIDAlumno.Location = new System.Drawing.Point(120, 93);
             this.txtIDAlumno.Name = "txtIDAlumno";
             this.txtIDAlumno.Size = new System.Drawing.Size(100, 20);
-            this.txtIDAlumno.TabIndex = 7;
+            this.txtIDAlumno.TabIndex = 3;
             // 
             // txtNota
             // 
             this.txtNota.Location = new System.Drawing.Point(120, 119);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(100, 20);
-            this.txtNota.TabIndex = 8;
+            this.txtNota.TabIndex = 4;
             // 
             // txtCondicion
             // 
             this.txtCondicion.Location = new System.Drawing.Point(120, 145);
             this.txtCondicion.Name = "txtCondicion";
             this.txtCondicion.Size = new System.Drawing.Size(100, 20);
-            this.txtCondicion.TabIndex = 9;
+            this.txtCondicion.TabIndex = 5;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(80, 189);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(161, 189);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

@@ -42,20 +42,21 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(109, 226);
+            this.btnAceptar.Location = new System.Drawing.Point(97, 146);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(200, 226);
+            this.btnCancelar.Location = new System.Drawing.Point(187, 146);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -63,7 +64,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(35, 50);
+            this.lblID.Location = new System.Drawing.Point(35, 25);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 2;
@@ -72,7 +73,7 @@
             // lblIDPlan
             // 
             this.lblIDPlan.AutoSize = true;
-            this.lblIDPlan.Location = new System.Drawing.Point(35, 95);
+            this.lblIDPlan.Location = new System.Drawing.Point(35, 54);
             this.lblIDPlan.Name = "lblIDPlan";
             this.lblIDPlan.Size = new System.Drawing.Size(42, 13);
             this.lblIDPlan.TabIndex = 3;
@@ -81,7 +82,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(35, 138);
+            this.lblDescripcion.Location = new System.Drawing.Point(35, 84);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 4;
@@ -90,7 +91,7 @@
             // lblAnioEspecialidad
             // 
             this.lblAnioEspecialidad.AutoSize = true;
-            this.lblAnioEspecialidad.Location = new System.Drawing.Point(35, 179);
+            this.lblAnioEspecialidad.Location = new System.Drawing.Point(35, 109);
             this.lblAnioEspecialidad.Name = "lblAnioEspecialidad";
             this.lblAnioEspecialidad.Size = new System.Drawing.Size(89, 13);
             this.lblAnioEspecialidad.TabIndex = 5;
@@ -98,38 +99,38 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(136, 47);
+            this.txtID.Location = new System.Drawing.Point(136, 25);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 6;
+            this.txtID.TabIndex = 1;
             // 
             // txtIDPlan
             // 
-            this.txtIDPlan.Location = new System.Drawing.Point(136, 88);
+            this.txtIDPlan.Location = new System.Drawing.Point(136, 51);
             this.txtIDPlan.Name = "txtIDPlan";
             this.txtIDPlan.Size = new System.Drawing.Size(100, 20);
-            this.txtIDPlan.TabIndex = 7;
+            this.txtIDPlan.TabIndex = 2;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(136, 135);
+            this.txtDescripcion.Location = new System.Drawing.Point(136, 77);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.TabIndex = 3;
             // 
             // txtAnioEspecialidad
             // 
-            this.txtAnioEspecialidad.Location = new System.Drawing.Point(136, 179);
+            this.txtAnioEspecialidad.Location = new System.Drawing.Point(136, 106);
             this.txtAnioEspecialidad.Name = "txtAnioEspecialidad";
             this.txtAnioEspecialidad.Size = new System.Drawing.Size(100, 20);
-            this.txtAnioEspecialidad.TabIndex = 9;
+            this.txtAnioEspecialidad.TabIndex = 4;
             // 
             // ComisionDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 267);
+            this.ClientSize = new System.Drawing.Size(286, 182);
             this.Controls.Add(this.txtAnioEspecialidad);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtIDPlan);

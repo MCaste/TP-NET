@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using Business.Entities;
 using Business.Logic;
 
+
 namespace UI.Desktop
 {
     public partial class PersonaDesktop : AplicationForm
@@ -21,7 +22,6 @@ namespace UI.Desktop
         }
         private Persona _PersonaActual;
 
-        //Propiedad
         public Persona PersonaActual
         
             {
@@ -32,7 +32,7 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
             {
-            this.txtIDPersona.Text = this.PersonaActual.ID.ToString();        
+            this.txtID.Text = this.PersonaActual.ID.ToString();        
             this.txtApellido.Text = this.PersonaActual.Apellido;           
             this.txtNombre.Text = this.PersonaActual.Nombre;           
             this.txtDireccion.Text = this.PersonaActual.Direccion;      
@@ -41,6 +41,7 @@ namespace UI.Desktop
             this.txtTelefono.Text = this.PersonaActual.Telefono;
             this.txtTIpoPersona.Text = this.PersonaActual.TiposPersona.ToString();
             this.txtIDPlan.Text = this.PersonaActual.IDPlan.ToString();
+            this.txtFechaNacimiento.Text = this.PersonaActual.FechaNacimiento.ToString();
 
             switch (Modo)
                 {
@@ -49,7 +50,6 @@ namespace UI.Desktop
                         {
                         this.btnAceptar.Text = "Guardar";
                         this.PersonaActual.State = BusinessEntity.States.New;
-                        
                         }
                     break;
                 case ModoForm.Modificacion:
@@ -80,10 +80,11 @@ namespace UI.Desktop
             
             if (Modo == AplicationForm.ModoForm.Alta)
                 {
-                Persona per = new Business.Entities.Persona();                
+                Persona per = new Persona();                
+                
                 PersonaActual = per;
                  
-                this.PersonaActual.ID = Convert.ToInt32(this.txtIDPersona.Text);                
+                this.PersonaActual.ID = Convert.ToInt32(this.txtID.Text);                
                 this.PersonaActual.Direccion = this.txtDireccion.Text;                
                 this.PersonaActual.Nombre = this.txtNombre.Text;                
                 this.PersonaActual.Apellido = this.txtApellido.Text;                
@@ -91,38 +92,47 @@ namespace UI.Desktop
                 this.PersonaActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text); 
                 this.PersonaActual.Telefono = this.txtTelefono.Text;
                 this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTIpoPersona);
-
-              
+                this.PersonaActual.FechaNacimiento = Convert.ToDateTime(this.txtFechaNacimiento);
                 }
             else if (Modo == AplicationForm.ModoForm.Modificacion)
                 {
-                    this.PersonaActual.ID = Convert.ToInt32(this.txtIDPersona.Text);
+                    this.PersonaActual.ID = Convert.ToInt32(this.txtID.Text);
                     this.PersonaActual.Direccion = this.txtDireccion.Text;
                     this.PersonaActual.Nombre = this.txtNombre.Text;
                     this.PersonaActual.Apellido = this.txtApellido.Text;
                     this.PersonaActual.Legajo = Convert.ToInt32(txtLegajo.Text);
                     this.PersonaActual.IDPlan = Convert.ToInt32(this.txtIDPlan.Text);
                     this.PersonaActual.Telefono = this.txtTelefono.Text;
-                    this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTIpoPersona);  
+                    this.PersonaActual.TiposPersona = Convert.ToInt32(this.txtTIpoPersona);
+                    this.PersonaActual.FechaNacimiento = Convert.ToDateTime(this.txtFechaNacimiento);
                 }
             }
 
         public override void GuardarCambios() 
             {
             MapearADatos();
-            PersonasLogic UL = new PersonasLogic();
-            UL.Save(PersonaActual);
+            PersonasLogic PL = new PersonasLogic();
+            PL.Save(PersonaActual);
             }
 
 
       public override bool Validar()
       {
-          /*string mensaje = "";
+          string mensaje = "";
+          
           bool ok = true;
 
           foreach(Control c in this.Controls)
           {
               if ((c is TextBox) && (c.Tag.ToString() != "ID") && (!Util.Util.IsComplete(c.Text))) mensaje += " - " + c.Tag.ToString() + "\n";
+          }
+
+
+          if (!Util.Util.IsDate (this.txtFechaNac.Text)) 
+          {
+            mensaje += "La fecha de nacimiento ingresada no es valida.\n";
+
+              ok = false;
           }
 
           if (!string.IsNullOrEmpty(mensaje))
@@ -137,29 +147,12 @@ namespace UI.Desktop
               ok = false;
           }
 
-          if (!(this.txtClave.Text.Equals(this.txtConfirmarClave.Text)) || (this.txtClave.Text.Length < 8))
-          {
-              mensaje += "La contraseña ingresada no coincide o posee menos de 8 caracteres.\n";
-              ok = false;
-          }
 
-          if (!string.IsNullOrEmpty(mensaje)) Notificar(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          return ok;*/
-          return true;
+          if (!string.IsNullOrEmpty(mensaje))Notificar("Error",mensaje, MessageBoxButtons.OK, MessageBoxIcon.Error);
+          
+          return ok;
       }
-
-        private void btnAceptar_Click( object sender, EventArgs e )
-            {
-            if (Validar() == true)
-                {
-                GuardarCambios();
-
-                this.Close();
-                }
-            }
-
-        //Agregandole new a los metodos void damos por sabido que el miembro que modificamos oculta el miembro que se hereda de la clase base.
-        
+       
         public new  void Notificar(string titulo,string mensaje,MessageBoxButtons botones,MessageBoxIcon icono)
             {
             MessageBox.Show(mensaje,titulo, botones, icono);
@@ -175,19 +168,27 @@ namespace UI.Desktop
             this.Modo = modo;   
             }
 
-        public PersonaDesktop(int ID, ModoForm modo)
-            : this()
+        public PersonaDesktop(int ID, ModoForm modo): this()
             {
             this.Modo = modo;
-            PersonasLogic UL = new PersonasLogic();
-            PersonaActual = UL.GetOne(ID);
+            PersonasLogic PL = new PersonasLogic();
+            PersonaActual = PL.GetOne(ID);
             MapearDeDatos();
             }
 
-        private void btnCancelar_Click( object sender, EventArgs e )
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (Validar() == true)
             {
-            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?","Cancelar", MessageBoxButtons.YesNo));
-            if (DR == DialogResult.Yes) this.Close();      
+                GuardarCambios();
+                this.Close();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult DR = (MessageBox.Show("Seguro que desea cancelar el proceso?", "Cancelar", MessageBoxButtons.YesNo));
+            if (DR == DialogResult.Yes) this.Close();      
+        }
     }
 }

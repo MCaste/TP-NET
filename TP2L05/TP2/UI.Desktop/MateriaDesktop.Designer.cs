@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblIDMateria = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblIDPlan = new System.Windows.Forms.Label();
-            this.txtIDMateria = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.lblHorasSemanales = new System.Windows.Forms.Label();
             this.lblHorasTotales = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -42,109 +42,113 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblIDMateria
+            // lblID
             // 
-            this.lblIDMateria.AutoSize = true;
-            this.lblIDMateria.Location = new System.Drawing.Point(13, 13);
-            this.lblIDMateria.Name = "lblIDMateria";
-            this.lblIDMateria.Size = new System.Drawing.Size(59, 13);
-            this.lblIDMateria.TabIndex = 0;
-            this.lblIDMateria.Text = "ID Materia:";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(13, 13);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(13, 41);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
+            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 1;
-            this.lblDescripcion.Text = "Descripción:";
+            this.lblDescripcion.Text = "Descripción";
             // 
             // lblIDPlan
             // 
             this.lblIDPlan.AutoSize = true;
             this.lblIDPlan.Location = new System.Drawing.Point(13, 70);
             this.lblIDPlan.Name = "lblIDPlan";
-            this.lblIDPlan.Size = new System.Drawing.Size(45, 13);
+            this.lblIDPlan.Size = new System.Drawing.Size(42, 13);
             this.lblIDPlan.TabIndex = 2;
-            this.lblIDPlan.Text = "ID Plan:";
+            this.lblIDPlan.Text = "ID Plan";
             // 
-            // txtIDMateria
+            // txtID
             // 
-            this.txtIDMateria.Location = new System.Drawing.Point(86, 10);
-            this.txtIDMateria.Name = "txtIDMateria";
-            this.txtIDMateria.Size = new System.Drawing.Size(189, 20);
-            this.txtIDMateria.TabIndex = 3;
+            this.txtID.Location = new System.Drawing.Point(86, 10);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(189, 20);
+            this.txtID.TabIndex = 1;
             // 
             // lblHorasSemanales
             // 
             this.lblHorasSemanales.AutoSize = true;
             this.lblHorasSemanales.Location = new System.Drawing.Point(281, 10);
             this.lblHorasSemanales.Name = "lblHorasSemanales";
-            this.lblHorasSemanales.Size = new System.Drawing.Size(93, 13);
+            this.lblHorasSemanales.Size = new System.Drawing.Size(90, 13);
             this.lblHorasSemanales.TabIndex = 4;
-            this.lblHorasSemanales.Text = "Horas Semanales:";
+            this.lblHorasSemanales.Text = "Horas Semanales";
             // 
             // lblHorasTotales
             // 
             this.lblHorasTotales.AutoSize = true;
-            this.lblHorasTotales.Location = new System.Drawing.Point(284, 41);
+            this.lblHorasTotales.Location = new System.Drawing.Point(281, 41);
             this.lblHorasTotales.Name = "lblHorasTotales";
-            this.lblHorasTotales.Size = new System.Drawing.Size(76, 13);
+            this.lblHorasTotales.Size = new System.Drawing.Size(73, 13);
             this.lblHorasTotales.TabIndex = 5;
-            this.lblHorasTotales.Text = "Horas Totales:";
+            this.lblHorasTotales.Text = "Horas Totales";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(85, 38);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(189, 20);
-            this.txtDescripcion.TabIndex = 6;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtIDPlan
             // 
             this.txtIDPlan.Location = new System.Drawing.Point(86, 67);
             this.txtIDPlan.Name = "txtIDPlan";
             this.txtIDPlan.Size = new System.Drawing.Size(189, 20);
-            this.txtIDPlan.TabIndex = 7;
+            this.txtIDPlan.TabIndex = 3;
             // 
             // txtHorasTotales
             // 
             this.txtHorasTotales.Location = new System.Drawing.Point(380, 36);
             this.txtHorasTotales.Name = "txtHorasTotales";
             this.txtHorasTotales.Size = new System.Drawing.Size(189, 20);
-            this.txtHorasTotales.TabIndex = 8;
+            this.txtHorasTotales.TabIndex = 5;
             // 
             // txtHorasSemanales
             // 
             this.txtHorasSemanales.Location = new System.Drawing.Point(380, 10);
             this.txtHorasSemanales.Name = "txtHorasSemanales";
             this.txtHorasSemanales.Size = new System.Drawing.Size(189, 20);
-            this.txtHorasSemanales.TabIndex = 9;
+            this.txtHorasSemanales.TabIndex = 4;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(299, 67);
+            this.btnAceptar.Location = new System.Drawing.Point(199, 108);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Enter += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(380, 67);
+            this.btnCancelar.Location = new System.Drawing.Point(287, 108);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // MateriaDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 111);
+            this.ClientSize = new System.Drawing.Size(583, 138);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtHorasSemanales);
@@ -153,10 +157,10 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblHorasTotales);
             this.Controls.Add(this.lblHorasSemanales);
-            this.Controls.Add(this.txtIDMateria);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblIDPlan);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.lblIDMateria);
+            this.Controls.Add(this.lblID);
             this.Name = "MateriaDesktop";
             this.Text = "MateriaDesktop";
             this.ResumeLayout(false);
@@ -166,10 +170,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblIDMateria;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblIDPlan;
-        private System.Windows.Forms.TextBox txtIDMateria;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblHorasSemanales;
         private System.Windows.Forms.Label lblHorasTotales;
         private System.Windows.Forms.TextBox txtDescripcion;

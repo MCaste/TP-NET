@@ -30,3 +30,7 @@ C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\De
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.dll
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
 C:\Users\Marti\Documents\GitHub\TP-NET\TP2L05\Data.Database\Data.Database\obj\Debug\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Data.Database.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Data.Database.pdb
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.dll
+C:\Users\Caste\Documents\GitHub\Repositorio\TP-NET\TP2L05\Data.Database\Data.Database\bin\Debug\Business.Entities.pdb
